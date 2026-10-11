@@ -34,7 +34,7 @@ class AssetTests(unittest.TestCase):
                 self.assertTrue(resource.startswith(prefix), resource)
                 self.assertIn(resource.removeprefix(prefix), ['vietflex.css', 'vietflex.js'])
             else:
-                self.assertTrue((ROOT / resource).is_file(), resource)
+                self.assertTrue((ROOT / resource.split('?', 1)[0]).is_file(), resource)
         advanced = Page()
         advanced.feed((ROOT / 'tools/KML_Workbench.html').read_text())
         for resource in advanced.resources:

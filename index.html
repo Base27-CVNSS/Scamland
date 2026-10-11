@@ -4,30 +4,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Scamland — WebGIS OSINT Tam giác vàng. Tra cứu địa danh, đọc nguồn gốc, kiểm tra quan hệ và mốc thời gian từ tài liệu công khai.">
-  <meta name="theme-color" content="#0a0f17">
+  <meta name="theme-color" content="#ffffff">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: https://cdn.jsdelivr.net https://tile.openstreetmap.org https://mt0.google.com https://mt1.google.com https://mt2.google.com https://mt3.google.com; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <title>Scamland · Tam giác vàng OSINT Atlas</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon.svg?v=redteam-20261011" type="image/svg+xml">
   <link id="vietflexStyle" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Vietflexmap/VN@6144d565fcf236727577ab3c4471bbe49f86892f/dist/vietflex.css" integrity="sha384-jgGkangGaFCW07zvonbYp8IqKgPThmKK4Oqfb4zbEw21uKpCINwp0YI3cBdNNriZ" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/style.css">
-  <link rel="stylesheet" href="assets/map-focus.css">
+  <link rel="stylesheet" href="assets/style.css?v=redteam-20261011">
+  <link rel="stylesheet" href="assets/map-focus.css?v=redteam-20261011">
 </head>
 <body>
   <a class="skip" href="#mainContent">Đến nội dung</a>
   <header class="header">
-    <a class="brand" href="#view=map" aria-label="Scamland · về bản đồ"><span class="focus-logo" aria-hidden="true">S</span><svg viewBox="0 0 42 42" aria-hidden="true"><path d="M21 5 38 35H4Z"/><path d="m21 16 11 19M15 25h18"/></svg><span>SCAM<span class="gold">LAND</span><span class="focus-brand-note"> / OSINT WebGIS</span><small>GOLDEN TRIANGLE · BOKEO, LAOS · VIETFLEX ENGINE</small></span></a>
+    <a class="brand" href="#view=map" aria-label="Scamland · về bản đồ"><span class="focus-logo" aria-hidden="true">S</span><svg viewBox="0 0 42 42" aria-hidden="true"><path d="M21 5 38 35H4Z"/><path d="m21 16 11 19M15 25h18"/></svg><span>SCAM<span class="gold">LAND</span><span class="focus-brand-note"> / OSINT WebGIS</span><small>GOLDEN TRIANGLE · OSINT ATLAS</small></span></a>
     <nav class="nav" aria-label="Chế độ phân tích">
       <button class="nav-btn active" data-view="map" aria-pressed="true"><span data-icon="map"></span>Bản đồ</button>
       <button class="nav-btn" data-view="graph" aria-pressed="false"><span data-icon="network"></span>Quan hệ</button>
       <button class="nav-btn" data-view="timeline" aria-pressed="false"><span data-icon="clock"></span>Diễn biến</button>
       <button class="nav-btn" data-view="sources" aria-pressed="false"><span data-icon="book"></span>Nguồn & công cụ</button>
     </nav>
-    <div class="header-actions"><span class="focus-trust">● Open-source intelligence</span><button class="btn subtle" id="mapModeBtn" type="button">Atlas phân tích ↗</button><a class="focus-github" href="https://github.com/Base27-CVNSS/Scamland" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button class="icon-btn" id="methodBtn" title="Phương pháp và giới hạn" aria-label="Phương pháp và giới hạn"><span data-icon="info"></span></button><a class="icon-btn" href="https://github.com/Base27-CVNSS/Scamland" target="_blank" rel="noopener noreferrer" title="Mã nguồn GitHub" aria-label="Mã nguồn GitHub"><span data-icon="code"></span></a><button class="btn primary" id="exportBtn"><span data-icon="download"></span><span>Xuất dữ liệu</span></button></div>
+    <div class="header-actions"><span class="focus-trust">● Open-source intelligence</span><button class="btn subtle" id="mapModeBtn" type="button" aria-label="Toàn màn hình bản đồ" aria-pressed="false"><span data-icon="expand"></span><span class="mode-label">Toàn màn hình bản đồ</span></button><a class="focus-github" href="https://github.com/Base27-CVNSS/Scamland" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button class="icon-btn" id="methodBtn" title="Phương pháp và giới hạn" aria-label="Phương pháp và giới hạn"><span data-icon="info"></span></button><a class="icon-btn" href="https://github.com/Base27-CVNSS/Scamland" target="_blank" rel="noopener noreferrer" title="Mã nguồn GitHub" aria-label="Mã nguồn GitHub"><span data-icon="code"></span></a><button class="btn primary" id="exportBtn"><span data-icon="download"></span><span>Xuất dữ liệu</span></button></div>
   </header>
   <main id="mainContent" tabindex="-1">
     <section class="intro" aria-label="Tổng quan bộ dữ liệu">
       <div class="intro-copy"><div class="eyebrow"><span class="mini-triangle">△</span> LÀO · MYANMAR · THÁI LAN <span class="edition">BẢN 01 / 2026</span></div><h1>Tam giác vàng<span class="muted">, nhìn từ nguồn mở.</span></h1><p>Đọc không gian. Đối chiếu nguồn. Kết nối bằng chứng.</p></div>
-      <div class="metrics"><div><strong id="metricPlaces">—</strong><span>mốc đang hiển thị</span></div><div><strong id="metricSources">20</strong><span>nguồn trong danh mục</span></div><div><strong id="metricRelations">—</strong><span>quan hệ có nguồn</span></div><div class="release"><span class="release-dot"></span><b>Hồ sơ biên tập</b><span>Đối chiếu 11.10.2026</span></div></div>
+      <div class="metrics"><div><strong id="metricPlaces">—</strong><span>mốc đang hiển thị</span></div><div><strong id="metricSources">21</strong><span>nguồn trong danh mục</span></div><div><strong id="metricRelations">—</strong><span>quan hệ có nguồn</span></div><div class="release"><span class="release-dot"></span><b>Hồ sơ biên tập</b><span>Đối chiếu 11.10.2026</span></div></div>
     </section>
     <div class="workspace-toolbar"><div class="scope-control" aria-label="Phạm vi nghiên cứu"><button class="scope active" data-scope="core" aria-pressed="true">Tam giác vàng</button><button class="scope" data-scope="regional" aria-pressed="false">Đông Nam Á mở rộng</button></div><div class="toolbar-right"><span id="scopeNote">Lõi và vùng Shan lân cận</span><button class="btn subtle mobile-only" id="filterBtn"><span data-icon="filter"></span>Bộ lọc</button><button class="btn subtle" id="resetBtn"><span data-icon="reset"></span>Đặt lại</button><button class="btn subtle" id="shareBtn"><span data-icon="link"></span>Chia sẻ góc nhìn</button></div></div>
     <section class="workspace">
@@ -93,6 +93,6 @@
   <script src="assets/vietflex-loader.js"></script>
   <script src="data/bundle.js"></script>
   <script src="assets/core.js"></script>
-  <script src="assets/app.js"></script>
+  <script src="assets/app.js?v=redteam-20261011"></script>
 </body>
 </html>

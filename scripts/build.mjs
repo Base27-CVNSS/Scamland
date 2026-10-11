@@ -13,6 +13,8 @@ const errors=core.validateCatalog(data);if(errors.length)throw new Error(errors.
 const json=JSON.stringify(data).replace(/</g,'\\u003c').replace(/\u2028/g,'\\u2028').replace(/\u2029/g,'\\u2029');
 fs.writeFileSync(path.join(root,'data/bundle.js'),'window.ScamlandData = '+json+';\n');
 let html=read('index.html');
+// Release queries refresh the online assets; offline files embed the same bytes.
+html=html.replace(/(href|src)="(assets\/[^"?]+)\?v=[^"]*"/g,'$1="$2"');
 for(const file of ['vendor/vietflex.css','assets/style.css','assets/map-focus.css']){
  let css=read(file);
  if(file==='vendor/vietflex.css')for(const name of ['layers.svg','marker-icon.svg'])css=css.replaceAll('url(images/'+name+')','url(data:image/svg+xml;base64,'+fs.readFileSync(path.join(root,'vendor/images',name)).toString('base64')+')');

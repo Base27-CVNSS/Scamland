@@ -35,7 +35,7 @@
   const icon = name => '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">' + (icons[name] || icons.info) + '</svg>';
   const hydrateIcons = () => document.querySelectorAll('[data-icon]').forEach(el => { el.innerHTML = icon(el.dataset.icon); });
   const sourceMap = C.sourceIndex(D);
-  const color = {documented:'#f3c167',reported:'#b3a1f0',lead:'#f2a9cc',context:'#9caabd'};
+  const color = {documented:'#c11d32',reported:'#27272a',lead:'#9f1239',context:'#71717a'};
   const typeLabel = {documented:'Có nguồn chính thức',reported:'Báo chí / nghiên cứu',lead:'Đầu mối cần đối chiếu',context:'Bối cảnh / đào tạo'};
   const categoryLabel = {official:'Cơ quan chính thức',journalism:'Báo chí / hướng dẫn',research:'Nghiên cứu',data:'Dữ liệu & bản đồ',lead:'Đầu mối độc lập'};
   const shortPublisher = source => ({'U.S. Treasury / OFAC':'OFAC','GIJN / Bertil Lintner':'GIJN','Global Initiative Against Transnational Organized Crime':'GI-TOC','Bali Process / Regional Support Office':'RSO','OHCHR South-East Asia':'OHCHR','Sovereign Integrity Institute':'SII'}[source.publisher] || source.publisher);
@@ -60,7 +60,7 @@
   let map; let backgroundLayer; let markerLayer; let radiusLayer; let labelLayer; let osmLayer; let localLayer; let googleLayer; let originalLayer;
   let impactLayers=new Map();
   let imported = []; let measureActive = false; let measurePoints = []; let measureLayer; let playTimer = null;
-  let focusMode=true;
+  let focusMode=false;
   let dragNode = null; let dragMoved = false; let suppressNodeClick = false; let toastTimer;
 
   function toast(message) { $('toast').textContent = message; $('toast').hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => {$('toast').hidden = true;}, 4200); }
@@ -98,7 +98,11 @@
   function showView(view) {
     state.view = view;
     document.body.classList.toggle('map-focus',focusMode&&view==='map');
-    $('mapModeBtn').textContent=focusMode&&view==='map'?'Atlas phân tích ↗':'Toàn màn hình bản đồ';
+    const modeLabel=focusMode&&view==='map'?'Atlas phân tích':'Toàn màn hình bản đồ';
+    $('mapModeBtn').innerHTML=icon(focusMode&&view==='map'?'map':'expand')+'<span class="mode-label">'+E(modeLabel)+'</span>';
+    $('mapModeBtn').setAttribute('aria-label',modeLabel);
+    $('mapModeBtn').setAttribute('aria-pressed',String(focusMode&&view==='map'));
+    $('mapModeBtn').title=modeLabel;
     document.querySelectorAll('[data-view]').forEach(button => {const active = button.dataset.view === view; button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});
     ['map','graph','timeline','sources'].forEach(name => {$(name + 'View').hidden = name !== view;});
     document.body.classList.toggle('library-mode',view === 'sources');
@@ -165,9 +169,9 @@
     map.on('click',event=>{
       if (!measureActive) return;
       if (measurePoints.length===2) {measurePoints=[];measureLayer.clearLayers();}
-      measurePoints.push(event.latlng); L.circleMarker(event.latlng,{radius:4,color:'#72d6e5',fillOpacity:1,interactive:false}).addTo(measureLayer);
+      measurePoints.push(event.latlng); L.circleMarker(event.latlng,{radius:4,color:'#c11d32',fillOpacity:1,interactive:false}).addTo(measureLayer);
       if (measurePoints.length===2) {
-        L.polyline(measurePoints,{color:'#72d6e5',weight:2,dashArray:'6 5',interactive:false}).addTo(measureLayer);
+        L.polyline(measurePoints,{color:'#c11d32',weight:2,dashArray:'6 5',interactive:false}).addTo(measureLayer);
         const [a,b]=measurePoints; const km=C.haversine([a.lng,a.lat],[b.lng,b.lat])/1000;
         message(km.toLocaleString('vi-VN',{maximumFractionDigits:2}) + ' km · khoảng cách cung lớn trên mô hình cầu, không phải tuyến đi.');
       } else message('Chọn điểm thứ hai để đo khoảng cách thẳng.');
@@ -188,7 +192,7 @@
       if(!feature)continue;
       const layer=L.geoJSON(feature,{
         style:()=>({color:spec.color,fillColor:spec.color,weight:spec.weight,fillOpacity:spec.fill,interactive:false}),
-        pointToLayer:(_,ll)=>L.circleMarker(ll,{radius:9,color:'#fff5d4',fillColor:spec.color,fillOpacity:1,weight:2.5,interactive:true}),
+        pointToLayer:(_,ll)=>L.circleMarker(ll,{radius:9,color:'#27272a',fillColor:spec.color,fillOpacity:1,weight:2.5,interactive:true}),
         onEachFeature:(f,l)=>{
           if(f.geometry.type==='Point'){
             l.bindTooltip('GTSEZ · địa danh tham chiếu xấp xỉ');
@@ -218,8 +222,8 @@
   function renderBackground() {
     backgroundLayer.clearLayers(); labelLayer.clearLayers();
     if (state.showContext) {
-      if(state.base==='atlas')L.geoJSON(D.context.countries,{interactive:false,style:()=>({color:'#455e79',weight:1,fillColor:'#142335',fillOpacity:.9})}).addTo(backgroundLayer);
-      if(state.base==='atlas')L.geoJSON(D.context.rivers,{interactive:false,style:()=>({color:'#4285aa',weight:2,opacity:.75})}).addTo(backgroundLayer);
+      if(state.base==='atlas')L.geoJSON(D.context.countries,{interactive:false,style:()=>({color:'#b4b4be',weight:1,fillColor:'#fafafa',fillOpacity:.9})}).addTo(backgroundLayer);
+      if(state.base==='atlas')L.geoJSON(D.context.rivers,{interactive:false,style:()=>({color:'#7d8593',weight:2,opacity:.75})}).addTo(backgroundLayer);
     }
     if (state.showLabels && state.base==='atlas') {
       [['MYANMAR',21.6,98.55],['LÀO',20.5,101.2],['THÁI LAN',19.1,99.9],['TRUNG QUỐC',23.4,100.55],['CAMPUCHIA',12.9,104.1],['VIỆT NAM',17.0,106.6]].forEach(([name,lat,lon])=>L.marker([lat,lon],{interactive:false,icon:L.divIcon({className:'country-label',html:name,iconSize:[120,18],iconAnchor:[60,9]})}).addTo(labelLayer));
@@ -305,14 +309,14 @@
   }
   function renderGraph() {
     const svg=$('graphSvg');const regional=graph.nodes.some(n=>n.scope==='regional');svg.setAttribute('viewBox','0 0 880 '+(regional?'900':'570'));
-    if(!graph.nodes.length){svg.innerHTML='<text x="440" y="270" text-anchor="middle" fill="#a0afc2" font-size="16">Chưa có quan hệ có nguồn phù hợp bộ lọc.</text>';return;}
+    if(!graph.nodes.length){svg.innerHTML='<text x="440" y="270" text-anchor="middle" fill="#62626d" font-size="16">Chưa có quan hệ có nguồn phù hợp bộ lọc.</text>';return;}
     graph.nodes.forEach(node=>{if(!graphPositions[node.id])graphPositions[node.id]={x:node.x,y:node.y};});
     let html=graph.edges.map(edge=>{
       const a=graphPositions[edge.source],b=graphPositions[edge.target];
       return '<g class="graph-edge-group" data-edge="'+E(edge.id)+'" tabindex="0" role="button" aria-label="'+E(edge.label)+' · '+formatDate(edge.date)+'"><title>'+E(edge.label)+'</title><path class="graph-edge '+(edge.type==='citation'?'citation':'')+' '+(activeEdge?.id===edge.id?'active':'')+'" d="'+graphPath(edge)+'"/><path class="edge-hit" d="'+graphPath(edge)+'"/><text class="edge-label" x="'+(a.x+b.x)/2+'" y="'+((a.y+b.y)/2-8)+'">'+E(edge.label)+'</text></g>';
     }).join('');
     html+=graph.nodes.map(node=>{
-      const pos=graphPositions[node.id];const stroke={person:'#f3c167',organization:'#b3a1f0',place:'#9caabd',document:'#72d6e5'}[node.type];
+      const pos=graphPositions[node.id];const stroke={person:'#c11d32',organization:'#27272a',place:'#71717a',document:'#c11d32'}[node.type];
       let shape;let y=0;
       if(node.type==='person'){shape='<circle class="node-outline" cx="0" cy="0" r="24" stroke="'+stroke+'"/><path d="M-10 13v-3a10 10 0 0 1 20 0v3M0-14a6 6 0 1 0 0 12 6 6 0 1 0 0-12" fill="none" stroke="'+stroke+'"/>';y=45;}
       else if(node.type==='organization'){shape='<path class="node-outline" d="M0-31 38 0 0 31-38 0Z" stroke="'+stroke+'"/>';y=49;}
@@ -386,7 +390,7 @@
   function renderImported() {
     localLayer.clearLayers();if(!state.showLocal)return;
     imported.forEach(feature=>{const p=feature.properties;const [lon,lat]=feature.geometry.coordinates;
-      L.circleMarker([lat,lon],{radius:6,color:'#72d6e5',weight:2,fillColor:'#10333c',fillOpacity:1}).addTo(localLayer).bindPopup('<span class="local-name">'+E(p.name)+'</span><p>Điểm nhập cục bộ · chưa được Scamland xác minh.</p><p>'+E(p.summary)+'</p><a href="'+E(p.source_url)+'" target="_blank" rel="noopener noreferrer">Mở nguồn đã nhập ↗</a>',{className:'map-popup'});
+      L.circleMarker([lat,lon],{radius:6,color:'#c11d32',weight:2,fillColor:'#fff1f3',fillOpacity:1}).addTo(localLayer).bindPopup('<span class="local-name">'+E(p.name)+'</span><p>Điểm nhập cục bộ · chưa được Scamland xác minh.</p><p>'+E(p.summary)+'</p><a href="'+E(p.source_url)+'" target="_blank" rel="noopener noreferrer">Mở nguồn đã nhập ↗</a>',{className:'map-popup'});
     });
   }
   function originalPoints() {
@@ -404,7 +408,7 @@
     $('originalList').innerHTML=features.map(f=>'<button class="original-item" data-original="'+E(f.properties.id)+'">'+E(f.properties.name)+'</button>').join('') || '<p>Chưa có mốc phù hợp.</p>';
     if(!state.showOriginal)return;
     features.forEach(feature=>{const [lon,lat]=feature.geometry.coordinates;
-      const marker=L.circleMarker([lat,lon],{radius:5,color:'#72d6e5',fillColor:'#0f3039',fillOpacity:.85,weight:1.5}).addTo(originalLayer);
+      const marker=L.circleMarker([lat,lon],{radius:5,color:'#71717a',fillColor:'#f4f4f6',fillOpacity:.85,weight:1.5}).addTo(originalLayer);
       marker.bindTooltip(E(feature.properties.name));marker.bindPopup(originalPopup(feature),{className:'map-popup',maxWidth:320});
       marker.on('click',()=>openOriginal(feature.properties.id,false));
     });
