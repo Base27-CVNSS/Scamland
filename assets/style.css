@@ -19,3 +19,29 @@
 /* My Maps snapshot: geographic context, separate from editorial claims. */
 .dot.original{background:var(--cyan)}.original-map{margin-top:15px;padding:14px 0;border-top:1px solid var(--line)}.original-map summary{cursor:pointer;color:var(--cyan);font-size:12px}.original-map p{font-size:10px;color:var(--muted);line-height:1.6;margin:10px 0}.original-map>.text-btn{margin:10px 0}.original-map>a{color:var(--cyan);font-size:11px}.original-list{max-height:250px;overflow:auto;display:grid;gap:4px;margin-bottom:12px}.original-item{text-align:left;border:1px solid var(--line);border-radius:4px;padding:8px;color:var(--text);font-size:11px;overflow-wrap:anywhere}.original-item:hover{border-color:var(--cyan);background:#17303c}.original-description{white-space:pre-wrap}.original-link{color:var(--cyan);font-size:11px;overflow-wrap:anywhere}.map-popup p{max-height:150px;overflow:auto;white-space:normal}.map-popup a{display:inline-block;margin:3px 0}.basemap-switch{max-width:calc(100% - 30px)}
 @media(max-width:720px){.basemap-switch{top:72px;right:12px}.map-tools{top:113px}.layer-options{top:235px}.map-title{max-width:calc(100% - 20px)}}
+
+
+/* Influence visualization: manual research extents, never measured risk. */
+.influence-panel{position:absolute;top:84px;right:62px;z-index:625;width:245px;max-width:calc(100% - 82px);max-height:62%;overflow:auto;color:#edf5fb;background:#101b2af4;border:1px solid #456075;border-radius:9px;box-shadow:0 16px 40px #0008;backdrop-filter:blur(10px)}
+.influence-panel summary{display:flex;justify-content:space-between;align-items:center;gap:8px;cursor:pointer;list-style:none;padding:11px 12px;font-size:10px;font-weight:800;letter-spacing:.5px}
+.influence-panel summary::-webkit-details-marker{display:none}
+.influence-panel summary i{font-style:normal;font-size:16px;transition:transform .15s}
+.influence-panel[open] summary i{transform:rotate(180deg)}
+.influence-body{padding:0 10px 10px;display:grid;gap:4px}
+.influence-body label{display:flex;align-items:center;gap:8px;min-height:36px;padding:4px 3px;border-radius:5px;cursor:pointer}
+.influence-body label:hover{background:#33425588}
+.influence-body label input{width:15px;height:15px;accent-color:#72d6e5;flex-shrink:0}
+.influence-body label span{font-size:11px;font-weight:700;line-height:1.3}
+.influence-body label small{display:block;font-size:9px;font-weight:400;color:#a0b5c5}
+.influence-panel .swatch{width:13px;height:13px;flex-shrink:0;display:block;border:2px solid;border-radius:3px}
+.influence-panel .swatch.point{border-radius:50%;background:#ffe0a0;border-color:#ffe0a0}
+.influence-panel .swatch.red{background:#ff454e66;border-color:#ff454e}
+.influence-panel .swatch.orange{background:#ff982966;border-color:#ff9829}
+.influence-panel .swatch.yellow{background:#ffda5066;border-color:#ffda50}
+#impactFit{background:#1d4253;border:1px solid #4a7487;border-radius:5px;padding:8px;color:#d5f7ff;font-size:10px;font-weight:700;margin-top:5px}
+#impactFit:hover{background:#275669}
+.influence-body p{font-size:9px;line-height:1.5;color:#d8c49d;border-top:1px solid #334558;padding-top:7px;margin-top:4px}
+.influence-body a{font-size:9px;color:#9be4ed;padding:2px}
+@media(max-width:720px){.influence-panel{top:161px;right:57px;width:215px;max-height:min(43dvh,300px)}.influence-panel summary{font-size:9px;padding:9px}.influence-body{padding:0 8px 8px}}
+@media(max-width:450px){.influence-panel{width:202px;right:54px;max-height:38dvh}}
+@media print{.influence-panel{display:none!important}}

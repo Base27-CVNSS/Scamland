@@ -1,0 +1,265 @@
+{
+  "type": "FeatureCollection",
+  "name": "GTSEZ research-area illustration",
+  "metadata": {
+    "crs": "EPSG:4326",
+    "updated": "2026-10-11",
+    "verified_impact": false,
+    "official_boundary": false,
+    "note_vi": "Đây là đa giác sơ họa phạm vi khảo sát, KHÔNG đo mức độ ảnh hưởng, KHÔNG là ranh giới pháp lý, KHÔNG khẳng định nguy cơ hoặc hoạt động phạm tội tại Việt Nam."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "gtsez-reference",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.10524,
+          20.34025
+        ]
+      },
+      "properties": {
+        "id": "gtsez-reference",
+        "name": "Điểm tham chiếu GTSEZ",
+        "level": "point",
+        "geometry_basis": "editorial_schematic",
+        "verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "zone-core",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.015,
+              20.43
+            ],
+            [
+              100.07,
+              20.445
+            ],
+            [
+              100.158,
+              20.438
+            ],
+            [
+              100.252,
+              20.408
+            ],
+            [
+              100.302,
+              20.355
+            ],
+            [
+              100.282,
+              20.292
+            ],
+            [
+              100.226,
+              20.24
+            ],
+            [
+              100.142,
+              20.22
+            ],
+            [
+              100.06,
+              20.226
+            ],
+            [
+              100.004,
+              20.265
+            ],
+            [
+              99.986,
+              20.334
+            ],
+            [
+              99.998,
+              20.392
+            ],
+            [
+              100.015,
+              20.43
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "zone-core",
+        "name": "Vùng lõi đỏ · GTSEZ",
+        "level": "red",
+        "geometry_basis": "editorial_schematic",
+        "verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "zone-regional",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              99.32,
+              21
+            ],
+            [
+              99.92,
+              21.18
+            ],
+            [
+              100.77,
+              21.1
+            ],
+            [
+              101.4,
+              20.82
+            ],
+            [
+              101.66,
+              20.28
+            ],
+            [
+              101.53,
+              19.76
+            ],
+            [
+              101,
+              19.32
+            ],
+            [
+              100.16,
+              19.18
+            ],
+            [
+              99.46,
+              19.35
+            ],
+            [
+              99.1,
+              19.88
+            ],
+            [
+              99.12,
+              20.52
+            ],
+            [
+              99.32,
+              21
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "zone-regional",
+        "name": "Vùng cam · tiểu vùng Tam giác Vàng",
+        "level": "orange",
+        "geometry_basis": "editorial_schematic",
+        "verified": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "zone-extended",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              98.9,
+              22.25
+            ],
+            [
+              100.55,
+              22.35
+            ],
+            [
+              102.45,
+              22
+            ],
+            [
+              104.2,
+              21.1
+            ],
+            [
+              105.6,
+              20.1
+            ],
+            [
+              106.7,
+              18.7
+            ],
+            [
+              107.35,
+              16.8
+            ],
+            [
+              107.25,
+              14.65
+            ],
+            [
+              107,
+              12.8
+            ],
+            [
+              106.65,
+              10.9
+            ],
+            [
+              105.55,
+              9.65
+            ],
+            [
+              104.25,
+              9.35
+            ],
+            [
+              103.25,
+              10.1
+            ],
+            [
+              102.4,
+              11.2
+            ],
+            [
+              101.3,
+              12.8
+            ],
+            [
+              100.55,
+              14.8
+            ],
+            [
+              100.05,
+              16.95
+            ],
+            [
+              98.5,
+              19
+            ],
+            [
+              98.6,
+              20.55
+            ],
+            [
+              98.9,
+              22.25
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "zone-extended",
+        "name": "Vùng vàng · hành lang nghiên cứu tới Việt Nam",
+        "level": "yellow",
+        "geometry_basis": "editorial_schematic",
+        "verified": false
+      }
+    }
+  ]
+}

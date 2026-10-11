@@ -55,9 +55,10 @@
   const loadedNotes = readLocal('notes', {});
   const notes = loadedNotes && typeof loadedNotes === 'object' && !Array.isArray(loadedNotes) ? loadedNotes : {};
   const state = {view:'map',scope:'core',year:2026,country:'',topic:'',level:'all',query:'',includeUndated:true,bookmarksOnly:false,
-    bookmarks:Array.isArray(saved) ? saved.filter(id => validIds.has(id)) : [],selectedId:'gtsez',sourceTab:'library',sourceQuery:'',sourceCategory:'all',base:window.__SCAMLAND_OFFLINE__?'atlas':'osm',showContext:true,showRadii:false,showLabels:true,showLocal:true,showOriginal:true,originalQuery:''};
+    bookmarks:Array.isArray(saved) ? saved.filter(id => validIds.has(id)) : [],selectedId:'gtsez',sourceTab:'library',sourceQuery:'',sourceCategory:'all',base:window.__SCAMLAND_OFFLINE__?'atlas':'osm',showContext:true,showRadii:false,showLabels:true,showLocal:true,showOriginal:true,originalQuery:'',impactPoint:true,impactRed:true,impactOrange:true,impactYellow:true};
   let places = []; let graph = {nodes:[],edges:[]}; let activeEdge = null; let graphPositions = {};
   let map; let backgroundLayer; let markerLayer; let radiusLayer; let labelLayer; let osmLayer; let localLayer; let googleLayer; let originalLayer;
+  let impactLayers=new Map();
   let imported = []; let measureActive = false; let measurePoints = []; let measureLayer; let playTimer = null;
   let dragNode = null; let dragMoved = false; let suppressNodeClick = false; let toastTimer;
 
@@ -167,8 +168,49 @@
         message(km.toLocaleString('vi-VN',{maximumFractionDigits:2}) + ' km · khoảng cách cung lớn trên mô hình cầu, không phải tuyến đi.');
       } else message('Chọn điểm thứ hai để đo khoảng cách thẳng.');
     });
-    setBase(state.base);renderOriginal();
+    setBase(state.base);renderOriginal();initInfluence();
   }
+
+  const influenceData={"type":"FeatureCollection","name":"GTSEZ research-area illustration","metadata":{"crs":"EPSG:4326","updated":"2026-10-11","verified_impact":false,"official_boundary":false,"note_vi":"Đây là đa giác sơ họa phạm vi khảo sát, KHÔNG đo mức độ ảnh hưởng, KHÔNG là ranh giới pháp lý, KHÔNG khẳng định nguy cơ hoặc hoạt động phạm tội tại Việt Nam."},"features":[{"type":"Feature","id":"gtsez-reference","geometry":{"type":"Point","coordinates":[100.10524,20.34025]},"properties":{"id":"gtsez-reference","name":"Điểm tham chiếu GTSEZ","level":"point","geometry_basis":"editorial_schematic","verified":false}},{"type":"Feature","id":"zone-core","geometry":{"type":"Polygon","coordinates":[[[100.015,20.43],[100.07,20.445],[100.158,20.438],[100.252,20.408],[100.302,20.355],[100.282,20.292],[100.226,20.24],[100.142,20.22],[100.06,20.226],[100.004,20.265],[99.986,20.334],[99.998,20.392],[100.015,20.43]]]},"properties":{"id":"zone-core","name":"Vùng lõi đỏ · GTSEZ","level":"red","geometry_basis":"editorial_schematic","verified":false}},{"type":"Feature","id":"zone-regional","geometry":{"type":"Polygon","coordinates":[[[99.32,21],[99.92,21.18],[100.77,21.1],[101.4,20.82],[101.66,20.28],[101.53,19.76],[101,19.32],[100.16,19.18],[99.46,19.35],[99.1,19.88],[99.12,20.52],[99.32,21]]]},"properties":{"id":"zone-regional","name":"Vùng cam · tiểu vùng Tam giác Vàng","level":"orange","geometry_basis":"editorial_schematic","verified":false}},{"type":"Feature","id":"zone-extended","geometry":{"type":"Polygon","coordinates":[[[98.9,22.25],[100.55,22.35],[102.45,22],[104.2,21.1],[105.6,20.1],[106.7,18.7],[107.35,16.8],[107.25,14.65],[107,12.8],[106.65,10.9],[105.55,9.65],[104.25,9.35],[103.25,10.1],[102.4,11.2],[101.3,12.8],[100.55,14.8],[100.05,16.95],[98.5,19],[98.6,20.55],[98.9,22.25]]]},"properties":{"id":"zone-extended","name":"Vùng vàng · hành lang nghiên cứu tới Việt Nam","level":"yellow","geometry_basis":"editorial_schematic","verified":false}}]};
+  const influenceSpecs=[
+    {id:'zone-extended',key:'impactYellow',color:'#ffda50',fill:.085,weight:2.2},
+    {id:'zone-regional',key:'impactOrange',color:'#ff9829',fill:.13,weight:2.5},
+    {id:'zone-core',key:'impactRed',color:'#ff454e',fill:.22,weight:3.1},
+    {id:'gtsez-reference',key:'impactPoint',color:'#ffe0a0',fill:1,weight:2.5}
+  ];
+  function initInfluence(){
+    for(const spec of influenceSpecs){
+      const feature=influenceData.features.find(x=>x.properties.id===spec.id);
+      if(!feature)continue;
+      const layer=L.geoJSON(feature,{
+        style:()=>({color:spec.color,fillColor:spec.color,weight:spec.weight,fillOpacity:spec.fill,interactive:false}),
+        pointToLayer:(_,ll)=>L.circleMarker(ll,{radius:9,color:'#fff5d4',fillColor:spec.color,fillOpacity:1,weight:2.5,interactive:true}),
+        onEachFeature:(f,l)=>{
+          if(f.geometry.type==='Point'){
+            l.bindTooltip('GTSEZ · địa danh tham chiếu xấp xỉ');
+            l.bindPopup('<b>GTSEZ · Ton Pheung, Bokeo</b><p>Điểm tham chiếu gần đúng, không đại diện ranh giới chính thức hoặc cơ sở bị cáo buộc.</p><a href="https://mapcarta.com/34835182" target="_blank" rel="noopener noreferrer">Nguồn Mapcarta ↗</a>');
+          }
+        }
+      });
+      impactLayers.set(spec.id,layer);
+    }
+    renderInfluence();
+  }
+  function renderInfluence(){
+    if(!map)return;
+    influenceSpecs.forEach(s=>{const layer=impactLayers.get(s.id);if(layer&&map.hasLayer(layer))map.removeLayer(layer);});
+    // Draw yellow, then orange, then red, finally the reference point.
+    influenceSpecs.forEach(s=>{const layer=impactLayers.get(s.id);if(layer&&state[s.key])layer.addTo(map);const cb=$(s.key);if(cb)cb.checked=!!state[s.key];});
+  }
+  function fitInfluence(){
+    let bounds=null;
+    influenceSpecs.forEach(s=>{const layer=impactLayers.get(s.id);if(layer&&state[s.key]){
+      const b=layer.getBounds();if(b.isValid()){if(bounds)bounds.extend(b);else bounds=b;}
+    }});
+    if(!bounds){toast('Chọn ít nhất một lớp vùng.');return;}
+    map.fitBounds(bounds,{padding:[35,35],maxZoom:11,animate:!reducedMotion});
+  }
+
   function renderBackground() {
     backgroundLayer.clearLayers(); labelLayer.clearLayers();
     if (state.showContext) {
@@ -445,7 +487,8 @@
         case 'osmBtn':setBase('osm');break;
         case 'googleBtn':setBase('google');break;
         case 'fitOriginal':fitOriginal();break;
-        case 'layerBtn':$('layerOptions').hidden=!$('layerOptions').hidden;button.setAttribute('aria-expanded',String(!$('layerOptions').hidden));break;
+        case 'impactFit':fitInfluence();break;
+        case 'layerBtn':$('layerOptions').hidden=!$('layerOptions').hidden;button.setAttribute('aria-expanded',String(!$('layerOptions').hidden));if(!$('layerOptions').hidden)$('influencePanel').open=false;break;
         case 'clearImport':imported=[];renderImported();toast('Đã xóa lớp nhập cục bộ khỏi phiên.');break;
         case 'measureBtn':measureActive=!measureActive;measurePoints=[];measureLayer.clearLayers();$('map').classList.toggle('measure-cursor',measureActive);button.classList.toggle('active',measureActive);button.setAttribute('aria-pressed',String(measureActive));message(measureActive?'Chọn hai điểm trên bản đồ để đo khoảng cách.':'');break;
         case 'playTimeline':playTimeline();break;
@@ -464,6 +507,10 @@
     $('importFile').addEventListener('change',event=>importFile(event.target.files[0]));
     $('originalSearch').addEventListener('input',event=>{state.originalQuery=event.target.value;renderOriginal();});
     $('showOriginal').addEventListener('change',event=>{state.showOriginal=event.target.checked;renderOriginal();});
+    [['impactPoint','impactPoint'],['impactRed','impactRed'],['impactOrange','impactOrange'],['impactYellow','impactYellow']].forEach(([id,key])=>{
+      $(id).addEventListener('change',event=>{state[key]=event.target.checked;renderInfluence();});
+    });
+    $('influencePanel').addEventListener('toggle',()=>{if($('influencePanel').open){$('layerOptions').hidden=true;$('layerBtn').setAttribute('aria-expanded','false');}});
     [['showContext','showContext'],['showRadii','showRadii'],['showLabels','showLabels'],['showLocal','showLocal']].forEach(([id,key])=>$(id).addEventListener('change',event=>{state[key]=event.target.checked;renderBackground();renderMarkers();renderImported();}));
     document.addEventListener('keydown',event=>{
       if(event.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(event.target.tagName)&&!document.querySelector('dialog[open]')){event.preventDefault();if(state.view==='sources')$('sourceSearch').focus();else{document.body.classList.add('filters-open');$('placeSearch').focus();}}
@@ -482,7 +529,7 @@
   function start() {
     const errors=C.validateCatalog(D);
     if(errors.length)throw new Error('Catalog contract failed: '+errors.join('; '));
-    restoreHash();const initialView=state.view;initMap();bindEvents();refresh();fitOriginal();showView(initialView);hydrateIcons();
+    restoreHash();const initialView=state.view;initMap();bindEvents();refresh();fitInfluence();showView(initialView);hydrateIcons();
     $('metricSources').textContent=D.sources.length;
     $('resourceSummary').textContent=D.sources.length+' nguồn biên tập · '+D.toolbox.length+' kho công cụ · '+D.factchecks.length+' tuyên bố được rà soát';
     if(window.__SCAMLAND_OFFLINE__)$('exportDialog').querySelector('[data-offline]')?.setAttribute('href','#');

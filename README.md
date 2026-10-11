@@ -46,3 +46,8 @@ GitHub Pages phục vụ `main / (root)`. `.nojekyll`, bundle và các bản xu�
 - [Dữ liệu gốc và checksum](data/original/provenance.json)
 
 Thông báo trừng phạt là tài liệu theo ngày phát hành; cần kiểm tra nguồn hiện hành khi sử dụng. Vị trí, quan hệ trong tài liệu và sự hiện diện trên một bản đồ không tự cấu thành kết luận pháp lý. Các nguồn SII/IPFS, Logic Hunter và số lượng tài liệu chưa đủ căn cứ được thể hiện rõ ở mục kiểm chứng.
+
+
+## 3 cấp vùng khảo sát khái niệm (11/10/2026)
+
+Có 4 công tắc trực tiếp trên bản đồ: **điểm GTSEZ**, **vùng lõi đỏ**, **vùng cam**, **vùng vàng kéo tới Việt Nam**. Có nút xem toàn bộ 3 vùng và tải [GeoJSON](data/influence.geojson). Dữ liệu minh họa không phải phạm vi ảnh hưởng đo đạc, ranh giới pháp lý, bản đồ rủi ro hoặc bằng chứng về hoạt động phạm pháp tại Việt Nam. Các đường bao vẽ sơ họa theo mục đích trình bày; cần dữ liệu thực địa, nguồn độc lập và mô hình đã kiểm thử trước khi đưa ra kết luận.

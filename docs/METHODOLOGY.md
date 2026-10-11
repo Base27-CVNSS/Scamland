@@ -35,3 +35,8 @@ SII có bài viết được tìm thấy; tuyên bố kho IPFS toàn bộ, hơn 
 Pipeline kiểm tra ID, URL, ngày, tham chiếu nguồn, tọa độ hữu hạn và giới hạn WGS84. Kiểm thử đối chiếu 87 Placemark trước/sau, giữ NetworkLink gốc, ZIP CRC và cùng checksum qua các lần build. Bản gốc và manifest được giữ để đối chiếu.
 
 Chưa thực hiện kiểm tra giao diện bằng trình duyệt tự động trong môi trường xây dựng này. Khi xuất bản bài điều tra, cần đọc lại nguồn và thời điểm, thẩm định từng liên kết/địa điểm, ghi rõ cơ sở của kết luận và quyền phản hồi phù hợp.
+
+
+## 3 cấp vùng phân tích minh họa
+
+Bản đồ có 4 lớp bật/tắt riêng: GTSEZ (điểm tham chiếu xấp xỉ Mapcarta), vùng đỏ, vùng cam và vùng vàng tới Việt Nam. Ba đa giác là phạm vi khảo sát sơ họa tự dựng, không đo ảnh hưởng, không có mô hình lan truyền/tương quan/nhân quả, không biểu thị mức độ tội phạm hoặc hiện diện của đối tượng bị cáo buộc. Việt Nam nằm trong vùng vàng **không có nghĩa** là địa phương chịu ảnh hưởng thực tế. GeoJSON được công bố tại data/influence.geojson để đối chiếu hình học.

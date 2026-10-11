@@ -768,6 +768,32 @@ path.leaflet-interactive:focus:not(:focus-visible) {
 .dot.original{background:var(--cyan)}.original-map{margin-top:15px;padding:14px 0;border-top:1px solid var(--line)}.original-map summary{cursor:pointer;color:var(--cyan);font-size:12px}.original-map p{font-size:10px;color:var(--muted);line-height:1.6;margin:10px 0}.original-map>.text-btn{margin:10px 0}.original-map>a{color:var(--cyan);font-size:11px}.original-list{max-height:250px;overflow:auto;display:grid;gap:4px;margin-bottom:12px}.original-item{text-align:left;border:1px solid var(--line);border-radius:4px;padding:8px;color:var(--text);font-size:11px;overflow-wrap:anywhere}.original-item:hover{border-color:var(--cyan);background:#17303c}.original-description{white-space:pre-wrap}.original-link{color:var(--cyan);font-size:11px;overflow-wrap:anywhere}.map-popup p{max-height:150px;overflow:auto;white-space:normal}.map-popup a{display:inline-block;margin:3px 0}.basemap-switch{max-width:calc(100% - 30px)}
 @media(max-width:720px){.basemap-switch{top:72px;right:12px}.map-tools{top:113px}.layer-options{top:235px}.map-title{max-width:calc(100% - 20px)}}
 
+
+/* Influence visualization: manual research extents, never measured risk. */
+.influence-panel{position:absolute;top:84px;right:62px;z-index:625;width:245px;max-width:calc(100% - 82px);max-height:62%;overflow:auto;color:#edf5fb;background:#101b2af4;border:1px solid #456075;border-radius:9px;box-shadow:0 16px 40px #0008;backdrop-filter:blur(10px)}
+.influence-panel summary{display:flex;justify-content:space-between;align-items:center;gap:8px;cursor:pointer;list-style:none;padding:11px 12px;font-size:10px;font-weight:800;letter-spacing:.5px}
+.influence-panel summary::-webkit-details-marker{display:none}
+.influence-panel summary i{font-style:normal;font-size:16px;transition:transform .15s}
+.influence-panel[open] summary i{transform:rotate(180deg)}
+.influence-body{padding:0 10px 10px;display:grid;gap:4px}
+.influence-body label{display:flex;align-items:center;gap:8px;min-height:36px;padding:4px 3px;border-radius:5px;cursor:pointer}
+.influence-body label:hover{background:#33425588}
+.influence-body label input{width:15px;height:15px;accent-color:#72d6e5;flex-shrink:0}
+.influence-body label span{font-size:11px;font-weight:700;line-height:1.3}
+.influence-body label small{display:block;font-size:9px;font-weight:400;color:#a0b5c5}
+.influence-panel .swatch{width:13px;height:13px;flex-shrink:0;display:block;border:2px solid;border-radius:3px}
+.influence-panel .swatch.point{border-radius:50%;background:#ffe0a0;border-color:#ffe0a0}
+.influence-panel .swatch.red{background:#ff454e66;border-color:#ff454e}
+.influence-panel .swatch.orange{background:#ff982966;border-color:#ff9829}
+.influence-panel .swatch.yellow{background:#ffda5066;border-color:#ffda50}
+#impactFit{background:#1d4253;border:1px solid #4a7487;border-radius:5px;padding:8px;color:#d5f7ff;font-size:10px;font-weight:700;margin-top:5px}
+#impactFit:hover{background:#275669}
+.influence-body p{font-size:9px;line-height:1.5;color:#d8c49d;border-top:1px solid #334558;padding-top:7px;margin-top:4px}
+.influence-body a{font-size:9px;color:#9be4ed;padding:2px}
+@media(max-width:720px){.influence-panel{top:161px;right:57px;width:215px;max-height:min(43dvh,300px)}.influence-panel summary{font-size:9px;padding:9px}.influence-body{padding:0 8px 8px}}
+@media(max-width:450px){.influence-panel{width:202px;right:54px;max-height:38dvh}}
+@media print{.influence-panel{display:none!important}}
+
 </style>
 </head>
 <body>
@@ -807,7 +833,19 @@ path.leaflet-interactive:focus:not(:focus-visible) {
           <div class="basemap-switch" aria-label="Chọn bản đồ nền"><button id="googleBtn" aria-pressed="false">Vietflex / Google</button><button id="atlasBtn" aria-pressed="false">Atlas</button><button id="osmBtn" class="active" aria-pressed="true">OSM</button></div>
           <div class="map-tools"><button class="tool" id="zoomIn" aria-label="Phóng to" title="Phóng to">+</button><button class="tool" id="zoomOut" aria-label="Thu nhỏ" title="Thu nhỏ">−</button><div class="tool-divider"></div><button class="tool" id="fitBtn" aria-label="Xem toàn bộ mốc đã lọc" title="Xem toàn bộ mốc đã lọc"><span data-icon="expand"></span></button><button class="tool" id="measureBtn" aria-label="Đo khoảng cách thẳng giữa hai điểm" title="Đo khoảng cách thẳng giữa hai điểm" aria-pressed="false"><span data-icon="ruler"></span></button><button class="tool" id="layerBtn" aria-label="Tùy chọn lớp" title="Tùy chọn lớp" aria-expanded="false"><span data-icon="layers"></span></button></div>
           <div id="layerOptions" class="layer-options" hidden><b>Lớp hiển thị</b><label><input type="checkbox" id="showOriginal" checked>Bản đồ gốc · 87 mốc</label><label><input type="checkbox" id="showContext" checked>Nền địa lý tổng quát</label><label><input type="checkbox" id="showRadii">Vòng chỉ báo độ khái quát</label><label><input type="checkbox" id="showLabels" checked>Tên địa danh</label><label><input type="checkbox" id="showLocal" checked>Điểm nhập cục bộ</label><button class="text-btn" id="clearImport">Xóa lớp nhập cục bộ</button></div>
-          <div class="map-message" id="mapMessage" hidden></div>
+<details id="influencePanel" class="influence-panel" open>
+            <summary><span>PHẠM VI KHẢO SÁT · 3 VÙNG</span><i aria-hidden="true">⌄</i></summary>
+            <div class="influence-body" role="group" aria-label="Bật tắt riêng từng lớp vùng Tam giác Vàng">
+              <label><input type="checkbox" id="impactPoint" checked><em class="swatch point"></em><span>Điểm tham chiếu GTSEZ<small>Ton Pheung, Bokeo</small></span></label>
+              <label><input type="checkbox" id="impactRed" checked><em class="swatch red"></em><span>Vùng lõi đỏ<small>GTSEZ và lân cận</small></span></label>
+              <label><input type="checkbox" id="impactOrange" checked><em class="swatch orange"></em><span>Vùng cam<small>Tiểu vùng Tam giác Vàng</small></span></label>
+              <label><input type="checkbox" id="impactYellow" checked><em class="swatch yellow"></em><span>Vùng vàng<small>Hành lang khảo sát tới Việt Nam</small></span></label>
+              <button type="button" id="impactFit">⌖ Xem toàn bộ 3 vùng</button>
+              <p>Ranh giới <strong>minh họa khái niệm</strong>, không phải dữ liệu đo ảnh hưởng, ranh giới pháp lý hay bằng chứng phạm tội.</p>
+              <a href="data/influence.geojson" download="Scamland_Vung_ThamGiacVang.geojson">↓ Tải 4 lớp GeoJSON</a>
+            </div>
+          </details>
+                    <div class="map-message" id="mapMessage" hidden></div>
           <div class="map-legend"><b>CẤP HỒ SƠ</b><span><i class="dot original"></i>87 mốc bản đồ gốc</span><span><i class="dot documented"></i>Nguồn chính thức</span><span><i class="dot reported"></i>Báo chí / nghiên cứu</span><span><i class="dot lead"></i>Đầu mối</span><span><i class="dot context"></i>Bối cảnh</span><small>Màu không biểu thị mức độ phạm tội.</small></div>
           <div class="map-coordinates" id="mapCoords">WGS84 · EPSG:4326</div>
         </section>
@@ -1081,9 +1119,10 @@ window.ScamlandData = {"metadata":{"title":"Scamland · Golden Triangle OSINT At
   const loadedNotes = readLocal('notes', {});
   const notes = loadedNotes && typeof loadedNotes === 'object' && !Array.isArray(loadedNotes) ? loadedNotes : {};
   const state = {view:'map',scope:'core',year:2026,country:'',topic:'',level:'all',query:'',includeUndated:true,bookmarksOnly:false,
-    bookmarks:Array.isArray(saved) ? saved.filter(id => validIds.has(id)) : [],selectedId:'gtsez',sourceTab:'library',sourceQuery:'',sourceCategory:'all',base:window.__SCAMLAND_OFFLINE__?'atlas':'osm',showContext:true,showRadii:false,showLabels:true,showLocal:true,showOriginal:true,originalQuery:''};
+    bookmarks:Array.isArray(saved) ? saved.filter(id => validIds.has(id)) : [],selectedId:'gtsez',sourceTab:'library',sourceQuery:'',sourceCategory:'all',base:window.__SCAMLAND_OFFLINE__?'atlas':'osm',showContext:true,showRadii:false,showLabels:true,showLocal:true,showOriginal:true,originalQuery:'',impactPoint:true,impactRed:true,impactOrange:true,impactYellow:true};
   let places = []; let graph = {nodes:[],edges:[]}; let activeEdge = null; let graphPositions = {};
   let map; let backgroundLayer; let markerLayer; let radiusLayer; let labelLayer; let osmLayer; let localLayer; let googleLayer; let originalLayer;
+  let impactLayers=new Map();
   let imported = []; let measureActive = false; let measurePoints = []; let measureLayer; let playTimer = null;
   let dragNode = null; let dragMoved = false; let suppressNodeClick = false; let toastTimer;
 
@@ -1193,8 +1232,49 @@ window.ScamlandData = {"metadata":{"title":"Scamland · Golden Triangle OSINT At
         message(km.toLocaleString('vi-VN',{maximumFractionDigits:2}) + ' km · khoảng cách cung lớn trên mô hình cầu, không phải tuyến đi.');
       } else message('Chọn điểm thứ hai để đo khoảng cách thẳng.');
     });
-    setBase(state.base);renderOriginal();
+    setBase(state.base);renderOriginal();initInfluence();
   }
+
+  const influenceData={"type":"FeatureCollection","name":"GTSEZ research-area illustration","metadata":{"crs":"EPSG:4326","updated":"2026-10-11","verified_impact":false,"official_boundary":false,"note_vi":"Đây là đa giác sơ họa phạm vi khảo sát, KHÔNG đo mức độ ảnh hưởng, KHÔNG là ranh giới pháp lý, KHÔNG khẳng định nguy cơ hoặc hoạt động phạm tội tại Việt Nam."},"features":[{"type":"Feature","id":"gtsez-reference","geometry":{"type":"Point","coordinates":[100.10524,20.34025]},"properties":{"id":"gtsez-reference","name":"Điểm tham chiếu GTSEZ","level":"point","geometry_basis":"editorial_schematic","verified":false}},{"type":"Feature","id":"zone-core","geometry":{"type":"Polygon","coordinates":[[[100.015,20.43],[100.07,20.445],[100.158,20.438],[100.252,20.408],[100.302,20.355],[100.282,20.292],[100.226,20.24],[100.142,20.22],[100.06,20.226],[100.004,20.265],[99.986,20.334],[99.998,20.392],[100.015,20.43]]]},"properties":{"id":"zone-core","name":"Vùng lõi đỏ · GTSEZ","level":"red","geometry_basis":"editorial_schematic","verified":false}},{"type":"Feature","id":"zone-regional","geometry":{"type":"Polygon","coordinates":[[[99.32,21],[99.92,21.18],[100.77,21.1],[101.4,20.82],[101.66,20.28],[101.53,19.76],[101,19.32],[100.16,19.18],[99.46,19.35],[99.1,19.88],[99.12,20.52],[99.32,21]]]},"properties":{"id":"zone-regional","name":"Vùng cam · tiểu vùng Tam giác Vàng","level":"orange","geometry_basis":"editorial_schematic","verified":false}},{"type":"Feature","id":"zone-extended","geometry":{"type":"Polygon","coordinates":[[[98.9,22.25],[100.55,22.35],[102.45,22],[104.2,21.1],[105.6,20.1],[106.7,18.7],[107.35,16.8],[107.25,14.65],[107,12.8],[106.65,10.9],[105.55,9.65],[104.25,9.35],[103.25,10.1],[102.4,11.2],[101.3,12.8],[100.55,14.8],[100.05,16.95],[98.5,19],[98.6,20.55],[98.9,22.25]]]},"properties":{"id":"zone-extended","name":"Vùng vàng · hành lang nghiên cứu tới Việt Nam","level":"yellow","geometry_basis":"editorial_schematic","verified":false}}]};
+  const influenceSpecs=[
+    {id:'zone-extended',key:'impactYellow',color:'#ffda50',fill:.085,weight:2.2},
+    {id:'zone-regional',key:'impactOrange',color:'#ff9829',fill:.13,weight:2.5},
+    {id:'zone-core',key:'impactRed',color:'#ff454e',fill:.22,weight:3.1},
+    {id:'gtsez-reference',key:'impactPoint',color:'#ffe0a0',fill:1,weight:2.5}
+  ];
+  function initInfluence(){
+    for(const spec of influenceSpecs){
+      const feature=influenceData.features.find(x=>x.properties.id===spec.id);
+      if(!feature)continue;
+      const layer=L.geoJSON(feature,{
+        style:()=>({color:spec.color,fillColor:spec.color,weight:spec.weight,fillOpacity:spec.fill,interactive:false}),
+        pointToLayer:(_,ll)=>L.circleMarker(ll,{radius:9,color:'#fff5d4',fillColor:spec.color,fillOpacity:1,weight:2.5,interactive:true}),
+        onEachFeature:(f,l)=>{
+          if(f.geometry.type==='Point'){
+            l.bindTooltip('GTSEZ · địa danh tham chiếu xấp xỉ');
+            l.bindPopup('<b>GTSEZ · Ton Pheung, Bokeo</b><p>Điểm tham chiếu gần đúng, không đại diện ranh giới chính thức hoặc cơ sở bị cáo buộc.</p><a href="https://mapcarta.com/34835182" target="_blank" rel="noopener noreferrer">Nguồn Mapcarta ↗</a>');
+          }
+        }
+      });
+      impactLayers.set(spec.id,layer);
+    }
+    renderInfluence();
+  }
+  function renderInfluence(){
+    if(!map)return;
+    influenceSpecs.forEach(s=>{const layer=impactLayers.get(s.id);if(layer&&map.hasLayer(layer))map.removeLayer(layer);});
+    // Draw yellow, then orange, then red, finally the reference point.
+    influenceSpecs.forEach(s=>{const layer=impactLayers.get(s.id);if(layer&&state[s.key])layer.addTo(map);const cb=$(s.key);if(cb)cb.checked=!!state[s.key];});
+  }
+  function fitInfluence(){
+    let bounds=null;
+    influenceSpecs.forEach(s=>{const layer=impactLayers.get(s.id);if(layer&&state[s.key]){
+      const b=layer.getBounds();if(b.isValid()){if(bounds)bounds.extend(b);else bounds=b;}
+    }});
+    if(!bounds){toast('Chọn ít nhất một lớp vùng.');return;}
+    map.fitBounds(bounds,{padding:[35,35],maxZoom:11,animate:!reducedMotion});
+  }
+
   function renderBackground() {
     backgroundLayer.clearLayers(); labelLayer.clearLayers();
     if (state.showContext) {
@@ -1471,7 +1551,8 @@ window.ScamlandData = {"metadata":{"title":"Scamland · Golden Triangle OSINT At
         case 'osmBtn':setBase('osm');break;
         case 'googleBtn':setBase('google');break;
         case 'fitOriginal':fitOriginal();break;
-        case 'layerBtn':$('layerOptions').hidden=!$('layerOptions').hidden;button.setAttribute('aria-expanded',String(!$('layerOptions').hidden));break;
+        case 'impactFit':fitInfluence();break;
+        case 'layerBtn':$('layerOptions').hidden=!$('layerOptions').hidden;button.setAttribute('aria-expanded',String(!$('layerOptions').hidden));if(!$('layerOptions').hidden)$('influencePanel').open=false;break;
         case 'clearImport':imported=[];renderImported();toast('Đã xóa lớp nhập cục bộ khỏi phiên.');break;
         case 'measureBtn':measureActive=!measureActive;measurePoints=[];measureLayer.clearLayers();$('map').classList.toggle('measure-cursor',measureActive);button.classList.toggle('active',measureActive);button.setAttribute('aria-pressed',String(measureActive));message(measureActive?'Chọn hai điểm trên bản đồ để đo khoảng cách.':'');break;
         case 'playTimeline':playTimeline();break;
@@ -1490,6 +1571,10 @@ window.ScamlandData = {"metadata":{"title":"Scamland · Golden Triangle OSINT At
     $('importFile').addEventListener('change',event=>importFile(event.target.files[0]));
     $('originalSearch').addEventListener('input',event=>{state.originalQuery=event.target.value;renderOriginal();});
     $('showOriginal').addEventListener('change',event=>{state.showOriginal=event.target.checked;renderOriginal();});
+    [['impactPoint','impactPoint'],['impactRed','impactRed'],['impactOrange','impactOrange'],['impactYellow','impactYellow']].forEach(([id,key])=>{
+      $(id).addEventListener('change',event=>{state[key]=event.target.checked;renderInfluence();});
+    });
+    $('influencePanel').addEventListener('toggle',()=>{if($('influencePanel').open){$('layerOptions').hidden=true;$('layerBtn').setAttribute('aria-expanded','false');}});
     [['showContext','showContext'],['showRadii','showRadii'],['showLabels','showLabels'],['showLocal','showLocal']].forEach(([id,key])=>$(id).addEventListener('change',event=>{state[key]=event.target.checked;renderBackground();renderMarkers();renderImported();}));
     document.addEventListener('keydown',event=>{
       if(event.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(event.target.tagName)&&!document.querySelector('dialog[open]')){event.preventDefault();if(state.view==='sources')$('sourceSearch').focus();else{document.body.classList.add('filters-open');$('placeSearch').focus();}}
@@ -1508,7 +1593,7 @@ window.ScamlandData = {"metadata":{"title":"Scamland · Golden Triangle OSINT At
   function start() {
     const errors=C.validateCatalog(D);
     if(errors.length)throw new Error('Catalog contract failed: '+errors.join('; '));
-    restoreHash();const initialView=state.view;initMap();bindEvents();refresh();fitOriginal();showView(initialView);hydrateIcons();
+    restoreHash();const initialView=state.view;initMap();bindEvents();refresh();fitInfluence();showView(initialView);hydrateIcons();
     $('metricSources').textContent=D.sources.length;
     $('resourceSummary').textContent=D.sources.length+' nguồn biên tập · '+D.toolbox.length+' kho công cụ · '+D.factchecks.length+' tuyên bố được rà soát';
     if(window.__SCAMLAND_OFFLINE__)$('exportDialog').querySelector('[data-offline]')?.setAttribute('href','#');
