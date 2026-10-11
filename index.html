@@ -229,7 +229,7 @@ function validateFeatures(data){
  }));
 }
 function kmlCoords(raw){
- return safeText(raw).trim().split(/\s+/).map(pt=>{
+ return String(raw||"").trim().split(/\s+/).map(pt=>{
    const a=pt.split(",").map(Number);return [a[0],a[1]];
  }).filter(p=>Number.isFinite(p[0])&&Number.isFinite(p[1])&&Math.abs(p[0])<=180&&Math.abs(p[1])<=90);
 }
@@ -258,6 +258,7 @@ function parseKML(xml){
    });
   });
  });
+ if(feats.length>10000)throw Error("Giới hạn 10.000 đối tượng KML mỗi tệp.");
  return {features:feats,links};
 }
 async function loadFile(file){
