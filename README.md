@@ -5,7 +5,7 @@ Trang WebGIS tĩnh nghiên cứu dữ liệu **công khai** về khu vực Tam g
 **Trang dự kiến:** https://base27-cvnss.github.io/Scamland/
 
 ## Tính năng
-- Vietflex vietflexMap() + Google legacy theo ví dụ; chuyển sang OpenStreetMap khi cần.
+- Vietflex vietflexMap() với OpenStreetMap làm nền mặc định để tránh lỗi Google legacy; Google legacy vẫn có nút kích hoạt thủ công.
 - Tọa độ tham chiếu Golden Triangle Special Economic Zone: 20.34025, 100.10524 theo [Wikidata Q24896442](https://www.wikidata.org/wiki/Q24896442). Đây là tọa độ địa danh xấp xỉ, không phải ranh giới pháp lý hoặc bằng chứng vi phạm.
 - Nhập .geojson, .json, .kml, .kmz trực tiếp trong trình duyệt (giới hạn 10 MB/tệp); không tải dữ liệu lên máy chủ. Xuất GeoJSON và lọc/ẩn hiện lớp.
 - Nội dung thuộc tính hiển thị dạng văn bản để hạn chế chèn HTML độc hại.
@@ -21,7 +21,12 @@ Mở Settings → Pages → Deploy from a branch → main → / (root) nếu Pag
 
 ## Giới hạn & giấy phép
 - Google legacy tiles không chính thức: không bảo đảm ổn định hay quyền sử dụng sản xuất. Sử dụng Google Maps Tiles API có khóa/tính phí theo điều khoản, hoặc OSM tuân thủ chính sách máy chủ tile nếu triển khai rộng.
-- Thư viện Vietflex và JSZip được tải từ CDN nên ứng dụng cần mạng, chưa hoạt động offline hoàn toàn.
+- Vietflex (JS/CSS) và JSZip được đóng gói tại thư mục vendor; JSZip chỉ tải khi mở KMZ. Tiles OSM/Google vẫn cần Internet, nên chưa hoạt động bản đồ nền offline hoàn toàn.
 - Trình nhập KML chỉ xử lý Point, LineString, Polygon cơ bản; chưa có GroundOverlay, gx:Track hoặc tự tải NetworkLink.
 - Vị trí địa lý không đủ làm kết luận về hoạt động phạm pháp. Yêu cầu ghi nguồn, thời gian và xác minh độc lập.
 - Mã ứng dụng: MIT · Long Ngo 2026; thư viện và nguồn dữ liệu giữ điều khoản riêng.
+
+## Tối ưu 2026-10-11
+- Vietflex v1.0.0 được đóng gói nội bộ tại vendor/ để tránh thời gian chờ CDN.
+- JSZip v3.10.1 tải theo nhu cầu khi nhập KMZ, không chặn lần vẽ bản đồ đầu.
+- OSM mặc định; Google legacy chỉ tải khi chọn. Cần tuân thủ chính sách máy chủ tile OSM.

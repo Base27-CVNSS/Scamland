@@ -6,9 +6,8 @@
   <meta name="theme-color" content="#101621">
   <meta name="description" content="Scamland OSINT WebGIS: bản đồ nghiên cứu dữ liệu công khai tại khu vực Tam giác Vàng. Địa điểm không đồng nghĩa với cáo buộc.">
   <title>Scamland | Golden Triangle OSINT WebGIS</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Vietflexmap/VN@6144d565fcf236727577ab3c4471bbe49f86892f/dist/vietflex.css">
-  <script defer src="https://cdn.jsdelivr.net/gh/Vietflexmap/VN@6144d565fcf236727577ab3c4471bbe49f86892f/dist/vietflex.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <link rel="stylesheet" href="./vendor/vietflex.css">
+  <script defer src="./vendor/vietflex.js"></script>
   <style>
     :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color-scheme:dark;--bg:#0b1018;--panel:#131b27;--panel2:#1b2634;--line:#2e3949;--text:#f3f7fa;--muted:#a2b1c3;--accent:#f55e65;--cyan:#53d7df;--gold:#f3b95e}
     *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text)}
@@ -120,8 +119,8 @@
     <div class="toolbar">
       <div class="map-chip">◉ BOKEO · TON PHEUNG</div>
       <div class="grow"></div>
-      <button id="googleBase" class="active" aria-pressed="true">Google · legacy</button>
-      <button id="osmBase" aria-pressed="false">OpenStreetMap</button>
+      <button id="googleBase" aria-pressed="false">Google · legacy</button>
+      <button id="osmBase" class="active" aria-pressed="true">OpenStreetMap</button>
     </div>
     <div id="mapError" class="map-error" role="alert"></div>
     <div class="map-foot">
@@ -216,6 +215,18 @@ function useBase(which){
  $("osmBase").setAttribute("aria-pressed",String(which==="osm"));
  if(which==="osm")hideStatus();
 }
+let jszipLoader=null;
+function ensureJSZip(){
+ if(window.JSZip)return Promise.resolve(window.JSZip);
+ if(jszipLoader)return jszipLoader;
+ jszipLoader=new Promise((resolve,reject)=>{
+  const s=document.createElement("script");s.src="./vendor/jszip.min.js";s.async=true;
+  s.onload=()=>window.JSZip?resolve(window.JSZip):reject(new Error("JSZip không sẵn sàng."));
+  s.onerror=()=>reject(new Error("Không tải được bộ đọc KMZ nội bộ."));
+  document.head.appendChild(s);
+ }).catch(err=>{jszipLoader=null;throw err;});
+ return jszipLoader;
+}
 function validateFeatures(data){
  let features=data&&data.type==="FeatureCollection"?data.features:(data&&data.type==="Feature"?[data]:[]);
  if(!Array.isArray(features))throw Error("Tệp không có danh sách GeoJSON Feature.");
@@ -267,8 +278,8 @@ async function loadFile(file){
  if(ext==="json"||ext==="geojson"){data.features=validateFeatures(JSON.parse(await file.text()));}
  else if(ext==="kml"){data=parseKML(await file.text());}
  else if(ext==="kmz"){
-  if(!window.JSZip)throw Error("Không tải được JSZip để mở tệp KMZ; hãy dùng KML hoặc GeoJSON.");
-  const zip=await JSZip.loadAsync(file);const kmlPath=Object.keys(zip.files).find(k=>k.toLowerCase().endsWith(".kml")&&!zip.files[k].dir);
+  const zipLib=await ensureJSZip();
+  const zip=await zipLib.loadAsync(file);const kmlPath=Object.keys(zip.files).find(k=>k.toLowerCase().endsWith(".kml")&&!zip.files[k].dir);
   if(!kmlPath)throw Error("KMZ không có tệp KML.");data=parseKML(await zip.files[kmlPath].async("string"));
  }else throw Error("Chỉ chấp nhận GeoJSON, KML hoặc KMZ.");
  if(data.links.length){const s=data.links.map(l=>l.href).join("\n");status("Tệp "+file.name+" chứa "+data.links.length+" NetworkLink. Nguồn ở xa chưa được tự động tải (có thể bị CORS). "+s.slice(0,170));$("countLinks").textContent=String(Number($("countLinks").textContent)+data.links.length);}
@@ -284,16 +295,19 @@ function exportGeoJSON(){
  const a=document.createElement("a");a.href=url;a.download="scamland-export.geojson";document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
 function init(){
- if(!window.Vietflex){error("Không tải được thư viện Vietflex từ CDN. Kiểm tra mạng hoặc chặn tải script.");return;}
+ if(!window.Vietflex){error("Không tải được thư viện Vietflex nội bộ. Kiểm tra GitHub Pages và tệp vendor/vietflex.js.");return;}
  try{
-  map=Vietflex.vietflexMap("map",{useLegacyGoogleTiles:true,googleMapType:"roadmap",zoomControl:false,attributionControl:false,maxBounds:null,minZoom:3});
+  map=Vietflex.vietflexMap("map",{googleMaps:false,zoomControl:false,attributionControl:false,maxBounds:null,minZoom:3});
   map.setView(HOME,12);
   new Vietflex.ZoomControl({position:"topleft"}).addTo(map);
   new Vietflex.AttributionControl({position:"bottomright"}).addTo(map);
-  google=map.baseLayer;
+  google=Vietflex.legacyGoogleTiles({mapType:"roadmap"});
   osm=new Vietflex.TileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>',maxZoom:19});
+  osm.addTo(map);
   let googleErrors=0;
-  if(google)google.on("tileerror",()=>{if(++googleErrors===3){useBase("osm");status("Nền Google legacy không tải được; đã chuyển sang OpenStreetMap. Để triển khai Google chính thức, cần API key và điều kiện sử dụng phù hợp.");}});
+  google.on("tileerror",()=>{if(++googleErrors===3){useBase("osm");status("Nền Google legacy không tải được; đã chuyển sang OpenStreetMap. Google legacy dùng endpoint không chính thức.");}});
+  let osmErrors=0;
+  osm.on("tileerror",()=>{if(++osmErrors===3)status("Không tải được tiles OpenStreetMap. Kiểm tra mạng hoặc chính sách truy cập máy chủ tile.");});
   map.on("baselayererror",()=>{useBase("osm");status("Không khởi tạo được Google tiles; đã dùng OpenStreetMap.");});
   map.on("mousemove",e=>{$("mouseCoords").textContent=e.latlng.lat.toFixed(5)+"°N, "+e.latlng.lng.toFixed(5)+"°E";});
   datasets.forEach(draw);render();
