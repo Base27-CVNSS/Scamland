@@ -1,0 +1,1699 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Scamland · Golden Triangle · bản đồ gốc + OSINT</name>
+    <description>Golden Triangle Special Economic Zone 金三角经济特区 in Bokeo province in Laos. Casino, hotels, entertainment and online fraud activities.&lt;br&gt;#gtsez #goldentriangle #onlinescam #cyberfraud #casino #GoldenKapokGroup #ZhaoWei #Laos&lt;br&gt;#金三角经济特区&lt;br&gt;&lt;br&gt;&lt;b&gt;Bổ sung Scamland, 2026-10-11&lt;/b&gt;&lt;br&gt;87 mốc gốc giữ nguyên; 8 mốc OSINT riêng, tọa độ chỉ báo.&lt;br&gt;Các địa danh gốc không tự xác nhận hành vi phạm tội.&lt;br&gt;&lt;a href="https://github.com/Base27-CVNSS/Scamland"&gt;Mã nguồn Scamland&lt;/a&gt; · &lt;a href="https://base27-cvnss.github.io/Scamland/"&gt;WebGIS&lt;/a&gt;</description>
+    <Style id="icon-1504-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1504-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1504-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1504-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1504-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1517-E65100-normal">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1517-E65100-highlight">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1517-E65100">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1517-E65100-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1517-E65100-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1517-E65100-nodesc-normal">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>&lt;h3&gt;$[name]&lt;/h3&gt;</text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1517-E65100-nodesc-highlight">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>&lt;h3&gt;$[name]&lt;/h3&gt;</text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1517-E65100-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1517-E65100-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1517-E65100-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1546-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1546-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1546-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1546-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1546-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1574-9C27B0-nodesc-normal">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>&lt;h3&gt;$[name]&lt;/h3&gt;</text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1574-9C27B0-nodesc-highlight">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>&lt;h3&gt;$[name]&lt;/h3&gt;</text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1574-9C27B0-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1574-9C27B0-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1574-9C27B0-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1577-E65100-normal">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1577-E65100-highlight">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1577-E65100">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1577-E65100-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1577-E65100-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1577-E65100-nodesc-normal">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>&lt;h3&gt;$[name]&lt;/h3&gt;</text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1577-E65100-nodesc-highlight">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>&lt;h3&gt;$[name]&lt;/h3&gt;</text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1577-E65100-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1577-E65100-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1577-E65100-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1585-0288D1-nodesc-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>&lt;h3&gt;$[name]&lt;/h3&gt;</text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1585-0288D1-nodesc-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>&lt;h3&gt;$[name]&lt;/h3&gt;</text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1585-0288D1-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1585-0288D1-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1585-0288D1-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1602-A52714-normal">
+      <IconStyle>
+        <color>ff1427a5</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1602-A52714-highlight">
+      <IconStyle>
+        <color>ff1427a5</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1602-A52714">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1602-A52714-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1602-A52714-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1602-A52714-nodesc-normal">
+      <IconStyle>
+        <color>ff1427a5</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>&lt;h3&gt;$[name]&lt;/h3&gt;</text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1602-A52714-nodesc-highlight">
+      <IconStyle>
+        <color>ff1427a5</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>&lt;h3&gt;$[name]&lt;/h3&gt;</text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1602-A52714-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1602-A52714-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1602-A52714-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1608-9C27B0-normal">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1608-9C27B0-highlight">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1608-9C27B0">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1608-9C27B0-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1608-9C27B0-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1684-817717-nodesc-normal">
+      <IconStyle>
+        <color>ff177781</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>&lt;h3&gt;$[name]&lt;/h3&gt;</text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1684-817717-nodesc-highlight">
+      <IconStyle>
+        <color>ff177781</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>&lt;h3&gt;$[name]&lt;/h3&gt;</text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1684-817717-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1684-817717-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1684-817717-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1697-0288D1-nodesc-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>&lt;h3&gt;$[name]&lt;/h3&gt;</text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1697-0288D1-nodesc-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>&lt;h3&gt;$[name]&lt;/h3&gt;</text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1697-0288D1-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1697-0288D1-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1697-0288D1-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1729-0288D1-nodesc-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>&lt;h3&gt;$[name]&lt;/h3&gt;</text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1729-0288D1-nodesc-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>&lt;h3&gt;$[name]&lt;/h3&gt;</text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1729-0288D1-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1729-0288D1-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1729-0288D1-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-0288D1-nodesc-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels" />
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>&lt;h3&gt;$[name]&lt;/h3&gt;</text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-nodesc-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels" />
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>&lt;h3&gt;$[name]&lt;/h3&gt;</text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-E65100-nodesc-normal">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels" />
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>&lt;h3&gt;$[name]&lt;/h3&gt;</text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-E65100-nodesc-highlight">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels" />
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text>&lt;h3&gt;$[name]&lt;/h3&gt;</text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-E65100-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-E65100-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-E65100-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Golden Triangle Special Economic Zone</name>
+      <Placemark>
+        <name>News about Golden Triangle Special Economic Zone 金三角经济特区</name>
+        <description>Read:&lt;br&gt;Online Scam: How the Chinese Police raided the Golden Triangle Special Economic Zone in Laos &lt;br&gt;https://treasuresoflaos.blogspot.com/2024/03/how-chinese-police-raided-golden.html (February 2024)&lt;br&gt;&lt;br&gt;16 Indians rescued from scam operations in Laos (March 2024)&lt;br&gt;https://www.rfa.org/english/news/laos/indians-rescued-03282024180122.html&lt;br&gt;&lt;br&gt;Macao at Mekong: How Chinese money flows into the Golden Triangle&lt;br&gt;https://treasuresoflaos.blogspot.com/2013/02/macao-on-mekong-how-chinese-money-flows.html</description>
+        <styleUrl>#icon-1608-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            100.1113782,20.3413949,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>News about Bokeo International Airport 博胶国际机场</name>
+        <description>Bokeo International Airport: For two millions of Passengers - but only one Flight daily until now. Read:&lt;br&gt;https://treasuresoflaos.blogspot.com/2024/01/what-happens-to-bokeo-international.html</description>
+        <styleUrl>#icon-1504-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            100.157846,20.3192299,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kapok Star Hotel 木棉之星酒店</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0979332,20.3408886,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kings Romans Casino, aka Blue Shield Casino
+</name>
+        <styleUrl>#icon-1574-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0968168,20.3401443,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>China Town - ຕະຫຼາດຈີນ</name>
+        <styleUrl>#icon-1574-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0983687,20.3422387,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>金木棉會所酒店 Golden Kapok Club Hotel</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0989333,20.3423154,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kapok Garden hotel 及木棉花园酒店</name>
+        <description>https://hotels.ctrip.com/hotels/7366369.html</description>
+        <styleUrl>#icon-1602-A52714</styleUrl>
+        <Point>
+          <coordinates>
+            100.0974336,20.3423308,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>泰和大酒店 Taihe Hotel</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0972029,20.343979,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>铂金酒店 Platinum Hotel</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.099868,20.347721,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>金三角特区曼樂酒店 Manle Hotel</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.100095,20.3468135,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ร้านไทยแท้ Thai Tae restaurant</name>
+        <styleUrl>#icon-1577-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.100027,20.3388681,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ຮ້ານເຫລົ້າປັ່ນສອງເອື້ອຍນ້ອງ Two Sisters Wine Shop</name>
+        <styleUrl>#icon-1684-817717-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1003899,20.338702,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ຕະຫລາດມືດສີ່ແຍກຖາງເຫລິນ Dark Market</name>
+        <styleUrl>#icon-1577-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1008176,20.3386146,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>甘氏重庆烤活鱼（老字号）Gan's Chongqing grilled live fish</name>
+        <styleUrl>#icon-1577-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1003406,20.3437085,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ケンタッキーフライドチキン KFC</name>
+        <styleUrl>#icon-1577-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1029635,20.3446653,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>七十七路拌粉 77 Road Mixed Noodles
+</name>
+        <styleUrl>#icon-1577-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1034748,20.3447986,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ချမ်းမြေ့သူ ကိတ်မုန့်ဆိုင် Sweet Cake Shop
+</name>
+        <styleUrl>#icon-1684-817717-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1039028,20.3450207,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ສວນອາຫານວັງມັງກອນ</name>
+        <description>https://www.facebook.com/sy.freedom.758?__cft__[0]=AZWPPxFKW3Ku_-vt6zaoqSjYMP5h5xjLeUrcF9X6xYT7IYPX7fPWY9mFfTiConQD55N7vJbFy6DvFAOfORkJqzYyjyom33cjHWwHtNzX2eXSCDBimbPt-EsjKvGE806hAF_lOKYmlzOvZ9dPiwRkAVFW7tn-N8fdLr-R8J8oSmWdtgjzBd39LVoECZ0343vBz4V-OVU4yheX2xnDyASRHpyP&amp;__tn__=-UC%2CP-R</description>
+        <styleUrl>#icon-1517-E65100</styleUrl>
+        <Point>
+          <coordinates>
+            100.1135361,20.3041654,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ຮ້ານອາຫານ ເດິຄີງ the khing</name>
+        <styleUrl>#icon-1517-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1116878,20.3052821,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Waivai heartbeat pub</name>
+        <description>https://www.instagram.com/explore/locations/1586546054971997/heartbeat-pub-thakhek/</description>
+        <styleUrl>#icon-1517-E65100</styleUrl>
+        <Point>
+          <coordinates>
+            100.108085,20.302927,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ເຮືອນພັກຮຸ່ຍຊາງ</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1128267,20.3032111,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>星河餐厅 Galaxy Restaurant
+</name>
+        <styleUrl>#icon-1577-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1123672,20.3074952,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>巨鼎酒店 Juding Hotel
+</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1122888,20.3069877,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Latsamee guesthouse</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1104035,20.3200203,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ເຫຼົ່າຊຽງຫ່າວ金三角老湘好</name>
+        <styleUrl>#icon-1577-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1099572,20.319763,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ຮ້ານອາຫານລາວວຽງຈັນ ສາຂາ1</name>
+        <styleUrl>#icon-1577-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1103414,20.3205295,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>A+</name>
+        <styleUrl>#icon-1517-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.108572,20.320633,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>khách sạn tq</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1095407,20.3229673,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ຮ້ານອາຫານKK PUB</name>
+        <styleUrl>#icon-1517-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.107962,20.3256035,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>DingGuaGua Live Music Bar</name>
+        <styleUrl>#icon-1517-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1041036,20.3294215,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>云鹏机器人 Yunpeng Robot Karaoke</name>
+        <styleUrl>#icon-1517-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.104921,20.3379516,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ໂຮງແຮມຢຸນຫລົງ</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1048288,20.3403183,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ອາຫານລາວ ວຽງຈັນ ສາຂາ1ບ້ານຄວ້ານ</name>
+        <description>https://www.facebook.com/profile.php?id=100083519796080</description>
+        <styleUrl>#icon-1577-E65100</styleUrl>
+        <Point>
+          <coordinates>
+            100.1108606,20.3204423,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ຮ້ານສະນຸກເກີ້</name>
+        <styleUrl>#icon-1517-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.116882,20.3217178,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Van Pak Len</name>
+        <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.103384,20.3631749,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Wat Ban Mom</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1233329,20.4300299,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ຮ້ານ ຂາຍເຄື່ອງນາງສີ Store
+</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1244982,20.4304639,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>勐磨码头 Ban Mom Pier
+</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1208507,20.4348241,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ศปปข.จีน ใน สปป.ลาว Chinese People's Democratic Reform Committee in Lao PDR</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1220502,20.4353336,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ໂຮງຮຽນ ມຕ ບ້ານມອມ Ban Mom High School
+</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1250369,20.4240339,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ຮ້ານຂາຍຂອງຊຳ</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0916417,20.3599167,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mini Restaurant &amp; barbecue</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.090991,20.3570582,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sivilai Guesthouse</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0914031,20.3566953,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>loas</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0877631,20.3509237,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ร้าน BeerLao Restaurant</name>
+        <styleUrl>#icon-1577-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0880373,20.3494938,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>农贸市场 Agricultural Market
+</name>
+        <styleUrl>#icon-1684-817717-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0965576,20.3460915,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>山水酒店 Shanshui Hotel
+</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.099084,20.3491157,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>金三角特区炬星国际酒店 Golden Triangle Special Economic Zone Juxing International Hotel</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0995524,20.3492817,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>华源酒店 Huayuan Hotel</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0997605,20.346382,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>福建财神酒店 Fujian Fortune Hotel</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1009783,20.3450531,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>金三角特区浩远酒店 Golden Triangle Special Economic Zone Haoyuan Hotel</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1010767,20.344607,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>金三角特区银海酒店 Golden Triangle Special Economic Zone Silver Sea Hotel</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1021205,20.3442351,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>金三角特区强者数码ສຽງເຈິຊູ່ມ່າ Golden Triangle Special Zone Strong Digital</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1006997,20.3466777,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>金三角特区雲珑酒店 Yunlong Hotel</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1061492,20.3342749,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ເມືອຍດົງວາງ Mekong Avenue 湄公大道</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1077846,20.3345666,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Dee Dee</name>
+        <styleUrl>#icon-1684-817717-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1049479,20.3390347,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ສາມຫຼ່ຽມຄຳ</name>
+        <styleUrl>#icon-1517-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1071059,20.3375038,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>红莞会所 Hongwan Club</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.105792,20.33312,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>金三角特区爱菲尔酒店 Golden Triangle Hotel</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1078647,20.3306804,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>金三角特区闵福国际酒店 Golden Triangle International Hotel</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0996351,20.334613,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Golden Dragon Mountain International Golf Club 金龙山国际高尔夫球会</name>
+        <styleUrl>#icon-1585-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1375625,20.3055625,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Riverside Road</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.091656,20.3425062,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kapok Avenue</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0972779,20.3382724,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>East Garden Road</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0975515,20.3431642,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>South Garden Road</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0963412,20.3411743,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>North Garden Road</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0956331,20.3453827,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>汉城超市 Seoul Supermarket</name>
+        <styleUrl>#icon-1684-817717-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1021611,20.34647,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>金龙山 Golden Dragon Mountain</name>
+        <styleUrl>#icon-1729-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1275909,20.3501226,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mekong River 湄公河</name>
+        <styleUrl>#icon-1697-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0916567,20.3353761,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>会展综合体 Convention and Exhibition Complex</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.093723,20.3474573,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>数字产业园 Digital Industrial Park</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0975425,20.348262,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Commercial and Entertainment Complex</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0979459,20.3471796,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>鑫越城市中心项目 Laos Xinyue City Center Project</name>
+        <description>https://www.powerchina.cn/art/2023/10/25/art_7449_1811375.html</description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            100.095788,20.3374699,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>金三角特区上水酒店 Golden Triangle Sheung Shui Hotel</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0964593,20.3353951,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ຖານເຫຍີນໂກຈີ 唐人国际 Tangren International</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0972442,20.3357739,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>提督的宴会厅</name>
+        <styleUrl>#icon-1577-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0984236,20.3356506,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ถางเหลีน Tang Lein</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0980033,20.3356482,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>唐人国际梅花园 Tangren International Plum Garden</name>
+        <styleUrl>#icon-1517-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0985176,20.3348264,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>汝好茶餐廳 Ruhao Tea Restaurant</name>
+        <styleUrl>#icon-1577-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0977745,20.334696,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ที่พัก</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.098284,20.334025,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>牛肉板面饺子馆 友家铁锅炖 Beef Pan Noodle Dumpling House Youjia Iron Pot Stew</name>
+        <styleUrl>#icon-1577-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1008045,20.3336632,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>皇朝會国际娱乐会所 Dynasty Club International Entertainment Club</name>
+        <description>Star City Club</description>
+        <styleUrl>#icon-1517-E65100</styleUrl>
+        <Point>
+          <coordinates>
+            100.096144,20.3287074,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>superface全球百大俱乐部</name>
+        <styleUrl>#icon-1517-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.096349,20.329203,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>金三角特区豪志庄园酒店 Golden Triangle Special Zone Haozhi Manor Hotel</name>
+        <styleUrl>#icon-1602-A52714-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0962156,20.3296034,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>缅籍新村库房 Myanmar New Village Warehouse</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.1037281,20.3569236,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Wet Market</name>
+        <styleUrl>#icon-1684-817717-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0964533,20.3457307,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>炭元素烤吧</name>
+        <styleUrl>#icon-1577-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.0991582,20.3464433,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>NetworkLink gốc · tắt mặc định để tránh trùng snapshot</name>
+      <visibility>0</visibility>
+      <NetworkLink>
+        <name>News about Golden Triangle Special Economic Zone in Laos</name>
+        <Link>
+          <href>https://www.google.com/maps/d/u/0/kml?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA</href>
+        </Link>
+        <visibility>0</visibility>
+      </NetworkLink>
+    </Folder>
+    <Folder>
+      <name>Scamland · OSINT Tam giác vàng &amp; Shan lân cận</name>
+      <visibility>1</visibility>
+      <description>Mốc địa danh gần đúng; đọc tài liệu và ngày nguồn. Không phải ranh giới cơ sở hay kết luận pháp lý.</description>
+      <Placemark id="scamland-gtsez">
+        <name>Golden Triangle SEZ</name>
+        <styleUrl>#scamland-osint</styleUrl>
+        <description>&lt;p&gt;Hồ sơ trọng tâm tại Ton Pheung, Bokeo, Lào. Đọc riêng thông báo trừng phạt, nhận định nghiên cứu và đầu mối thứ cấp.&lt;/p&gt;&lt;p&gt;Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.&lt;/p&gt;&lt;p&gt;&lt;b&gt;2018-01-30&lt;/b&gt; · OFAC công bố biện pháp đối với Zhao Wei TCO và các thực thể liên quan đến Kings Romans tại GTSEZ.&lt;/p&gt;&lt;p&gt;&lt;a href="https://home.treasury.gov/news/press-releases/sm0272"&gt;U.S. Treasury / OFAC&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;2022-11-28&lt;/b&gt; · GIJN dùng GTSEZ trong hướng dẫn điều tra buôn bán động vật hoang dã.&lt;/p&gt;&lt;p&gt;&lt;a href="https://gijn.org/resource/guide-for-investigating-organized-crime-in-the-golden-triangle-chapter-5-wildlife-trafficking/"&gt;GIJN / Bertil Lintner&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;2025-05-29&lt;/b&gt; · Compound crime đặt GTSEZ trong phân tích môi trường các cơ sở lừa đảo Đông Nam Á.&lt;/p&gt;&lt;p&gt;&lt;a href="https://globalinitiative.net/analysis/compound-crime-cyber-scam-operations-in-southeast-asia/"&gt;Global Initiative Against Transnational Organized Crime&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Chưa có ngày&lt;/b&gt; · ScamLens có mục GTSEZ; nhãn hoạt động và tọa độ trên nền tảng chưa được xác minh độc lập.&lt;/p&gt;&lt;p&gt;&lt;a href="https://scamlens.org/en/intelligence/scam-centers"&gt;ScamLens&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/Base27-CVNSS/Scamland"&gt;Scamland · mã nguồn và nguồn gốc&lt;/a&gt;&lt;/p&gt;</description>
+        <ExtendedData>
+          <Data name="id">
+            <value>gtsez</value>
+          </Data>
+          <Data name="scope">
+            <value>core</value>
+          </Data>
+          <Data name="position_basis">
+            <value>analyst_approximation</value>
+          </Data>
+          <Data name="coordinate_note">
+            <value>Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.</value>
+          </Data>
+          <Data name="source_urls">
+            <value>https://home.treasury.gov/news/press-releases/sm0272 | https://gijn.org/resource/guide-for-investigating-organized-crime-in-the-golden-triangle-chapter-5-wildlife-trafficking/ | https://globalinitiative.net/analysis/compound-crime-cyber-scam-operations-in-southeast-asia/ | https://scamlens.org/en/intelligence/scam-centers</value>
+          </Data>
+          <Data name="checked">
+            <value>2026-10-11</value>
+          </Data>
+          <Data name="repository">
+            <value>https://github.com/Base27-CVNSS/Scamland</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>100.1,20.36,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="scamland-mong-la">
+        <name>Mong La</name>
+        <styleUrl>#scamland-osint</styleUrl>
+        <description>&lt;p&gt;Mốc đô thị trong hướng dẫn GIJN về sòng bạc và kinh tế xuyên biên giới. Không đại diện một cơ sở cụ thể.&lt;/p&gt;&lt;p&gt;Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.&lt;/p&gt;&lt;p&gt;&lt;b&gt;2022-11-28&lt;/b&gt; · GIJN mô tả Mong La là một bối cảnh sòng bạc trong chương về rửa tiền.&lt;/p&gt;&lt;p&gt;&lt;a href="https://gijn.org/resource/guide-to-investigating-organized-crime-in-the-golden-triangle-chapter-3-money-laundering/"&gt;GIJN / Bertil Lintner&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Chưa có ngày&lt;/b&gt; · ScamLens liệt kê Mong La; cần truy nguyên nguồn cho từng cơ sở.&lt;/p&gt;&lt;p&gt;&lt;a href="https://scamlens.org/en/intelligence/scam-centers"&gt;ScamLens&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/Base27-CVNSS/Scamland"&gt;Scamland · mã nguồn và nguồn gốc&lt;/a&gt;&lt;/p&gt;</description>
+        <ExtendedData>
+          <Data name="id">
+            <value>mong-la</value>
+          </Data>
+          <Data name="scope">
+            <value>core</value>
+          </Data>
+          <Data name="position_basis">
+            <value>analyst_approximation</value>
+          </Data>
+          <Data name="coordinate_note">
+            <value>Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.</value>
+          </Data>
+          <Data name="source_urls">
+            <value>https://gijn.org/resource/guide-to-investigating-organized-crime-in-the-golden-triangle-chapter-3-money-laundering/ | https://scamlens.org/en/intelligence/scam-centers</value>
+          </Data>
+          <Data name="checked">
+            <value>2026-10-11</value>
+          </Data>
+          <Data name="repository">
+            <value>https://github.com/Base27-CVNSS/Scamland</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>100.04,21.68,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="scamland-tachileik">
+        <name>Tachileik</name>
+        <styleUrl>#scamland-osint</styleUrl>
+        <description>&lt;p&gt;Đầu mối địa danh từ danh mục ScamLens. Chưa có hồ sơ xác minh một cơ sở riêng trong bộ dữ liệu này.&lt;/p&gt;&lt;p&gt;Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Chưa có ngày&lt;/b&gt; · Tên Tachileik xuất hiện trong danh mục đầu mối ScamLens.&lt;/p&gt;&lt;p&gt;&lt;a href="https://scamlens.org/en/intelligence/scam-centers"&gt;ScamLens&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/Base27-CVNSS/Scamland"&gt;Scamland · mã nguồn và nguồn gốc&lt;/a&gt;&lt;/p&gt;</description>
+        <ExtendedData>
+          <Data name="id">
+            <value>tachileik</value>
+          </Data>
+          <Data name="scope">
+            <value>core</value>
+          </Data>
+          <Data name="position_basis">
+            <value>analyst_approximation</value>
+          </Data>
+          <Data name="coordinate_note">
+            <value>Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.</value>
+          </Data>
+          <Data name="source_urls">
+            <value>https://scamlens.org/en/intelligence/scam-centers</value>
+          </Data>
+          <Data name="checked">
+            <value>2026-10-11</value>
+          </Data>
+          <Data name="repository">
+            <value>https://github.com/Base27-CVNSS/Scamland</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>99.88,20.45,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="scamland-panghsang">
+        <name>Panghsang / Pangkham</name>
+        <styleUrl>#scamland-osint</styleUrl>
+        <description>&lt;p&gt;Mốc địa danh cho mục Wa State trên ScamLens; cần xác minh nguồn độc lập và phạm vi cơ sở.&lt;/p&gt;&lt;p&gt;Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Chưa có ngày&lt;/b&gt; · ScamLens gắn mục Wa State Scam Operations với Panghsang.&lt;/p&gt;&lt;p&gt;&lt;a href="https://scamlens.org/en/intelligence/scam-centers"&gt;ScamLens&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/Base27-CVNSS/Scamland"&gt;Scamland · mã nguồn và nguồn gốc&lt;/a&gt;&lt;/p&gt;</description>
+        <ExtendedData>
+          <Data name="id">
+            <value>panghsang</value>
+          </Data>
+          <Data name="scope">
+            <value>core</value>
+          </Data>
+          <Data name="position_basis">
+            <value>analyst_approximation</value>
+          </Data>
+          <Data name="coordinate_note">
+            <value>Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.</value>
+          </Data>
+          <Data name="source_urls">
+            <value>https://scamlens.org/en/intelligence/scam-centers</value>
+          </Data>
+          <Data name="checked">
+            <value>2026-10-11</value>
+          </Data>
+          <Data name="repository">
+            <value>https://github.com/Base27-CVNSS/Scamland</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>99.41,22.17,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="scamland-chiang-saen">
+        <name>Chiang Saen</name>
+        <styleUrl>#scamland-osint</styleUrl>
+        <description>&lt;p&gt;Điểm bối cảnh về đào tạo điều tra trực tuyến, được tách khỏi nhóm địa điểm có cáo buộc.&lt;/p&gt;&lt;p&gt;Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.&lt;/p&gt;&lt;p&gt;&lt;b&gt;2025-05-30&lt;/b&gt; · RSO tổ chức hội thảo OSINT 27–30/05/2025 tại Chiang Saen.&lt;/p&gt;&lt;p&gt;&lt;a href="https://rso.baliprocess.net/rso-workshop-gathers-investigators-from-16-countries-in-the-golden-triangle-to-strengthen-online-investigative-capabilities-and-interregional-networks-to-disrupt-cyber-scam-centre-operations/"&gt;Bali Process / Regional Support Office&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/Base27-CVNSS/Scamland"&gt;Scamland · mã nguồn và nguồn gốc&lt;/a&gt;&lt;/p&gt;</description>
+        <ExtendedData>
+          <Data name="id">
+            <value>chiang-saen</value>
+          </Data>
+          <Data name="scope">
+            <value>core</value>
+          </Data>
+          <Data name="position_basis">
+            <value>analyst_approximation</value>
+          </Data>
+          <Data name="coordinate_note">
+            <value>Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.</value>
+          </Data>
+          <Data name="source_urls">
+            <value>https://rso.baliprocess.net/rso-workshop-gathers-investigators-from-16-countries-in-the-golden-triangle-to-strengthen-online-investigative-capabilities-and-interregional-networks-to-disrupt-cyber-scam-centre-operations/</value>
+          </Data>
+          <Data name="checked">
+            <value>2026-10-11</value>
+          </Data>
+          <Data name="repository">
+            <value>https://github.com/Base27-CVNSS/Scamland</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>100.08,20.27,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Scamland · tham chiếu ngoài Tam giác vàng</name>
+      <visibility>0</visibility>
+      <description>Mốc địa danh gần đúng; đọc tài liệu và ngày nguồn. Không phải ranh giới cơ sở hay kết luận pháp lý.</description>
+      <Placemark id="scamland-laukkai">
+        <name>Laukkai / Kokang</name>
+        <styleUrl>#scamland-osint</styleUrl>
+        <description>&lt;p&gt;Đầu mối mở rộng ở bắc Shan; không nằm tại điểm giao ba nước. Nhãn vận hành chưa được nhập như sự kiện.&lt;/p&gt;&lt;p&gt;Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Chưa có ngày&lt;/b&gt; · ScamLens có mục Laukkai Central, cần đối chiếu báo cáo gốc trước khi sử dụng.&lt;/p&gt;&lt;p&gt;&lt;a href="https://scamlens.org/en/intelligence/scam-centers"&gt;ScamLens&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/Base27-CVNSS/Scamland"&gt;Scamland · mã nguồn và nguồn gốc&lt;/a&gt;&lt;/p&gt;</description>
+        <ExtendedData>
+          <Data name="id">
+            <value>laukkai</value>
+          </Data>
+          <Data name="scope">
+            <value>regional</value>
+          </Data>
+          <Data name="position_basis">
+            <value>analyst_approximation</value>
+          </Data>
+          <Data name="coordinate_note">
+            <value>Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.</value>
+          </Data>
+          <Data name="source_urls">
+            <value>https://scamlens.org/en/intelligence/scam-centers</value>
+          </Data>
+          <Data name="checked">
+            <value>2026-10-11</value>
+          </Data>
+          <Data name="repository">
+            <value>https://github.com/Base27-CVNSS/Scamland</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>98.76,23.69,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="scamland-shwe-kokko">
+        <name>Shwe Kokko</name>
+        <styleUrl>#scamland-osint</styleUrl>
+        <description>&lt;p&gt;Hành lang Myanmar–Thái Lan mở rộng. Tách rõ khỏi Tam giác vàng khi phân tích không gian.&lt;/p&gt;&lt;p&gt;Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.&lt;/p&gt;&lt;p&gt;&lt;b&gt;2025-05-05&lt;/b&gt; · Thông báo OFAC năm 2025 xác định Shwe Kokko là địa bàn trụ sở của KNA.&lt;/p&gt;&lt;p&gt;&lt;a href="https://home.treasury.gov/news/press-releases/sb0129"&gt;U.S. Treasury / OFAC&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/Base27-CVNSS/Scamland"&gt;Scamland · mã nguồn và nguồn gốc&lt;/a&gt;&lt;/p&gt;</description>
+        <ExtendedData>
+          <Data name="id">
+            <value>shwe-kokko</value>
+          </Data>
+          <Data name="scope">
+            <value>regional</value>
+          </Data>
+          <Data name="position_basis">
+            <value>analyst_approximation</value>
+          </Data>
+          <Data name="coordinate_note">
+            <value>Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.</value>
+          </Data>
+          <Data name="source_urls">
+            <value>https://home.treasury.gov/news/press-releases/sb0129</value>
+          </Data>
+          <Data name="checked">
+            <value>2026-10-11</value>
+          </Data>
+          <Data name="repository">
+            <value>https://github.com/Base27-CVNSS/Scamland</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>98.55,16.79,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="scamland-sihanoukville">
+        <name>Sihanoukville</name>
+        <styleUrl>#scamland-osint</styleUrl>
+        <description>&lt;p&gt;Mốc thành phố trong phạm vi tham chiếu Đông Nam Á; không phải Tam giác vàng và không chỉ ra toàn bộ thành phố là cơ sở lừa đảo.&lt;/p&gt;&lt;p&gt;Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Chưa có ngày&lt;/b&gt; · ScamLens liệt kê các mục ở Sihanoukville; bản đồ này chỉ dùng mốc địa danh để tra cứu nguồn.&lt;/p&gt;&lt;p&gt;&lt;a href="https://scamlens.org/en/intelligence/scam-centers"&gt;ScamLens&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/Base27-CVNSS/Scamland"&gt;Scamland · mã nguồn và nguồn gốc&lt;/a&gt;&lt;/p&gt;</description>
+        <ExtendedData>
+          <Data name="id">
+            <value>sihanoukville</value>
+          </Data>
+          <Data name="scope">
+            <value>regional</value>
+          </Data>
+          <Data name="position_basis">
+            <value>analyst_approximation</value>
+          </Data>
+          <Data name="coordinate_note">
+            <value>Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.</value>
+          </Data>
+          <Data name="source_urls">
+            <value>https://scamlens.org/en/intelligence/scam-centers</value>
+          </Data>
+          <Data name="checked">
+            <value>2026-10-11</value>
+          </Data>
+          <Data name="repository">
+            <value>https://github.com/Base27-CVNSS/Scamland</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>103.52,10.63,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Style id="scamland-osint">
+      <IconStyle>
+        <color>ff67c1f3</color>
+        <scale>1.1</scale>
+      </IconStyle>
+    </Style>
+    <Folder>
+      <name>Thư viện nguồn công khai · Scamland</name>
+      <visibility>0</visibility>
+      <description>&lt;p&gt;&lt;a href="https://github.com/Base27-CVNSS/Scamland"&gt;Scamland&lt;/a&gt; · 21 nguồn&lt;/p&gt;&lt;p&gt;&lt;a href="https://home.treasury.gov/news/press-releases/sm0272"&gt;Thông báo OFAC về Zhao Wei TCO&lt;/a&gt;&lt;br&gt;Thông báo lịch sử về biện pháp trừng phạt; không xác nhận tình trạng SDN tại thời điểm hiện tại.&lt;/p&gt;&lt;p&gt;&lt;a href="https://home.treasury.gov/news/press-releases/sb0129"&gt;Thông báo OFAC về Karen National Army&lt;/a&gt;&lt;br&gt;Shwe Kokko thuộc hành lang Myanmar–Thái Lan mở rộng, nằm ngoài lõi Tam giác vàng.&lt;/p&gt;&lt;p&gt;&lt;a href="https://gijn.org/resource/guide-to-investigating-organized-crime-in-the-golden-triangle-introduction/"&gt;GIJN · Tổng quan Tam giác vàng&lt;/a&gt;&lt;br&gt;Hướng dẫn nghiệp vụ; các mô tả phản ánh thời điểm công bố.&lt;/p&gt;&lt;p&gt;&lt;a href="https://gijn.org/resource/guide-to-investigating-organized-crime-in-the-golden-triangle-chapter-1-drug-trafficking/"&gt;GIJN · Chương 1: Ma túy&lt;/a&gt;&lt;br&gt;Không suy diễn mức độ phạm tội từ việc xuất hiện trên bản đồ. Các chương được diễn giải ngắn, không sao chép bài gốc.&lt;/p&gt;&lt;p&gt;&lt;a href="https://gijn.org/resource/guide-to-investigating-organized-crime-in-the-golden-triangle-chapter-2-official-complicity-in-drug-trafficking/"&gt;GIJN · Chương 2: Các quan hệ bảo trợ&lt;/a&gt;&lt;br&gt;Không suy diễn mức độ phạm tội từ việc xuất hiện trên bản đồ. Các chương được diễn giải ngắn, không sao chép bài gốc.&lt;/p&gt;&lt;p&gt;&lt;a href="https://gijn.org/resource/guide-to-investigating-organized-crime-in-the-golden-triangle-chapter-3-money-laundering/"&gt;GIJN · Chương 3: Rửa tiền&lt;/a&gt;&lt;br&gt;Không suy diễn mức độ phạm tội từ việc xuất hiện trên bản đồ. Các chương được diễn giải ngắn, không sao chép bài gốc.&lt;/p&gt;&lt;p&gt;&lt;a href="https://gijn.org/resource/guide-to-investigating-organized-crime-in-the-golden-triangle-chapter-4-human-trafficking/"&gt;GIJN · Chương 4: Buôn người&lt;/a&gt;&lt;br&gt;Không suy diễn mức độ phạm tội từ việc xuất hiện trên bản đồ. Các chương được diễn giải ngắn, không sao chép bài gốc.&lt;/p&gt;&lt;p&gt;&lt;a href="https://gijn.org/resource/guide-for-investigating-organized-crime-in-the-golden-triangle-chapter-5-wildlife-trafficking/"&gt;GIJN · Chương 5: Buôn bán động vật hoang dã&lt;/a&gt;&lt;br&gt;Không suy diễn mức độ phạm tội từ việc xuất hiện trên bản đồ. Các chương được diễn giải ngắn, không sao chép bài gốc.&lt;/p&gt;&lt;p&gt;&lt;a href="https://gijn.org/resource/guide-to-investigating-organized-crime-in-the-golden-triangle-chapter-6-other-criminal-activity/"&gt;GIJN · Chương 6: Hoạt động phạm pháp khác&lt;/a&gt;&lt;br&gt;Không suy diễn mức độ phạm tội từ việc xuất hiện trên bản đồ. Các chương được diễn giải ngắn, không sao chép bài gốc.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.bangkok.ohchr.org/reports/online-scam-operations-and-trafficking-forced-criminality-southeast-asia-recommendations"&gt;Lừa đảo trực tuyến và cưỡng bức phạm tội&lt;/a&gt;&lt;br&gt;Người bị ép lừa đảo cũng có thể là nạn nhân của buôn người; không đồng nhất hai nhóm.&lt;/p&gt;&lt;p&gt;&lt;a href="https://bangkok.ohchr.org/reports/wicked-problem-seeking-human-rights-based-solutions-trafficking-cyber-scam-operations"&gt;A Wicked Problem · Giải pháp dựa trên nhân quyền&lt;/a&gt;&lt;br&gt;Tài liệu chính sách khu vực, không phải cơ sở xác định ranh giới từng cơ sở.&lt;/p&gt;&lt;p&gt;&lt;a href="https://globalinitiative.net/analysis/compound-crime-cyber-scam-operations-in-southeast-asia/"&gt;Compound crime · Cyber scam operations&lt;/a&gt;&lt;br&gt;Nhận định nghiên cứu cần đối chiếu với tài liệu gốc khi dùng cho từng trường hợp.&lt;/p&gt;&lt;p&gt;&lt;a href="https://rso.baliprocess.net/rso-workshop-gathers-investigators-from-16-countries-in-the-golden-triangle-to-strengthen-online-investigative-capabilities-and-interregional-networks-to-disrupt-cyber-scam-centre-operations/"&gt;Đào tạo OSINT tại Chiang Saen&lt;/a&gt;&lt;br&gt;Chiang Saen là địa điểm đào tạo trong hồ sơ này, không phải địa điểm bị cáo buộc phạm tội.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.interpol.int/News-and-Events/News/2025/INTERPOL-releases-new-information-on-globalization-of-scam-centres"&gt;Sự mở rộng toàn cầu của scam centres&lt;/a&gt;&lt;br&gt;Số liệu toàn cầu và có kỳ tham chiếu; không phải số liệu riêng cho Tam giác vàng.&lt;/p&gt;&lt;p&gt;&lt;a href="https://scamlens.org/en/intelligence/scam-centers"&gt;ScamLens · Scam Center Tracker&lt;/a&gt;&lt;br&gt;Nhà xuất bản ghi rõ vị trí gần đúng và chưa được họ xác minh độc lập. Không nhập nhãn Active thành trạng thái đã xác nhận.&lt;/p&gt;&lt;p&gt;&lt;a href="https://data.opendevelopmentmekong.net/dataset/"&gt;Open Development Mekong · DataHub&lt;/a&gt;&lt;br&gt;Tổng số bản ghi thay đổi; nhóm dataset, library và laws có phạm vi khác nhau. Giấy phép phải kiểm tra theo từng tài nguyên.&lt;/p&gt;&lt;p&gt;&lt;a href="https://dmpone.unodc.org/"&gt;UNODC · Drugs Monitoring Platform&lt;/a&gt;&lt;br&gt;Một số chức năng hoặc dữ liệu yêu cầu được cấp quyền. Không tự động tải các tập dữ liệu có hạn chế.&lt;/p&gt;&lt;p&gt;&lt;a href="https://siistrategic.com/the-scam-call-center-economy-of-the-golden-triangle-extraction-human-trafficking-and-the-architecture-of-a-transnational-criminal-system/"&gt;SII · The Scam-Call-Center Economy&lt;/a&gt;&lt;br&gt;Đã tìm thấy bài và website. Chưa kiểm chứng độc lập số 120 bài, kho IPFS, CID hay toàn bộ chứng cứ của kho.&lt;/p&gt;&lt;p&gt;&lt;a href="https://doi.org/10.1016/j.srs.2024.100143"&gt;Nghiên cứu hố bom từ ảnh KH-9&lt;/a&gt;&lt;br&gt;Đây không phải mô hình nhận diện cơ sở lừa đảo. Phạm vi tri-border của nghiên cứu không được đồng nhất với Tam giác vàng.&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19/geojson"&gt;Natural Earth · Nền địa lý tổng quát&lt;/a&gt;&lt;br&gt;Biên giới tổng quát phục vụ hiển thị; không dùng làm ranh giới pháp lý hoặc đo diện tích.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA"&gt;Bản đồ gốc · News about Golden Triangle SEZ in Laos&lt;/a&gt;&lt;br&gt;Tọa độ và liên kết tin trong bản đồ gốc chưa được thẩm định độc lập; sự hiện diện của địa danh không xác nhận hành vi phạm tội.&lt;/p&gt;</description>
+    </Folder>
+  </Document>
+</kml>

@@ -1,0 +1,382 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1,
+          20.36
+        ]
+      },
+      "properties": {
+        "id": "gtsez",
+        "name": "Golden Triangle SEZ",
+        "alt_names": [
+          "Kings Romans",
+          "金三角经济特区",
+          "Ton Pheung",
+          "Bokeo"
+        ],
+        "country": "LAO",
+        "scope": "core",
+        "type": "documented",
+        "summary": "Hồ sơ trọng tâm tại Ton Pheung, Bokeo, Lào. Đọc riêng thông báo trừng phạt, nhận định nghiên cứu và đầu mối thứ cấp.",
+        "position_basis": "analyst_approximation",
+        "coordinate_note": "Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.",
+        "display_radius_m": 2500,
+        "radius_note": "Vòng tròn minh họa độ khái quát, không phải khoảng tin cậy đo đạc.",
+        "claims": [
+          {
+            "id": "gt-ofac",
+            "text": "OFAC công bố biện pháp đối với Zhao Wei TCO và các thực thể liên quan đến Kings Romans tại GTSEZ.",
+            "date": "2018-01-30",
+            "topics": [
+              "finance",
+              "drugs",
+              "trafficking",
+              "wildlife",
+              "sanctions"
+            ],
+            "source_ids": [
+              "treasury-2018"
+            ],
+            "status": "attributed"
+          },
+          {
+            "id": "gt-wildlife",
+            "text": "GIJN dùng GTSEZ trong hướng dẫn điều tra buôn bán động vật hoang dã.",
+            "date": "2022-11-28",
+            "topics": [
+              "wildlife"
+            ],
+            "source_ids": [
+              "gijn-5"
+            ],
+            "status": "attributed"
+          },
+          {
+            "id": "gt-report",
+            "text": "Compound crime đặt GTSEZ trong phân tích môi trường các cơ sở lừa đảo Đông Nam Á.",
+            "date": "2025-05-29",
+            "topics": [
+              "scams",
+              "trafficking"
+            ],
+            "source_ids": [
+              "gitoc-2025"
+            ],
+            "status": "attributed"
+          },
+          {
+            "id": "gt-lead",
+            "text": "ScamLens có mục GTSEZ; nhãn hoạt động và tọa độ trên nền tảng chưa được xác minh độc lập.",
+            "date": null,
+            "topics": [
+              "scams"
+            ],
+            "source_ids": [
+              "scamlens"
+            ],
+            "status": "secondary"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.04,
+          21.68
+        ]
+      },
+      "properties": {
+        "id": "mong-la",
+        "name": "Mong La",
+        "alt_names": [
+          "Mongla",
+          "勐拉"
+        ],
+        "country": "MMR",
+        "scope": "core",
+        "type": "reported",
+        "summary": "Mốc đô thị trong hướng dẫn GIJN về sòng bạc và kinh tế xuyên biên giới. Không đại diện một cơ sở cụ thể.",
+        "position_basis": "analyst_approximation",
+        "coordinate_note": "Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.",
+        "display_radius_m": 5000,
+        "radius_note": "Vòng tròn minh họa độ khái quát, không phải khoảng tin cậy đo đạc.",
+        "claims": [
+          {
+            "id": "mong-gijn",
+            "text": "GIJN mô tả Mong La là một bối cảnh sòng bạc trong chương về rửa tiền.",
+            "date": "2022-11-28",
+            "topics": [
+              "finance"
+            ],
+            "source_ids": [
+              "gijn-3"
+            ],
+            "status": "attributed"
+          },
+          {
+            "id": "mong-lead",
+            "text": "ScamLens liệt kê Mong La; cần truy nguyên nguồn cho từng cơ sở.",
+            "date": null,
+            "topics": [
+              "scams"
+            ],
+            "source_ids": [
+              "scamlens"
+            ],
+            "status": "secondary"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.88,
+          20.45
+        ]
+      },
+      "properties": {
+        "id": "tachileik",
+        "name": "Tachileik",
+        "alt_names": [
+          "Tachilek",
+          "大其力"
+        ],
+        "country": "MMR",
+        "scope": "core",
+        "type": "lead",
+        "summary": "Đầu mối địa danh từ danh mục ScamLens. Chưa có hồ sơ xác minh một cơ sở riêng trong bộ dữ liệu này.",
+        "position_basis": "analyst_approximation",
+        "coordinate_note": "Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.",
+        "display_radius_m": 5000,
+        "radius_note": "Vòng tròn minh họa độ khái quát, không phải khoảng tin cậy đo đạc.",
+        "claims": [
+          {
+            "id": "tach-lead",
+            "text": "Tên Tachileik xuất hiện trong danh mục đầu mối ScamLens.",
+            "date": null,
+            "topics": [
+              "scams"
+            ],
+            "source_ids": [
+              "scamlens"
+            ],
+            "status": "secondary"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.41,
+          22.17
+        ]
+      },
+      "properties": {
+        "id": "panghsang",
+        "name": "Panghsang / Pangkham",
+        "alt_names": [
+          "Pangkham",
+          "邦康"
+        ],
+        "country": "MMR",
+        "scope": "core",
+        "type": "lead",
+        "summary": "Mốc địa danh cho mục Wa State trên ScamLens; cần xác minh nguồn độc lập và phạm vi cơ sở.",
+        "position_basis": "analyst_approximation",
+        "coordinate_note": "Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.",
+        "display_radius_m": 7000,
+        "radius_note": "Vòng tròn minh họa độ khái quát, không phải khoảng tin cậy đo đạc.",
+        "claims": [
+          {
+            "id": "wa-lead",
+            "text": "ScamLens gắn mục Wa State Scam Operations với Panghsang.",
+            "date": null,
+            "topics": [
+              "scams"
+            ],
+            "source_ids": [
+              "scamlens"
+            ],
+            "status": "secondary"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.08,
+          20.27
+        ]
+      },
+      "properties": {
+        "id": "chiang-saen",
+        "name": "Chiang Saen",
+        "alt_names": [
+          "เชียงแสน"
+        ],
+        "country": "THA",
+        "scope": "core",
+        "type": "context",
+        "summary": "Điểm bối cảnh về đào tạo điều tra trực tuyến, được tách khỏi nhóm địa điểm có cáo buộc.",
+        "position_basis": "analyst_approximation",
+        "coordinate_note": "Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.",
+        "display_radius_m": 3000,
+        "radius_note": "Vòng tròn minh họa độ khái quát, không phải khoảng tin cậy đo đạc.",
+        "claims": [
+          {
+            "id": "chiang-rso",
+            "text": "RSO tổ chức hội thảo OSINT 27–30/05/2025 tại Chiang Saen.",
+            "date": "2025-05-30",
+            "topics": [
+              "methods",
+              "context"
+            ],
+            "source_ids": [
+              "rso-2025"
+            ],
+            "status": "context"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.76,
+          23.69
+        ]
+      },
+      "properties": {
+        "id": "laukkai",
+        "name": "Laukkai / Kokang",
+        "alt_names": [
+          "Laukkai Central",
+          "老街"
+        ],
+        "country": "MMR",
+        "scope": "regional",
+        "type": "lead",
+        "summary": "Đầu mối mở rộng ở bắc Shan; không nằm tại điểm giao ba nước. Nhãn vận hành chưa được nhập như sự kiện.",
+        "position_basis": "analyst_approximation",
+        "coordinate_note": "Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.",
+        "display_radius_m": 5000,
+        "radius_note": "Vòng tròn minh họa độ khái quát, không phải khoảng tin cậy đo đạc.",
+        "claims": [
+          {
+            "id": "laukkai-lead",
+            "text": "ScamLens có mục Laukkai Central, cần đối chiếu báo cáo gốc trước khi sử dụng.",
+            "date": null,
+            "topics": [
+              "scams"
+            ],
+            "source_ids": [
+              "scamlens"
+            ],
+            "status": "secondary"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.55,
+          16.79
+        ]
+      },
+      "properties": {
+        "id": "shwe-kokko",
+        "name": "Shwe Kokko",
+        "alt_names": [
+          "Shwe Kokko Yatai",
+          "ရွှေကုက္ကို"
+        ],
+        "country": "MMR",
+        "scope": "regional",
+        "type": "documented",
+        "summary": "Hành lang Myanmar–Thái Lan mở rộng. Tách rõ khỏi Tam giác vàng khi phân tích không gian.",
+        "position_basis": "analyst_approximation",
+        "coordinate_note": "Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.",
+        "display_radius_m": 3000,
+        "radius_note": "Vòng tròn minh họa độ khái quát, không phải khoảng tin cậy đo đạc.",
+        "claims": [
+          {
+            "id": "shwe-ofac",
+            "text": "Thông báo OFAC năm 2025 xác định Shwe Kokko là địa bàn trụ sở của KNA.",
+            "date": "2025-05-05",
+            "topics": [
+              "scams",
+              "trafficking",
+              "sanctions"
+            ],
+            "source_ids": [
+              "treasury-2025"
+            ],
+            "status": "attributed"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.52,
+          10.63
+        ]
+      },
+      "properties": {
+        "id": "sihanoukville",
+        "name": "Sihanoukville",
+        "alt_names": [
+          "Preah Sihanouk",
+          "西港"
+        ],
+        "country": "KHM",
+        "scope": "regional",
+        "type": "lead",
+        "summary": "Mốc thành phố trong phạm vi tham chiếu Đông Nam Á; không phải Tam giác vàng và không chỉ ra toàn bộ thành phố là cơ sở lừa đảo.",
+        "position_basis": "analyst_approximation",
+        "coordinate_note": "Mốc địa danh biên tập gần đúng, chưa xác minh tọa độ cơ sở hay ranh giới.",
+        "display_radius_m": 8000,
+        "radius_note": "Vòng tròn minh họa độ khái quát, không phải khoảng tin cậy đo đạc.",
+        "claims": [
+          {
+            "id": "sihanouk-lead",
+            "text": "ScamLens liệt kê các mục ở Sihanoukville; bản đồ này chỉ dùng mốc địa danh để tra cứu nguồn.",
+            "date": null,
+            "topics": [
+              "scams"
+            ],
+            "source_ids": [
+              "scamlens"
+            ],
+            "status": "secondary"
+          }
+        ]
+      }
+    }
+  ]
+}

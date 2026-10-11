@@ -1,0 +1,35 @@
+{
+  "title": "Scamland · Golden Triangle OSINT Atlas",
+  "version": "1.0.0",
+  "updated": "2026-10-11",
+  "author": "Long Ngo",
+  "copyright": "Vietflexmap 2026",
+  "crs": "EPSG:4326",
+  "extent": [
+    97.0,
+    9.0,
+    105.0,
+    25.0
+  ],
+  "code_license": "MIT",
+  "data_note": "Mô tả biên tập dựa trên nguồn công khai; vị trí chỉ báo, không phải cơ sở dữ liệu đầy đủ hay kết luận pháp lý.",
+  "coordinate_policy": "Mốc biên tập theo địa danh; không có tọa độ cơ sở/ranh giới đã kiểm định. display_radius_m chỉ là vòng minh họa.",
+  "topics": {
+    "scams": "Lừa đảo mạng",
+    "trafficking": "Buôn người",
+    "finance": "Tài chính / rửa tiền",
+    "drugs": "Ma túy",
+    "wildlife": "Động vật hoang dã",
+    "methods": "Phương pháp OSINT",
+    "context": "Bối cảnh địa lý",
+    "sanctions": "Thông báo trừng phạt",
+    "data": "Dữ liệu mở",
+    "imagery": "Ảnh lịch sử"
+  },
+  "countries": {
+    "LAO": "Lào",
+    "MMR": "Myanmar",
+    "THA": "Thái Lan",
+    "KHM": "Campuchia"
+  }
+}

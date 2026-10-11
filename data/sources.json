@@ -1,0 +1,364 @@
+[
+  {
+    "id": "treasury-2018",
+    "title": "Thông báo OFAC về Zhao Wei TCO",
+    "publisher": "U.S. Treasury / OFAC",
+    "category": "official",
+    "url": "https://home.treasury.gov/news/press-releases/sm0272",
+    "summary": "Thông báo ngày 30/01/2018 mô tả mạng lưới Zhao Wei, Kings Romans và hoạt động tại GTSEZ.",
+    "published": "2018-01-30",
+    "accessed": "2026-10-11",
+    "limitations": "Thông báo lịch sử về biện pháp trừng phạt; không xác nhận tình trạng SDN tại thời điểm hiện tại.",
+    "tags": [
+      "sanctions",
+      "finance",
+      "trafficking",
+      "drugs",
+      "wildlife"
+    ],
+    "verification": "retrieved",
+    "license": "Theo điều khoản của nhà xuất bản; chỉ lưu mô tả biên tập và liên kết"
+  },
+  {
+    "id": "treasury-2025",
+    "title": "Thông báo OFAC về Karen National Army",
+    "publisher": "U.S. Treasury / OFAC",
+    "category": "official",
+    "url": "https://home.treasury.gov/news/press-releases/sb0129",
+    "summary": "Thông báo ngày 05/05/2025 liên hệ KNA, Saw Chit Thu và Shwe Kokko với lừa đảo mạng và buôn người.",
+    "published": "2025-05-05",
+    "accessed": "2026-10-11",
+    "limitations": "Shwe Kokko thuộc hành lang Myanmar–Thái Lan mở rộng, nằm ngoài lõi Tam giác vàng.",
+    "tags": [
+      "sanctions",
+      "scams",
+      "trafficking"
+    ],
+    "verification": "retrieved",
+    "license": "Theo điều khoản của nhà xuất bản; chỉ lưu mô tả biên tập và liên kết"
+  },
+  {
+    "id": "gijn-intro",
+    "title": "GIJN · Tổng quan Tam giác vàng",
+    "publisher": "GIJN / Bertil Lintner",
+    "category": "journalism",
+    "url": "https://gijn.org/resource/guide-to-investigating-organized-crime-in-the-golden-triangle-introduction/",
+    "summary": "Bối cảnh lịch sử và địa lý cùng lộ trình điều tra tội phạm có tổ chức.",
+    "published": "2022-11-28",
+    "accessed": "2026-10-11",
+    "limitations": "Hướng dẫn nghiệp vụ; các mô tả phản ánh thời điểm công bố.",
+    "tags": [
+      "context",
+      "methods"
+    ],
+    "verification": "retrieved",
+    "license": "Theo điều khoản của nhà xuất bản; chỉ lưu mô tả biên tập và liên kết"
+  },
+  {
+    "id": "gijn-1",
+    "title": "GIJN · Chương 1: Ma túy",
+    "publisher": "GIJN / Bertil Lintner",
+    "category": "journalism",
+    "url": "https://gijn.org/resource/guide-to-investigating-organized-crime-in-the-golden-triangle-chapter-1-drug-trafficking/",
+    "summary": "Hướng dẫn tìm nguồn, đối chiếu chứng cứ và phát triển câu hỏi điều tra về ma túy.",
+    "published": "2022-11-28",
+    "accessed": "2026-10-11",
+    "limitations": "Không suy diễn mức độ phạm tội từ việc xuất hiện trên bản đồ. Các chương được diễn giải ngắn, không sao chép bài gốc.",
+    "tags": [
+      "drugs"
+    ],
+    "verification": "retrieved",
+    "license": "Theo điều khoản của nhà xuất bản; chỉ lưu mô tả biên tập và liên kết"
+  },
+  {
+    "id": "gijn-2",
+    "title": "GIJN · Chương 2: Các quan hệ bảo trợ",
+    "publisher": "GIJN / Bertil Lintner",
+    "category": "journalism",
+    "url": "https://gijn.org/resource/guide-to-investigating-organized-crime-in-the-golden-triangle-chapter-2-official-complicity-in-drug-trafficking/",
+    "summary": "Hướng dẫn tìm nguồn, đối chiếu chứng cứ và phát triển câu hỏi điều tra về các quan hệ bảo trợ.",
+    "published": "2022-11-28",
+    "accessed": "2026-10-11",
+    "limitations": "Không suy diễn mức độ phạm tội từ việc xuất hiện trên bản đồ. Các chương được diễn giải ngắn, không sao chép bài gốc.",
+    "tags": [
+      "drugs",
+      "methods"
+    ],
+    "verification": "linked_from_publisher",
+    "license": "Theo điều khoản của nhà xuất bản; chỉ lưu mô tả biên tập và liên kết"
+  },
+  {
+    "id": "gijn-3",
+    "title": "GIJN · Chương 3: Rửa tiền",
+    "publisher": "GIJN / Bertil Lintner",
+    "category": "journalism",
+    "url": "https://gijn.org/resource/guide-to-investigating-organized-crime-in-the-golden-triangle-chapter-3-money-laundering/",
+    "summary": "Hướng dẫn tìm nguồn, đối chiếu chứng cứ và phát triển câu hỏi điều tra về rửa tiền.",
+    "published": "2022-11-28",
+    "accessed": "2026-10-11",
+    "limitations": "Không suy diễn mức độ phạm tội từ việc xuất hiện trên bản đồ. Các chương được diễn giải ngắn, không sao chép bài gốc.",
+    "tags": [
+      "finance"
+    ],
+    "verification": "retrieved",
+    "license": "Theo điều khoản của nhà xuất bản; chỉ lưu mô tả biên tập và liên kết"
+  },
+  {
+    "id": "gijn-4",
+    "title": "GIJN · Chương 4: Buôn người",
+    "publisher": "GIJN / Bertil Lintner",
+    "category": "journalism",
+    "url": "https://gijn.org/resource/guide-to-investigating-organized-crime-in-the-golden-triangle-chapter-4-human-trafficking/",
+    "summary": "Hướng dẫn tìm nguồn, đối chiếu chứng cứ và phát triển câu hỏi điều tra về buôn người.",
+    "published": "2022-11-28",
+    "accessed": "2026-10-11",
+    "limitations": "Không suy diễn mức độ phạm tội từ việc xuất hiện trên bản đồ. Các chương được diễn giải ngắn, không sao chép bài gốc.",
+    "tags": [
+      "trafficking"
+    ],
+    "verification": "retrieved",
+    "license": "Theo điều khoản của nhà xuất bản; chỉ lưu mô tả biên tập và liên kết"
+  },
+  {
+    "id": "gijn-5",
+    "title": "GIJN · Chương 5: Buôn bán động vật hoang dã",
+    "publisher": "GIJN / Bertil Lintner",
+    "category": "journalism",
+    "url": "https://gijn.org/resource/guide-for-investigating-organized-crime-in-the-golden-triangle-chapter-5-wildlife-trafficking/",
+    "summary": "Hướng dẫn tìm nguồn, đối chiếu chứng cứ và phát triển câu hỏi điều tra về buôn bán động vật hoang dã.",
+    "published": "2022-11-28",
+    "accessed": "2026-10-11",
+    "limitations": "Không suy diễn mức độ phạm tội từ việc xuất hiện trên bản đồ. Các chương được diễn giải ngắn, không sao chép bài gốc.",
+    "tags": [
+      "wildlife"
+    ],
+    "verification": "retrieved",
+    "license": "Theo điều khoản của nhà xuất bản; chỉ lưu mô tả biên tập và liên kết"
+  },
+  {
+    "id": "gijn-6",
+    "title": "GIJN · Chương 6: Hoạt động phạm pháp khác",
+    "publisher": "GIJN / Bertil Lintner",
+    "category": "journalism",
+    "url": "https://gijn.org/resource/guide-to-investigating-organized-crime-in-the-golden-triangle-chapter-6-other-criminal-activity/",
+    "summary": "Hướng dẫn tìm nguồn, đối chiếu chứng cứ và phát triển câu hỏi điều tra về hoạt động phạm pháp khác.",
+    "published": "2022-11-28",
+    "accessed": "2026-10-11",
+    "limitations": "Không suy diễn mức độ phạm tội từ việc xuất hiện trên bản đồ. Các chương được diễn giải ngắn, không sao chép bài gốc.",
+    "tags": [
+      "scams"
+    ],
+    "verification": "linked_from_publisher",
+    "license": "Theo điều khoản của nhà xuất bản; chỉ lưu mô tả biên tập và liên kết"
+  },
+  {
+    "id": "ohchr-2023",
+    "title": "Lừa đảo trực tuyến và cưỡng bức phạm tội",
+    "publisher": "OHCHR South-East Asia",
+    "category": "official",
+    "url": "https://www.bangkok.ohchr.org/reports/online-scam-operations-and-trafficking-forced-criminality-southeast-asia-recommendations",
+    "summary": "Khung nhân quyền cho việc nhận diện buôn người và lao động bị ép thực hiện lừa đảo.",
+    "published": "2023-08-28",
+    "accessed": "2026-10-11",
+    "limitations": "Người bị ép lừa đảo cũng có thể là nạn nhân của buôn người; không đồng nhất hai nhóm.",
+    "tags": [
+      "trafficking",
+      "scams",
+      "methods"
+    ],
+    "verification": "retrieved",
+    "license": "Theo điều khoản của nhà xuất bản; chỉ lưu mô tả biên tập và liên kết"
+  },
+  {
+    "id": "ohchr-2026",
+    "title": "A Wicked Problem · Giải pháp dựa trên nhân quyền",
+    "publisher": "OHCHR South-East Asia",
+    "category": "official",
+    "url": "https://bangkok.ohchr.org/reports/wicked-problem-seeking-human-rights-based-solutions-trafficking-cyber-scam-operations",
+    "summary": "Báo cáo năm 2026 tiếp tục xem xét buôn người vào hoạt động lừa đảo trong khu vực.",
+    "published": "2026-02-20",
+    "accessed": "2026-10-11",
+    "limitations": "Tài liệu chính sách khu vực, không phải cơ sở xác định ranh giới từng cơ sở.",
+    "tags": [
+      "trafficking",
+      "scams",
+      "methods"
+    ],
+    "verification": "retrieved",
+    "license": "Theo điều khoản của nhà xuất bản; chỉ lưu mô tả biên tập và liên kết"
+  },
+  {
+    "id": "gitoc-2025",
+    "title": "Compound crime · Cyber scam operations",
+    "publisher": "Global Initiative Against Transnational Organized Crime",
+    "category": "research",
+    "url": "https://globalinitiative.net/analysis/compound-crime-cyber-scam-operations-in-southeast-asia/",
+    "summary": "Nghiên cứu cơ chế vận hành các cơ sở lừa đảo và môi trường kinh tế, chính trị liên quan tại Đông Nam Á.",
+    "published": "2025-05-29",
+    "accessed": "2026-10-11",
+    "limitations": "Nhận định nghiên cứu cần đối chiếu với tài liệu gốc khi dùng cho từng trường hợp.",
+    "tags": [
+      "scams",
+      "finance",
+      "trafficking"
+    ],
+    "verification": "retrieved",
+    "license": "Theo điều khoản của nhà xuất bản; chỉ lưu mô tả biên tập và liên kết"
+  },
+  {
+    "id": "rso-2025",
+    "title": "Đào tạo OSINT tại Chiang Saen",
+    "publisher": "Bali Process / Regional Support Office",
+    "category": "official",
+    "url": "https://rso.baliprocess.net/rso-workshop-gathers-investigators-from-16-countries-in-the-golden-triangle-to-strengthen-online-investigative-capabilities-and-interregional-networks-to-disrupt-cyber-scam-centre-operations/",
+    "summary": "Hội thảo 27–30/05/2025 tại Chiang Saen có 31 người tham gia từ 16 quốc gia.",
+    "published": "2025-05-30",
+    "accessed": "2026-10-11",
+    "limitations": "Chiang Saen là địa điểm đào tạo trong hồ sơ này, không phải địa điểm bị cáo buộc phạm tội.",
+    "tags": [
+      "methods",
+      "context"
+    ],
+    "verification": "retrieved",
+    "license": "Theo điều khoản của nhà xuất bản; chỉ lưu mô tả biên tập và liên kết"
+  },
+  {
+    "id": "interpol-2025",
+    "title": "Sự mở rộng toàn cầu của scam centres",
+    "publisher": "INTERPOL",
+    "category": "official",
+    "url": "https://www.interpol.int/News-and-Events/News/2025/INTERPOL-releases-new-information-on-globalization-of-scam-centres",
+    "summary": "Cập nhật công bố 30/06/2025 ghi nhận nạn nhân bị buôn từ 66 quốc gia tính đến tháng 03/2025.",
+    "published": "2025-06-30",
+    "accessed": "2026-10-11",
+    "limitations": "Số liệu toàn cầu và có kỳ tham chiếu; không phải số liệu riêng cho Tam giác vàng.",
+    "tags": [
+      "scams",
+      "trafficking"
+    ],
+    "verification": "retrieved",
+    "license": "Theo điều khoản của nhà xuất bản; chỉ lưu mô tả biên tập và liên kết"
+  },
+  {
+    "id": "scamlens",
+    "title": "ScamLens · Scam Center Tracker",
+    "publisher": "ScamLens",
+    "category": "lead",
+    "url": "https://scamlens.org/en/intelligence/scam-centers",
+    "summary": "Danh mục đầu mối có mục Golden Triangle SEZ, Mong La, Tachileik và một số địa danh khác.",
+    "published": null,
+    "accessed": "2026-10-11",
+    "limitations": "Nhà xuất bản ghi rõ vị trí gần đúng và chưa được họ xác minh độc lập. Không nhập nhãn Active thành trạng thái đã xác nhận.",
+    "tags": [
+      "scams",
+      "finance",
+      "trafficking"
+    ],
+    "verification": "retrieved",
+    "license": "ScamLens giữ bản quyền; không sao chép toàn bộ dữ liệu hay giao diện"
+  },
+  {
+    "id": "odm",
+    "title": "Open Development Mekong · DataHub",
+    "publisher": "Open Development Mekong",
+    "category": "data",
+    "url": "https://data.opendevelopmentmekong.net/dataset/",
+    "summary": "Kho dữ liệu, thư viện và văn bản về Mekong; có nhóm khu kinh tế đặc biệt, đất đai và phát triển.",
+    "published": null,
+    "accessed": "2026-10-11",
+    "limitations": "Tổng số bản ghi thay đổi; nhóm dataset, library và laws có phạm vi khác nhau. Giấy phép phải kiểm tra theo từng tài nguyên.",
+    "tags": [
+      "context",
+      "data",
+      "methods"
+    ],
+    "verification": "retrieved",
+    "license": "Theo điều khoản của nhà xuất bản; chỉ lưu mô tả biên tập và liên kết"
+  },
+  {
+    "id": "unodc-dmp",
+    "title": "UNODC · Drugs Monitoring Platform",
+    "publisher": "UNODC",
+    "category": "data",
+    "url": "https://dmpone.unodc.org/",
+    "summary": "Nền tảng phân tích dữ liệu thu giữ ma túy và xu hướng buôn bán với nhiều mức truy cập.",
+    "published": null,
+    "accessed": "2026-10-11",
+    "limitations": "Một số chức năng hoặc dữ liệu yêu cầu được cấp quyền. Không tự động tải các tập dữ liệu có hạn chế.",
+    "tags": [
+      "drugs",
+      "data"
+    ],
+    "verification": "retrieved",
+    "license": "Theo điều khoản của nhà xuất bản; chỉ lưu mô tả biên tập và liên kết"
+  },
+  {
+    "id": "sii",
+    "title": "SII · The Scam-Call-Center Economy",
+    "publisher": "Sovereign Integrity Institute",
+    "category": "lead",
+    "url": "https://siistrategic.com/the-scam-call-center-economy-of-the-golden-triangle-extraction-human-trafficking-and-the-architecture-of-a-transnational-criminal-system/",
+    "summary": "Bài phân tích độc lập về GTSEZ và nền kinh tế lừa đảo xuyên quốc gia.",
+    "published": "2026-04-16",
+    "accessed": "2026-10-11",
+    "limitations": "Đã tìm thấy bài và website. Chưa kiểm chứng độc lập số 120 bài, kho IPFS, CID hay toàn bộ chứng cứ của kho.",
+    "tags": [
+      "scams",
+      "finance",
+      "trafficking"
+    ],
+    "verification": "retrieved",
+    "license": "Theo điều khoản của nhà xuất bản; chỉ lưu mô tả biên tập và liên kết"
+  },
+  {
+    "id": "crater-paper",
+    "title": "Nghiên cứu hố bom từ ảnh KH-9",
+    "publisher": "Barthelme và cộng sự / Science of Remote Sensing",
+    "category": "research",
+    "url": "https://doi.org/10.1016/j.srs.2024.100143",
+    "summary": "Nghiên cứu phát hiện hố bom lịch sử; mã nguồn và dữ liệu được công bố để tái lập.",
+    "published": null,
+    "accessed": "2026-10-11",
+    "limitations": "Đây không phải mô hình nhận diện cơ sở lừa đảo. Phạm vi tri-border của nghiên cứu không được đồng nhất với Tam giác vàng.",
+    "tags": [
+      "imagery",
+      "methods"
+    ],
+    "verification": "retrieved",
+    "license": "Theo điều khoản của nhà xuất bản; chỉ lưu mô tả biên tập và liên kết"
+  },
+  {
+    "id": "natural-earth",
+    "title": "Natural Earth · Nền địa lý tổng quát",
+    "publisher": "Natural Earth",
+    "category": "data",
+    "url": "https://github.com/nvkelso/natural-earth-vector/tree/ca96624a56bd078437bca8184e78163e5039ad19/geojson",
+    "summary": "Ranh giới quốc gia và sông ở tỷ lệ 1:110 triệu, dùng làm bối cảnh khi không có kết nối mạng.",
+    "published": null,
+    "accessed": "2026-10-11",
+    "limitations": "Biên giới tổng quát phục vụ hiển thị; không dùng làm ranh giới pháp lý hoặc đo diện tích.",
+    "tags": [
+      "context",
+      "data"
+    ],
+    "verification": "retrieved",
+    "license": "Public domain"
+  },
+  {
+    "id": "user-mymaps",
+    "title": "Bản đồ gốc · News about Golden Triangle SEZ in Laos",
+    "publisher": "Bản đồ Google My Maps công khai do người dùng cung cấp",
+    "category": "data",
+    "url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+    "summary": "Snapshot tải ngày 11/10/2026 gồm 87 điểm địa danh. Giữ nguyên tên, tọa độ và mô tả trong KML/KMZ cập nhật.",
+    "published": null,
+    "accessed": "2026-10-11",
+    "limitations": "Tọa độ và liên kết tin trong bản đồ gốc chưa được thẩm định độc lập; sự hiện diện của địa danh không xác nhận hành vi phạm tội.",
+    "tags": [
+      "data",
+      "context"
+    ],
+    "verification": "retrieved",
+    "license": "Bản đồ do người dùng cung cấp; giữ nguồn gốc, các liên kết và điều khoản riêng của nguồn."
+  }
+]

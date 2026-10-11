@@ -1,0 +1,13 @@
+{
+  "name": "scamland-osint-atlas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Golden Triangle OSINT WebGIS with retained My Maps geometry and Vietflex",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/core.test.cjs && python3 -m unittest discover -s tests -p 'test_*.py'",
+    "check": "node --check assets/app.js && node --check assets/core.js && node --check vendor/vietflex.js && npm run build && npm test"
+  },
+  "engines": {"node": ">=22"}
+}

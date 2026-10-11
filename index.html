@@ -3,329 +3,78 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101621">
-  <meta name="description" content="Scamland OSINT WebGIS: bản đồ nghiên cứu dữ liệu công khai tại khu vực Tam giác Vàng. Địa điểm không đồng nghĩa với cáo buộc.">
-  <title>Scamland | Golden Triangle OSINT WebGIS</title>
-  <link rel="stylesheet" href="./vendor/vietflex.css">
-  <script defer src="./vendor/vietflex.js"></script>
-  <style>
-    :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color-scheme:dark;--bg:#0b1018;--panel:#131b27;--panel2:#1b2634;--line:#2e3949;--text:#f3f7fa;--muted:#a2b1c3;--accent:#f55e65;--cyan:#53d7df;--gold:#f3b95e}
-    *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text)}
-    button,input,select{font:inherit}button{cursor:pointer}a{color:#92d9f6}
-    .shell{height:100dvh;min-height:620px;display:grid;grid-template-columns:345px minmax(0,1fr);grid-template-rows:72px minmax(0,1fr) 34px}
-    header{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 24px;border-bottom:1px solid var(--line);background:#101823}
-    .brand{display:flex;align-items:center;gap:13px;min-width:0}.brandmark{height:42px;width:42px;border:1px solid #fd677c66;border-radius:13px;background:linear-gradient(135deg,#4a2330,#1b2738);display:grid;place-items:center;color:#ff8c93;font-weight:900;font-size:21px}
-    h1{font-size:17px;letter-spacing:.045em;margin:0}.sub{font-size:11px;color:var(--muted);margin-top:4px}
-    .toplinks{display:flex;align-items:center;gap:12px;font-size:12px;flex-wrap:wrap;justify-content:flex-end}
-    .tag{padding:7px 10px;border-radius:999px;border:1px solid #45675c;color:#a9e6c8;background:#192e2c;font-size:11px;white-space:nowrap}
-    aside{overflow:auto;padding:19px 17px;background:var(--panel);border-right:1px solid var(--line)}
-    .eyebrow{font-size:10px;font-weight:800;letter-spacing:.19em;text-transform:uppercase;color:var(--cyan);margin-bottom:9px}
-    h2{font-size:20px;line-height:1.3;margin:0 0 10px}
-    .intro{font-size:12px;line-height:1.7;color:var(--muted);margin:0 0 18px}
-    .section{margin:19px 0;padding-top:17px;border-top:1px solid var(--line)}
-    .section h3{font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin:0 0 12px;color:#dfebf4}
-    .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
-    .stat{padding:12px 9px;background:var(--panel2);border:1px solid var(--line);border-radius:12px}
-    .num{font-size:22px;font-weight:800;line-height:1.2;font-variant-numeric:tabular-nums}
-    .stat-label{font-size:10px;color:var(--muted);margin-top:6px}
-    .controls{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-    button,.button{background:#202c3c;border:1px solid #41516a;color:var(--text);border-radius:10px;padding:10px 11px;font-size:12px;font-weight:700}
-    button:hover,.button:hover{border-color:var(--cyan);background:#263b4c}
-    button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
-    button.primary,.button.primary{background:#a72b3e;border-color:#e65b68;color:#fff}
-    button.active{border-color:#67d7df;background:#24434a;color:#e7feff}
-    .full{width:100%;margin-top:8px;text-align:center;display:block}
-    .muted{font-size:11px;color:var(--muted);line-height:1.65}
-    .field{width:100%;height:39px;background:#101824;border:1px solid var(--line);border-radius:9px;padding:0 11px;color:var(--text);margin:3px 0 10px}
-    .source{padding:11px;border:1px solid var(--line);background:#172130;border-radius:11px;margin-bottom:8px}
-    .source-header{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;font-weight:750}
-    .source small{display:block;margin:6px 0 0;color:var(--muted);line-height:1.5}
-    .source button{padding:5px 9px;font-size:10px}
-    .item{width:100%;display:block;text-align:left;margin-bottom:6px;padding:11px;background:#182333;border:1px solid var(--line)}
-    .item strong{display:block;font-size:12px;margin-bottom:5px}.item span{font-size:10px;color:var(--muted)}
-    .notice{padding:12px;background:#29231d;border:1px solid #66513c;color:#f1d09d;border-radius:11px;font-size:11px;line-height:1.6}
-    .map-wrap{position:relative;overflow:hidden;background:#0e1621}
-    #map{height:100%;width:100%;z-index:1}
-    .toolbar{position:absolute;top:15px;left:15px;right:15px;z-index:500;display:flex;flex-wrap:wrap;align-items:center;gap:8px;pointer-events:none}
-    .toolbar>*{pointer-events:auto}
-    .map-chip{background:#111a26eb;border:1px solid #496073;border-radius:10px;color:#f3f8fa;padding:9px 12px;font-size:11px;backdrop-filter:blur(14px)}
-    .grow{flex:1}
-    .map-foot{position:absolute;bottom:24px;left:15px;z-index:500;max-width:min(510px,calc(100% - 30px));pointer-events:none}
-    .map-foot>*{pointer-events:auto}
-    .legend{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:10px}
-    .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--gold);margin-right:5px}
-    .dot.cyan{background:var(--cyan)}
-    .map-error{display:none;position:absolute;top:66px;right:14px;z-index:650;background:#6b2830;border:1px solid #fd7d87;color:#fff;padding:10px 13px;border-radius:9px;font-size:12px;max-width:370px}
-    .leaflet-container{background:#111a25;font-family:inherit}
-    .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#182536;color:#f0f7fc}
-    .leaflet-popup-content{line-height:1.5;min-width:170px}
-    .popup-title{font-size:14px;font-weight:800;margin-bottom:5px}
-    .popup-note{font-size:11px;color:#bfccd9;margin:8px 0}
-    .leaflet-control-attribution{background:#101824dc!important;color:#c7d4df!important}
-    .leaflet-control-zoom a{background:#182638!important;color:#fff!important}
-    footer{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding:5px 17px;font-size:10px;color:var(--muted);background:#0f1721}
-    #fileInput{display:none}
-    @media(max-width:850px){.shell{height:auto;min-height:100dvh;display:flex;flex-direction:column}header{padding:12px 14px}.toplinks .tag{display:none}aside{order:2;overflow:visible;border-right:0;border-top:1px solid var(--line)}.map-wrap{order:1;height:57dvh;min-height:390px}footer{order:3}.toolbar{top:8px;left:8px;right:8px}.map-chip{padding:8px;font-size:10px}}
-    @media(max-width:460px){header h1{font-size:14px}.toplinks{gap:7px}.toplinks a{font-size:10px}.map-foot{bottom:26px;left:8px}.stat{padding:9px 7px}.num{font-size:20px}}
-    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
-  </style>
+  <meta name="description" content="Scamland — WebGIS OSINT Tam giác vàng. Tra cứu địa danh, đọc nguồn gốc, kiểm tra quan hệ và mốc thời gian từ tài liệu công khai.">
+  <meta name="theme-color" content="#0a0f17">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://tile.openstreetmap.org https://mt0.google.com https://mt1.google.com https://mt2.google.com https://mt3.google.com; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Scamland · Tam giác vàng OSINT Atlas</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/vietflex.css">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<div class="shell">
-  <header>
-    <div class="brand"><div class="brandmark" aria-hidden="true">S</div><div><h1>SCAMLAND <span style="color:#f87482">/ OSINT WebGIS</span></h1><div class="sub">GOLDEN TRIANGLE · BOKEO, LAOS · VIETFLEX ENGINE</div></div></div>
-    <nav class="toplinks" aria-label="Liên kết chính"><span class="tag">● Open-source intelligence</span><a href="https://github.com/Base27-CVNSS/Scamland" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav>
+  <a class="skip" href="#mainContent">Đến nội dung</a>
+  <header class="header">
+    <a class="brand" href="#view=map" aria-label="Scamland · về bản đồ"><svg viewBox="0 0 42 42" aria-hidden="true"><path d="M21 5 38 35H4Z"/><path d="m21 16 11 19M15 25h18"/></svg><span>SCAM<span class="gold">LAND</span><small>GOLDEN TRIANGLE · OSINT ATLAS</small></span></a>
+    <nav class="nav" aria-label="Chế độ phân tích">
+      <button class="nav-btn active" data-view="map" aria-pressed="true"><span data-icon="map"></span>Bản đồ</button>
+      <button class="nav-btn" data-view="graph" aria-pressed="false"><span data-icon="network"></span>Quan hệ</button>
+      <button class="nav-btn" data-view="timeline" aria-pressed="false"><span data-icon="clock"></span>Diễn biến</button>
+      <button class="nav-btn" data-view="sources" aria-pressed="false"><span data-icon="book"></span>Nguồn & công cụ</button>
+    </nav>
+    <div class="header-actions"><button class="icon-btn" id="methodBtn" title="Phương pháp và giới hạn" aria-label="Phương pháp và giới hạn"><span data-icon="info"></span></button><a class="icon-btn" href="https://github.com/Base27-CVNSS/Scamland" target="_blank" rel="noopener noreferrer" title="Mã nguồn GitHub" aria-label="Mã nguồn GitHub"><span data-icon="code"></span></a><button class="btn primary" id="exportBtn"><span data-icon="download"></span><span>Xuất dữ liệu</span></button></div>
   </header>
-  <aside>
-    <div class="eyebrow">GEOSPATIAL RESEARCH PLATFORM</div>
-    <h2>Địa lý dữ liệu mở<br>khu vực Tam giác Vàng</h2>
-    <p class="intro">Theo dõi địa điểm, tài liệu và lớp dữ liệu địa lý từ nguồn công khai. Phân biệt rõ <strong>địa danh tham chiếu</strong>, <strong>nguồn tin</strong> và <strong>thông tin đã kiểm chứng</strong>.</p>
-    <div class="stats" aria-label="Thống kê dữ liệu">
-      <div class="stat"><div class="num" id="countFeatures">0</div><div class="stat-label">Hình học GIS</div></div>
-      <div class="stat"><div class="num" id="countLayers">0</div><div class="stat-label">Lớp dữ liệu</div></div>
-      <div class="stat"><div class="num" id="countLinks">1</div><div class="stat-label">NetworkLink</div></div>
-    </div>
-    <section class="section" aria-labelledby="source-heading">
-      <h3 id="source-heading">Nguồn dữ liệu & lớp bản đồ</h3>
-      <div id="sourceList" aria-live="polite"></div>
-      <p class="muted">KMZ đính kèm chỉ chứa liên kết Google My Maps, không có hình học nhúng. Chưa thể tự động suy ra các tọa độ từ liên kết này.</p>
-      <a class="button full" style="text-decoration:none" href="https://www.google.com/maps/d/u/0/kml?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA" target="_blank" rel="noopener noreferrer">Mở nguồn KML công khai ↗</a>
-      <a class="muted" style="display:block;margin-top:8px" href="./data/gtsez-networklink.kml" download>Tải KML nguồn đã cung cấp</a>
+  <main id="mainContent" tabindex="-1">
+    <section class="intro" aria-label="Tổng quan bộ dữ liệu">
+      <div class="intro-copy"><div class="eyebrow"><span class="mini-triangle">△</span> LÀO · MYANMAR · THÁI LAN <span class="edition">BẢN 01 / 2026</span></div><h1>Tam giác vàng<span class="muted">, nhìn từ nguồn mở.</span></h1><p>Đọc không gian. Đối chiếu nguồn. Kết nối bằng chứng.</p></div>
+      <div class="metrics"><div><strong id="metricPlaces">—</strong><span>mốc đang hiển thị</span></div><div><strong id="metricSources">20</strong><span>nguồn trong danh mục</span></div><div><strong id="metricRelations">—</strong><span>quan hệ có nguồn</span></div><div class="release"><span class="release-dot"></span><b>Hồ sơ biên tập</b><span>Đối chiếu 11.10.2026</span></div></div>
     </section>
-    <section class="section" aria-labelledby="tools-heading">
-      <h3 id="tools-heading">Công cụ không gian</h3>
-      <div class="controls">
-        <button id="goHome">⌖ Đến vùng nghiên cứu</button>
-        <button id="fitData">⊞ Xem toàn bộ dữ liệu</button>
-        <button id="importButton" class="primary">＋ Nhập dữ liệu</button>
-        <button id="exportButton">↓ Xuất GeoJSON</button>
+    <div class="workspace-toolbar"><div class="scope-control" aria-label="Phạm vi nghiên cứu"><button class="scope active" data-scope="core" aria-pressed="true">Tam giác vàng</button><button class="scope" data-scope="regional" aria-pressed="false">Đông Nam Á mở rộng</button></div><div class="toolbar-right"><span id="scopeNote">Lõi và vùng Shan lân cận</span><button class="btn subtle mobile-only" id="filterBtn"><span data-icon="filter"></span>Bộ lọc</button><button class="btn subtle" id="resetBtn"><span data-icon="reset"></span>Đặt lại</button><button class="btn subtle" id="shareBtn"><span data-icon="link"></span>Chia sẻ góc nhìn</button></div></div>
+    <section class="workspace">
+      <aside class="sidebar" id="sidebar" aria-label="Bộ lọc và địa danh">
+        <div class="side-heading"><span class="eyebrow">BỘ LỌC KHÔNG GIAN</span><button class="icon-btn mobile-only" id="closeFilters" aria-label="Đóng bộ lọc"><span data-icon="close"></span></button></div>
+        <label class="search"><span data-icon="search"></span><input id="placeSearch" placeholder="Địa danh, tên khác, nội dung…" aria-label="Tìm địa danh, tên khác, nội dung"><kbd>/</kbd></label>
+        <div class="field-row"><label>Quốc gia<select id="countryFilter"><option value="">Tất cả quốc gia</option><option value="LAO">Lào</option><option value="MMR">Myanmar</option><option value="THA">Thái Lan</option><option value="KHM">Campuchia</option></select></label></div>
+        <label class="field-label">Cấp thông tin<select id="levelFilter"><option value="all">Tất cả cấp thông tin</option><option value="official">Có nguồn chính thức</option><option value="research">Báo chí / nghiên cứu</option><option value="lead">Đầu mối cần đối chiếu</option><option value="context">Bối cảnh, đào tạo</option></select></label>
+        <div class="topic-label">CHỦ ĐỀ</div><div class="chips" id="topicChips"></div>
+        <label class="check-line"><input type="checkbox" id="bookmarksOnly">Chỉ địa danh đã lưu <span id="bookmarkCount">0</span></label>
+        <div class="list-heading"><span>Địa danh tra cứu</span><b id="placeCount">—</b></div><div id="placeList" class="place-list"></div>
+        <details class="original-map"><summary>Bản đồ gốc · <b id="originalCount">87</b> mốc</summary><p>Tọa độ giữ nguyên từ My Maps. Lớp địa danh chưa thẩm định, không áp dụng bộ lọc hồ sơ ở trên.</p><label class="search"><input id="originalSearch" placeholder="Tìm trong bản đồ gốc…" aria-label="Tìm trong 87 mốc bản đồ gốc"></label><button class="text-btn" id="fitOriginal">Xem toàn bộ lớp gốc ↗</button><div id="originalList" class="original-list"></div><a href="https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA" target="_blank" rel="noopener noreferrer">Mở Google My Maps ↗</a></details>
+        <div class="side-foot"><span data-icon="shield"></span><p>Điểm OSINT là mốc chỉ báo.<br>Lớp gốc là địa danh, không quy kết.</p><button class="text-btn" id="importBtn">Nhập GeoJSON cục bộ <span>↗</span></button><input type="file" id="importFile" accept=".geojson,.json,application/geo+json,application/json" hidden></div>
+      </aside>
+      <div class="stage">
+        <section class="view-panel map-panel" id="mapView" aria-label="Bản đồ tương tác">
+          <div id="map" aria-label="Bản đồ địa danh. Có thể dùng danh sách địa danh để truy cập bằng bàn phím."></div>
+          <div class="map-title"><span class="eyebrow">ATLAS / 01</span><h2>Tam giác vàng</h2><p id="mapSubtitle">Bối cảnh địa lý & hồ sơ công khai</p></div>
+          <div class="basemap-switch" aria-label="Chọn bản đồ nền"><button id="googleBtn" aria-pressed="false">Vietflex / Google</button><button id="atlasBtn" aria-pressed="false">Atlas</button><button id="osmBtn" class="active" aria-pressed="true">OSM</button></div>
+          <div class="map-tools"><button class="tool" id="zoomIn" aria-label="Phóng to" title="Phóng to">+</button><button class="tool" id="zoomOut" aria-label="Thu nhỏ" title="Thu nhỏ">−</button><div class="tool-divider"></div><button class="tool" id="fitBtn" aria-label="Xem toàn bộ mốc đã lọc" title="Xem toàn bộ mốc đã lọc"><span data-icon="expand"></span></button><button class="tool" id="measureBtn" aria-label="Đo khoảng cách thẳng giữa hai điểm" title="Đo khoảng cách thẳng giữa hai điểm" aria-pressed="false"><span data-icon="ruler"></span></button><button class="tool" id="layerBtn" aria-label="Tùy chọn lớp" title="Tùy chọn lớp" aria-expanded="false"><span data-icon="layers"></span></button></div>
+          <div id="layerOptions" class="layer-options" hidden><b>Lớp hiển thị</b><label><input type="checkbox" id="showOriginal" checked>Bản đồ gốc · 87 mốc</label><label><input type="checkbox" id="showContext" checked>Nền địa lý tổng quát</label><label><input type="checkbox" id="showRadii">Vòng chỉ báo độ khái quát</label><label><input type="checkbox" id="showLabels" checked>Tên địa danh</label><label><input type="checkbox" id="showLocal" checked>Điểm nhập cục bộ</label><button class="text-btn" id="clearImport">Xóa lớp nhập cục bộ</button></div>
+          <div class="map-message" id="mapMessage" hidden></div>
+          <div class="map-legend"><b>CẤP HỒ SƠ</b><span><i class="dot original"></i>87 mốc bản đồ gốc</span><span><i class="dot documented"></i>Nguồn chính thức</span><span><i class="dot reported"></i>Báo chí / nghiên cứu</span><span><i class="dot lead"></i>Đầu mối</span><span><i class="dot context"></i>Bối cảnh</span><small>Màu không biểu thị mức độ phạm tội.</small></div>
+          <div class="map-coordinates" id="mapCoords">WGS84 · EPSG:4326</div>
+        </section>
+        <section class="view-panel graph-panel" id="graphView" hidden aria-label="Mạng quan hệ có dẫn nguồn"><div class="panel-heading"><div><div class="eyebrow">EVIDENCE NETWORK / 02</div><h2>Quan hệ, có dấu vết nguồn.</h2><p>Chọn đường nối để đọc căn cứ. Kéo nút để sắp xếp.</p></div><button class="btn subtle" id="resetGraph"><span data-icon="reset"></span>Khôi phục bố cục</button></div><svg id="graphSvg" viewBox="0 0 880 570" aria-label="Đồ thị quan hệ giữa địa điểm, tổ chức, cá nhân và tài liệu"></svg><div class="graph-legend"><span>○ Cá nhân</span><span>◇ Tổ chức</span><span>▭ Địa danh</span><span>▣ Tài liệu</span><span class="muted">Nét đứt: tài liệu mô tả · nét liền: quan hệ được nguồn nêu</span></div><p class="graph-note">Đường nối là quan hệ trong tài liệu, không phải giao dịch, luồng tiền hay tuyến di chuyển.</p></section>
+        <section class="view-panel timeline-panel" id="timelineView" hidden aria-label="Dòng thời gian tài liệu"><div class="panel-heading"><div><div class="eyebrow">DOCUMENT CHRONOLOGY / 03</div><h2>Đọc diễn biến qua tài liệu.</h2><p>Mốc công bố và sự kiện được phân biệt trong từng hồ sơ.</p></div></div><div class="chart-title">Tài liệu đã công bố trong danh mục <span>Đếm tài liệu, không đo quy mô tội phạm</span></div><div id="timelineChart" class="timeline-chart" aria-label="Số tài liệu theo năm"></div><div class="timeline-feed" id="timelineFeed"></div></section>
+        <section class="view-panel sources-panel" id="sourcesView" hidden aria-label="Thư viện nguồn và công cụ"><div class="panel-heading"><div><div class="eyebrow">SOURCE LIBRARY / 04</div><h2>Đi đến nguồn gốc.</h2><p><span id="resourceSummary">Thư viện nguồn, công cụ và kiểm chứng</span></p></div></div><div class="source-tabs" aria-label="Nhóm tài nguyên"><button data-source-tab="library" class="active" aria-pressed="true">Thư viện</button><button data-source-tab="toolbox" aria-pressed="false">Mã nguồn & công cụ</button><button data-source-tab="verification" aria-pressed="false">Kiểm chứng tuyên bố</button></div><div class="source-filters" id="sourceFilters"><label class="search"><span data-icon="search"></span><input id="sourceSearch" placeholder="Tìm trong thư viện nguồn…" aria-label="Tìm trong thư viện nguồn"></label><label class="sr-only" for="sourceCategory">Loại nguồn</label><select id="sourceCategory"><option value="all">Tất cả loại nguồn</option><option value="official">Cơ quan chính thức</option><option value="journalism">Báo chí / hướng dẫn</option><option value="research">Nghiên cứu</option><option value="data">Dữ liệu & bản đồ</option><option value="lead">Đầu mối độc lập</option></select></div><div id="sourceContent" class="source-content"></div></section>
+        <div class="time-control" id="timeControl"><div class="time-top"><button id="playTimeline" class="play-button" aria-label="Chạy qua các năm" aria-pressed="false"><span data-icon="play"></span></button><div><span class="eyebrow">CỬA SỔ TÀI LIỆU</span><strong id="yearLabel">Đến 11/10/2026</strong></div><label class="check-line"><input type="checkbox" id="includeUndated" checked>Bao gồm mốc chưa có ngày</label><button class="text-btn" id="timelineOpen">Xem diễn biến ↗</button></div><label class="sr-only" for="yearSlider">Năm cuối của cửa sổ tài liệu</label><input type="range" id="yearSlider" min="2018" max="2026" value="2026" step="1"><div class="year-ticks"><span>2018</span><span>2020</span><span>2022</span><span>2024</span><span>2026</span></div><div class="time-caption" id="timeCaption">Tài liệu được công bố đến ngày đối chiếu, không phải trạng thái hoạt động trực tiếp.</div></div>
       </div>
-      <input id="fileInput" type="file" accept=".geojson,.json,.kml,.kmz,application/vnd.google-earth.kml+xml,application/vnd.google-earth.kmz" multiple>
-      <p class="muted">Nhập GeoJSON, KML hoặc KMZ (tối đa 10 MB/tệp). Xử lý cục bộ trên trình duyệt, không tải dữ liệu lên máy chủ.</p>
+      <aside class="detail" id="detail" aria-label="Hồ sơ và bằng chứng"><div class="detail-toolbar"><span class="eyebrow">HỒ SƠ NGUỒN MỞ</span><button class="icon-btn" id="closeDetail" aria-label="Đóng hồ sơ"><span data-icon="close"></span></button></div><div id="detailContent" class="detail-content"></div></aside>
     </section>
-    <section class="section" aria-labelledby="objects-heading">
-      <h3 id="objects-heading">Đối tượng trên bản đồ</h3>
-      <label for="search" class="muted">Tìm theo địa danh hoặc thuộc tính</label>
-      <input id="search" class="field" placeholder="Ví dụ: Golden Triangle SEZ" autocomplete="off">
-      <div id="featureList"></div>
-    </section>
-    <section class="section">
-      <h3>Quy tắc xác minh</h3>
-      <div class="notice">Dữ liệu nghiên cứu OSINT ≠ kết luận về hoạt động phạm pháp. Không quy kết một cá nhân, doanh nghiệp hay công trình từ vị trí địa lý đơn lẻ. Đối chiếu nguồn gốc, thời điểm và bằng chứng độc lập trước khi công bố.</div>
-    </section>
-  </aside>
-  <main class="map-wrap" aria-label="Bản đồ khu vực Tam giác Vàng">
-    <div id="map"></div>
-    <div class="toolbar">
-      <div class="map-chip">◉ BOKEO · TON PHEUNG</div>
-      <div class="grow"></div>
-      <button id="googleBase" aria-pressed="false">Google · legacy</button>
-      <button id="osmBase" class="active" aria-pressed="true">OpenStreetMap</button>
-    </div>
-    <div id="mapError" class="map-error" role="alert"></div>
-    <div class="map-foot">
-      <div class="map-chip legend"><span><i class="dot"></i>Địa danh tham chiếu</span><span><i class="dot cyan"></i>Dữ liệu người dùng nhập</span><span id="mouseCoords">WGS84 · EPSG:4326</span></div>
-    </div>
+    <footer class="footer"><span><b>SCAMLAND</b> <span class="muted">/</span> Nguồn công khai · Hồ sơ biên tập</span><span>Long Ngo 2026 · Vietflexmap · <a href="LICENSE" target="_blank" rel="noopener">MIT (mã nguồn)</a></span></footer>
   </main>
-  <footer><span>Dữ liệu nghiên cứu công khai · Không phải kết luận điều tra</span><span>Vietflexmap · Long Ngo 2026 · MIT (mã ứng dụng)</span></footer>
-</div>
-<script>
-(function(){
-"use strict";
-const HOME=[20.34025,100.10524];
-const $=id=>document.getElementById(id);
-const referenceFeature={type:"Feature",geometry:{type:"Point",coordinates:[HOME[1],HOME[0]]},properties:{
-  name:"Golden Triangle Special Economic Zone",category:"reference",
-  description:"Địa danh tham chiếu tại Ton Pheung, tỉnh Bokeo, Lào. Tọa độ trung tâm xấp xỉ; không phải ranh giới pháp lý hay vị trí một cơ sở bị cáo buộc.",
-  source:"Wikidata Q24896442",url:"https://www.wikidata.org/wiki/Q24896442"}};
-const datasets=[{id:"reference",name:"Địa danh đã định vị",kind:"reference",visible:true,features:[referenceFeature]}];
-let map,google,osm;
-const layers=new Map();
-function error(message){$("mapError").textContent=message;$("mapError").style.display="block";}
-function status(message){$("mapError").textContent=message;$("mapError").style.display="block";}
-function hideStatus(){$("mapError").style.display="none";}
-function safeText(v){return v==null?"":String(v).slice(0,1200);}
-function safeLink(url){
- try{const parsed=new URL(url);return parsed.protocol==="https:"?parsed.href:null;}catch(e){return null;}
-}
-function pName(f){return safeText((f.properties||{}).name||(f.properties||{}).title||(f.properties||{}).Name||"Không có tên");}
-function allFeatures(){return datasets.flatMap(d=>d.features);}
-function pointBounds(features){
- let minLat=90,maxLat=-90,minLng=180,maxLng=-180,n=0;
- function scan(c){if(!Array.isArray(c))return;if(typeof c[0]==="number"&&typeof c[1]==="number"){if(Number.isFinite(c[0])&&Number.isFinite(c[1])&&Math.abs(c[0])<=180&&Math.abs(c[1])<=90){minLng=Math.min(minLng,c[0]);maxLng=Math.max(maxLng,c[0]);minLat=Math.min(minLat,c[1]);maxLat=Math.max(maxLat,c[1]);n++;}}else c.forEach(scan);}
- features.forEach(f=>f.geometry&&scan(f.geometry.coordinates));
- return n?[[minLat,minLng],[maxLat,maxLng]]:null;
-}
-function goFeature(f){
- const b=pointBounds([f]);if(!b)return;
- const same=Math.abs(b[0][0]-b[1][0])<.00001&&Math.abs(b[0][1]-b[1][1])<.00001;
- if(same)map.setView(b[0],Math.max(14,map.getZoom()));else map.fitBounds(b,{padding:[45,45],maxZoom:16});
-}
-function popupNode(f){
- const p=f.properties||{},wrap=document.createElement("div");
- const title=document.createElement("div");title.className="popup-title";title.textContent=pName(f);wrap.appendChild(title);
- const descr=document.createElement("div");descr.className="popup-note";descr.textContent=safeText(p.description||"Dữ liệu địa lý do người dùng cung cấp; chưa được hệ thống xác minh.");wrap.appendChild(descr);
- if(p.source){const src=document.createElement("div");src.className="popup-note";src.textContent="Nguồn: "+safeText(p.source);wrap.appendChild(src);}
- const href=safeLink(p.url);if(href){const link=document.createElement("a");link.href=href;link.target="_blank";link.rel="noopener noreferrer";link.textContent="Mở nguồn ↗";wrap.appendChild(link);}
- return wrap;
-}
-function styleFor(kind){return kind==="reference"?{color:"#eab65a",fillColor:"#eab65a",weight:2,fillOpacity:.25,opacity:.95}:{color:"#53d7df",fillColor:"#53d7df",weight:2.5,fillOpacity:.17,opacity:1};}
-function draw(d){
- if(layers.has(d.id)){map.removeLayer(layers.get(d.id));layers.delete(d.id);}
- const style=styleFor(d.kind);
- const layer=new Vietflex.GeoJSON({type:"FeatureCollection",features:d.features},{
-   style:()=>style,
-   pointToLayer:(f,ll)=>new Vietflex.CircleMarker(ll,{...style,radius:d.kind==="reference"?8:6,fillOpacity:.8}),
-   onEachFeature:(f,l)=>{l.bindPopup(popupNode(f));l.on("click",()=>{});}
- });
- layers.set(d.id,layer);if(d.visible)layer.addTo(map);
-}
-function addText(parent,tag,txt,cls){const el=document.createElement(tag);el.textContent=txt;if(cls)el.className=cls;parent.appendChild(el);return el;}
-function render(){
- $("countFeatures").textContent=allFeatures().length;
- $("countLayers").textContent=datasets.length;
- const src=$("sourceList");src.replaceChildren();
- datasets.forEach(d=>{
-  const row=document.createElement("div");row.className="source";
-  const line=document.createElement("div");line.className="source-header";
-  addText(line,"span",d.name);
-  const btn=document.createElement("button");btn.textContent=d.visible?"● Hiện":"○ Ẩn";btn.setAttribute("aria-pressed",String(d.visible));
-  btn.onclick=()=>{d.visible=!d.visible;const lyr=layers.get(d.id);if(d.visible)lyr.addTo(map);else map.removeLayer(lyr);render();};
-  line.appendChild(btn);row.appendChild(line);
-  addText(row,"small",d.features.length+" hình học · "+(d.kind==="reference"?"Tọa độ địa danh từ nguồn mở":"Dữ liệu nhập, chưa xác minh"));
-  src.appendChild(row);
- });
- const q=$("search").value.trim().toLowerCase(),items=$("featureList");items.replaceChildren();
- let hits=0;datasets.forEach(d=>d.features.forEach(f=>{
-  const text=(pName(f)+" "+safeText(f.properties&&f.properties.description)).toLowerCase();
-  if(!text.includes(q)||hits>=100)return;hits++;
-  const btn=document.createElement("button");btn.className="item";
-  addText(btn,"strong",pName(f));addText(btn,"span",(d.kind==="reference"?"Tham chiếu":"Đã nhập")+" · "+f.geometry.type);
-  btn.onclick=()=>{if(!d.visible){d.visible=true;layers.get(d.id).addTo(map);render();}goFeature(f);};
-  items.appendChild(btn);
- }));
- if(!hits)addText(items,"p","Không tìm thấy đối tượng phù hợp.","muted");
-}
-function useBase(which){
- if(which==="osm"){if(google&&map.hasLayer(google))map.removeLayer(google);if(!map.hasLayer(osm))osm.addTo(map);}
- else{if(map.hasLayer(osm))map.removeLayer(osm);if(google&&!map.hasLayer(google))google.addTo(map);}
- $("googleBase").classList.toggle("active",which==="google");
- $("osmBase").classList.toggle("active",which==="osm");
- $("googleBase").setAttribute("aria-pressed",String(which==="google"));
- $("osmBase").setAttribute("aria-pressed",String(which==="osm"));
- if(which==="osm")hideStatus();
-}
-let jszipLoader=null;
-function ensureJSZip(){
- if(window.JSZip)return Promise.resolve(window.JSZip);
- if(jszipLoader)return jszipLoader;
- jszipLoader=new Promise((resolve,reject)=>{
-  const s=document.createElement("script");s.src="./vendor/jszip.min.js";s.async=true;
-  s.onload=()=>window.JSZip?resolve(window.JSZip):reject(new Error("JSZip không sẵn sàng."));
-  s.onerror=()=>reject(new Error("Không tải được bộ đọc KMZ nội bộ."));
-  document.head.appendChild(s);
- }).catch(err=>{jszipLoader=null;throw err;});
- return jszipLoader;
-}
-function validateFeatures(data){
- let features=data&&data.type==="FeatureCollection"?data.features:(data&&data.type==="Feature"?[data]:[]);
- if(!Array.isArray(features))throw Error("Tệp không có danh sách GeoJSON Feature.");
- if(features.length>10000)throw Error("Giới hạn 10.000 đối tượng mỗi tệp.");
- const allowed=new Set(["Point","MultiPoint","LineString","MultiLineString","Polygon","MultiPolygon","GeometryCollection"]);
- return features.filter(f=>f&&f.type==="Feature"&&f.geometry&&allowed.has(f.geometry.type)).map(f=>({
-  type:"Feature",geometry:f.geometry,properties:{
-   ...(f.properties&&typeof f.properties==="object"&&!Array.isArray(f.properties)?f.properties:{}),
-   name:pName(f),source:safeText((f.properties||{}).source||"Tệp dữ liệu do người dùng nhập")
-  }
- }));
-}
-function kmlCoords(raw){
- return String(raw||"").trim().split(/\s+/).map(pt=>{
-   const a=pt.split(",").map(Number);return [a[0],a[1]];
- }).filter(p=>Number.isFinite(p[0])&&Number.isFinite(p[1])&&Math.abs(p[0])<=180&&Math.abs(p[1])<=90);
-}
-function firstTag(node,tag){
- const found=node.getElementsByTagNameNS("*",tag);return found.length?found[0]:null;
-}
-function xmlText(node,tag){const e=firstTag(node,tag);return e?e.textContent.trim():"";}
-function parseKML(xml){
- const doc=new DOMParser().parseFromString(xml,"application/xml");
- if(doc.querySelector("parsererror"))throw Error("KML không hợp lệ.");
- const links=Array.from(doc.getElementsByTagNameNS("*","NetworkLink")).map(x=>({name:xmlText(x,"name"),href:xmlText(x,"href")})).filter(x=>x.href);
- const feats=[];
- const placemarks=doc.getElementsByTagNameNS("*","Placemark");
- Array.from(placemarks).forEach(pm=>{
-  const props={name:xmlText(pm,"name")||"KML Placemark",description:xmlText(pm,"description"),source:"KML nhập từ máy"};
-  ["Point","LineString","Polygon"].forEach(type=>{
-   Array.from(pm.getElementsByTagNameNS("*",type)).forEach(node=>{
-    const raw=xmlText(node,"coordinates");const xy=kmlCoords(raw);let coords=null;
-    if(type==="Point"&&xy.length)coords=xy[0];
-    if(type==="LineString"&&xy.length>=2)coords=xy;
-    if(type==="Polygon"){
-     const outer=firstTag(node,"outerBoundaryIs"),outerCoords=outer?kmlCoords(xmlText(outer,"coordinates")):xy;
-     if(outerCoords.length>=3){const ring=outerCoords.slice();if(ring[0][0]!==ring[ring.length-1][0]||ring[0][1]!==ring[ring.length-1][1])ring.push(ring[0]);coords=[ring];}
-    }
-    if(coords)feats.push({type:"Feature",geometry:{type,coordinates:coords},properties:props});
-   });
-  });
- });
- if(feats.length>10000)throw Error("Giới hạn 10.000 đối tượng KML mỗi tệp.");
- return {features:feats,links};
-}
-async function loadFile(file){
- if(file.size>10*1024*1024)throw Error(file.name+": quá 10 MB.");
- const ext=file.name.split(".").pop().toLowerCase();let data={features:[],links:[]};
- if(ext==="json"||ext==="geojson"){data.features=validateFeatures(JSON.parse(await file.text()));}
- else if(ext==="kml"){data=parseKML(await file.text());}
- else if(ext==="kmz"){
-  const zipLib=await ensureJSZip();
-  const zip=await zipLib.loadAsync(file);const kmlPath=Object.keys(zip.files).find(k=>k.toLowerCase().endsWith(".kml")&&!zip.files[k].dir);
-  if(!kmlPath)throw Error("KMZ không có tệp KML.");data=parseKML(await zip.files[kmlPath].async("string"));
- }else throw Error("Chỉ chấp nhận GeoJSON, KML hoặc KMZ.");
- if(data.links.length){const s=data.links.map(l=>l.href).join("\n");status("Tệp "+file.name+" chứa "+data.links.length+" NetworkLink. Nguồn ở xa chưa được tự động tải (có thể bị CORS). "+s.slice(0,170));$("countLinks").textContent=String(Number($("countLinks").textContent)+data.links.length);}
- if(!data.features.length)return;
- const name=file.name.slice(0,80);
- const layer={id:"user-"+Date.now()+"-"+Math.random().toString(36).slice(2,7),name,kind:"import",visible:true,features:validateFeatures({type:"FeatureCollection",features:data.features})};
- datasets.push(layer);draw(layer);render();const b=pointBounds(layer.features);if(b)map.fitBounds(b,{padding:[40,40],maxZoom:15});
-}
-function exportGeoJSON(){
- const features=datasets.filter(d=>d.visible).flatMap(d=>d.features);
- const content=JSON.stringify({type:"FeatureCollection",features},null,2);
- const url=URL.createObjectURL(new Blob([content],{type:"application/geo+json"}));
- const a=document.createElement("a");a.href=url;a.download="scamland-export.geojson";document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
-}
-function init(){
- if(!window.Vietflex){error("Không tải được thư viện Vietflex nội bộ. Kiểm tra GitHub Pages và tệp vendor/vietflex.js.");return;}
- try{
-  map=Vietflex.vietflexMap("map",{googleMaps:false,zoomControl:false,attributionControl:false,maxBounds:null,minZoom:3});
-  map.setView(HOME,12);
-  new Vietflex.ZoomControl({position:"topleft"}).addTo(map);
-  new Vietflex.AttributionControl({position:"bottomright"}).addTo(map);
-  google=Vietflex.legacyGoogleTiles({mapType:"roadmap"});
-  osm=new Vietflex.TileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>',maxZoom:19});
-  osm.addTo(map);
-  let googleErrors=0;
-  google.on("tileerror",()=>{if(++googleErrors===3){useBase("osm");status("Nền Google legacy không tải được; đã chuyển sang OpenStreetMap. Google legacy dùng endpoint không chính thức.");}});
-  let osmErrors=0;
-  osm.on("tileerror",()=>{if(++osmErrors===3)status("Không tải được tiles OpenStreetMap. Kiểm tra mạng hoặc chính sách truy cập máy chủ tile.");});
-  map.on("baselayererror",()=>{useBase("osm");status("Không khởi tạo được Google tiles; đã dùng OpenStreetMap.");});
-  map.on("mousemove",e=>{$("mouseCoords").textContent=e.latlng.lat.toFixed(5)+"°N, "+e.latlng.lng.toFixed(5)+"°E";});
-  datasets.forEach(draw);render();
-  $("goHome").onclick=()=>map.setView(HOME,12);
-  $("fitData").onclick=()=>{const b=pointBounds(datasets.filter(d=>d.visible).flatMap(d=>d.features));if(b)map.fitBounds(b,{padding:[35,35],maxZoom:14});};
-  $("googleBase").onclick=()=>useBase("google");
-  $("osmBase").onclick=()=>useBase("osm");
-  $("importButton").onclick=()=>$("fileInput").click();
-  $("fileInput").onchange=async e=>{
-   for(const file of Array.from(e.target.files||[])){try{await loadFile(file);}catch(err){status(file.name+": "+err.message);}}
-   e.target.value="";
-  };
-  $("exportButton").onclick=exportGeoJSON;
-  $("search").oninput=render;
- }catch(e){error("Lỗi khởi tạo WebGIS: "+safeText(e.message));}
-}
-window.addEventListener("DOMContentLoaded",init);
-})();
-</script>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="methodDialog"><div class="dialog-top"><div class="eyebrow">PHƯƠNG PHÁP / GIỚI HẠN</div><button class="icon-btn" data-close="methodDialog" aria-label="Đóng phương pháp"><span data-icon="close"></span></button></div><h2>Kiểm tra lời nói bằng nguồn.</h2><p class="dialog-lead">Scamland là atlas nghiên cứu từ nguồn công khai. Mỗi nhận định được gắn với tài liệu và thời điểm của tài liệu đó. Lớp 87 mốc My Maps giữ nguyên tọa độ và tên gốc, được trình bày như địa danh chưa thẩm định.</p><ol class="method-steps"><li><b>Đọc nguồn gốc</b><span>Phân biệt thông báo chính thức, nghiên cứu, báo chí và đầu mối thứ cấp.</span></li><li><b>Giữ địa lý trung thực</b><span>Tọa độ WGS84 là mốc địa danh gần đúng. Không có ranh giới cơ sở đã kiểm định. Vòng chỉ báo là ký hiệu, không phải khoảng tin cậy.</span></li><li><b>Tách thời gian khỏi trạng thái</b><span>Bộ lọc dùng ngày công bố/ghi nhận của nguồn. Thông báo OFAC năm 2018/2025 không xác nhận tình trạng trừng phạt hiện hành.</span></li><li><b>Giữ bằng chứng và suy luận riêng</b><span>Quan hệ trên đồ thị có căn cứ tài liệu; không tự sinh luồng tiền, tuyến di chuyển hoặc điểm rủi ro. Mốc địa lý không quy kết cư dân.</span></li><li><b>Đối chiếu và ghi giới hạn</b><span>Không đồng nhất người bị cưỡng bức phạm tội với người tổ chức. Các tuyên bố IPFS, số bài và công cụ chưa đủ căn cứ được giữ ở cấp cần kiểm chứng.</span></li></ol><div class="callout">Bộ dữ liệu tuyển chọn, không đầy đủ · đối chiếu 11/10/2026. Chỉ lưu mô tả biên tập và liên kết; bản quyền, điều khoản tài liệu thuộc nhà xuất bản.</div><p class="muted">Bản đồ trực tuyến: EPSG:3857. Dữ liệu: EPSG:4326. Nền offline Natural Earth 1:110 triệu. Đo khoảng cách dùng cung lớn trên mô hình cầu; không dùng để đo ranh giới hay lập tuyến.</p><a class="btn primary" href="docs/METHODOLOGY.md" target="_blank" rel="noopener">Đọc tài liệu phương pháp ↗</a></dialog>
+  <dialog id="exportDialog"><div class="dialog-top"><div class="eyebrow">XUẤT HỒ SƠ / DỮ LIỆU</div><button class="icon-btn" data-close="exportDialog" aria-label="Đóng xuất dữ liệu"><span data-icon="close"></span></button></div><h2>Mang theo cả nguồn gốc.</h2><p class="dialog-lead" id="exportSummary">Xuất các mốc đang được lọc, cùng tài liệu dẫn nguồn.</p><div class="export-grid"><button class="export-option" data-export="geojson"><span data-icon="map"></span><b>GeoJSON</b><span>WGS84 · điểm và nguồn</span></button><button class="export-option" data-export="csv"><span data-icon="table"></span><b>CSV</b><span>Bảng tra cứu địa danh</span></button><button class="export-option" data-export="report"><span data-icon="book"></span><b>Báo cáo Markdown</b><span>Nhận định, URL và giới hạn</span></button><a class="export-option" href="Scamland_Offline.html" data-offline download><span data-icon="code"></span><b>HTML offline</b><span>Bộ dữ liệu công khai đầy đủ</span></a></div><div class="export-grid"><a class="export-option" data-kml href="downloads/Scamland_Updated.kml" download="Scamland_Updated.kml"><b>KML cập nhật</b><span>87 mốc gốc + 8 mốc OSINT</span></a><a class="export-option" data-kmz href="downloads/Scamland_Updated.kmz" download="Scamland_Updated.kmz"><b>KMZ cập nhật</b><span>Snapshot + NetworkLink gốc</span></a></div><div class="callout">Bản HTML offline có bản đồ Atlas và thư viện. Nền Google / OSM cần Internet. KML/KMZ gồm toàn bộ dữ liệu công khai, không phụ thuộc bộ lọc. Các bản xuất không kèm ghi chú riêng hoặc điểm nhập cục bộ.</div></dialog>
+  <dialog id="importDialog"><div class="dialog-top"><div class="eyebrow">LỚP DỮ LIỆU CỤC BỘ</div><button class="icon-btn" data-close="importDialog" aria-label="Đóng nhập dữ liệu"><span data-icon="close"></span></button></div><h2>Thêm mốc của bạn.</h2><p class="dialog-lead">GeoJSON FeatureCollection, tối đa 200 điểm / 1 MB. Tọa độ WGS84 theo thứ tự [kinh độ, vĩ độ]. Điểm nhập chỉ tồn tại trong phiên, hiển thị riêng và không được đưa vào bộ dữ liệu công khai.</p><pre>{"type":"FeatureCollection","features":[
+  {"type":"Feature","geometry":{"type":"Point",
+    "coordinates":[100.10,20.36]},
+   "properties":{"name":"Mốc nghiên cứu",
+    "source_url":"https://example.org/report",
+    "date":null,"summary":"Ghi chú nguồn"}}
+]}</pre><button class="btn primary" id="chooseImport"><span data-icon="upload"></span>Chọn GeoJSON</button><p style="margin-top:18px"><a class="text-btn" href="tools/KML_Workbench.html" target="_blank" rel="noopener">Công cụ nhập KML/KMZ và hình học khác ↗</a></p><p id="importError" role="alert" class="error" hidden></p></dialog>
+  <noscript><div class="noscript">Cần bật JavaScript để sử dụng atlas. Bạn vẫn có thể đọc <a href="data/sources.json">danh mục nguồn</a> và <a href="docs/METHODOLOGY.md">phương pháp</a>.</div></noscript>
+  <script src="vendor/vietflex.js"></script>
+  <script src="data/bundle.js"></script>
+  <script src="assets/core.js"></script>
+  <script src="assets/app.js"></script>
 </body>
 </html>

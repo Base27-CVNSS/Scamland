@@ -1,0 +1,246 @@
+{
+  "nodes": [
+    {
+      "id": "gtsez",
+      "label": "Golden Triangle SEZ",
+      "type": "place",
+      "scope": "core",
+      "place_id": "gtsez",
+      "x": 470,
+      "y": 280
+    },
+    {
+      "id": "kings-casino",
+      "label": "Kings Romans Casino",
+      "type": "organization",
+      "scope": "core",
+      "place_id": "gtsez",
+      "x": 320,
+      "y": 190
+    },
+    {
+      "id": "zhao-wei",
+      "label": "Zhao Wei",
+      "type": "person",
+      "scope": "core",
+      "place_id": "gtsez",
+      "x": 175,
+      "y": 290
+    },
+    {
+      "id": "kings-hk",
+      "label": "Kings Romans (HK)",
+      "type": "organization",
+      "scope": "core",
+      "place_id": "gtsez",
+      "x": 270,
+      "y": 420
+    },
+    {
+      "id": "ofac-2018",
+      "label": "OFAC · 30/01/2018",
+      "type": "document",
+      "scope": "core",
+      "source_id": "treasury-2018",
+      "x": 500,
+      "y": 110
+    },
+    {
+      "id": "gitoc-report",
+      "label": "GI-TOC · 2025",
+      "type": "document",
+      "scope": "core",
+      "source_id": "gitoc-2025",
+      "x": 645,
+      "y": 285
+    },
+    {
+      "id": "gijn-3-doc",
+      "label": "GIJN · Rửa tiền",
+      "type": "document",
+      "scope": "core",
+      "source_id": "gijn-3",
+      "x": 570,
+      "y": 425
+    },
+    {
+      "id": "mong-la",
+      "label": "Mong La",
+      "type": "place",
+      "scope": "core",
+      "place_id": "mong-la",
+      "x": 735,
+      "y": 440
+    },
+    {
+      "id": "shwe-kokko",
+      "label": "Shwe Kokko",
+      "type": "place",
+      "scope": "regional",
+      "place_id": "shwe-kokko",
+      "x": 640,
+      "y": 680
+    },
+    {
+      "id": "kna",
+      "label": "Karen National Army",
+      "type": "organization",
+      "scope": "regional",
+      "place_id": "shwe-kokko",
+      "x": 380,
+      "y": 640
+    },
+    {
+      "id": "saw-chit-thu",
+      "label": "Saw Chit Thu",
+      "type": "person",
+      "scope": "regional",
+      "place_id": "shwe-kokko",
+      "x": 230,
+      "y": 735
+    },
+    {
+      "id": "ofac-2025",
+      "label": "OFAC · 05/05/2025",
+      "type": "document",
+      "scope": "regional",
+      "source_id": "treasury-2025",
+      "x": 545,
+      "y": 810
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "gtsez",
+      "target": "kings-casino",
+      "label": "Sòng bạc nằm trong đặc khu",
+      "date": "2018-01-30",
+      "source_ids": [
+        "treasury-2018"
+      ],
+      "scope": "core",
+      "type": "documented"
+    },
+    {
+      "id": "e2",
+      "source": "zhao-wei",
+      "target": "kings-casino",
+      "label": "Quan hệ sở hữu theo OFAC",
+      "date": "2018-01-30",
+      "source_ids": [
+        "treasury-2018"
+      ],
+      "scope": "core",
+      "type": "documented"
+    },
+    {
+      "id": "e3",
+      "source": "zhao-wei",
+      "target": "kings-hk",
+      "label": "Sở hữu/kiểm soát cùng Su Guiqin",
+      "date": "2018-01-30",
+      "source_ids": [
+        "treasury-2018"
+      ],
+      "scope": "core",
+      "type": "documented"
+    },
+    {
+      "id": "e4",
+      "source": "ofac-2018",
+      "target": "zhao-wei",
+      "label": "Thông báo chỉ định năm 2018",
+      "date": "2018-01-30",
+      "source_ids": [
+        "treasury-2018"
+      ],
+      "scope": "core",
+      "type": "citation"
+    },
+    {
+      "id": "e5",
+      "source": "ofac-2018",
+      "target": "kings-hk",
+      "label": "Thực thể được nêu trong thông báo",
+      "date": "2018-01-30",
+      "source_ids": [
+        "treasury-2018"
+      ],
+      "scope": "core",
+      "type": "citation"
+    },
+    {
+      "id": "e6",
+      "source": "gitoc-report",
+      "target": "gtsez",
+      "label": "Địa điểm trong nghiên cứu",
+      "date": "2025-05-29",
+      "source_ids": [
+        "gitoc-2025"
+      ],
+      "scope": "core",
+      "type": "citation"
+    },
+    {
+      "id": "e7",
+      "source": "gijn-3-doc",
+      "target": "gtsez",
+      "label": "Bối cảnh sòng bạc",
+      "date": "2022-11-28",
+      "source_ids": [
+        "gijn-3"
+      ],
+      "scope": "core",
+      "type": "citation"
+    },
+    {
+      "id": "e8",
+      "source": "gijn-3-doc",
+      "target": "mong-la",
+      "label": "Bối cảnh xuyên biên giới",
+      "date": "2022-11-28",
+      "source_ids": [
+        "gijn-3"
+      ],
+      "scope": "core",
+      "type": "citation"
+    },
+    {
+      "id": "e9",
+      "source": "kna",
+      "target": "shwe-kokko",
+      "label": "Trụ sở theo thông báo OFAC",
+      "date": "2025-05-05",
+      "source_ids": [
+        "treasury-2025"
+      ],
+      "scope": "regional",
+      "type": "documented"
+    },
+    {
+      "id": "e10",
+      "source": "saw-chit-thu",
+      "target": "kna",
+      "label": "Lãnh đạo theo thông báo OFAC",
+      "date": "2025-05-05",
+      "source_ids": [
+        "treasury-2025"
+      ],
+      "scope": "regional",
+      "type": "documented"
+    },
+    {
+      "id": "e11",
+      "source": "ofac-2025",
+      "target": "kna",
+      "label": "Thông báo chỉ định năm 2025",
+      "date": "2025-05-05",
+      "source_ids": [
+        "treasury-2025"
+      ],
+      "scope": "regional",
+      "type": "citation"
+    }
+  ]
+}

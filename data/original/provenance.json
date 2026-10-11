@@ -1,0 +1,13 @@
+{
+  "retrieved": "2026-10-11",
+  "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+  "kml_url": "https://www.google.com/maps/d/u/0/kml?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA&forcekml=1",
+  "original_networklink_url": "https://www.google.com/maps/d/u/0/kml?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+  "original_placemarks": 87,
+  "snapshot_sha256": "502bdd1eb476cae27bcfff7bdcb48c4712cc9eb9343f357a0c88a2368a261c9e",
+  "uploaded_kmz_sha256": "860ff0e73e744c99f1bac5a2cd33c766388c87efc352f3c9a9ab44b21f68d5c1",
+  "coordinate_policy": "Original coordinates retained. Precision is not verified accuracy.",
+  "limitations": "Public map snapshot; names, coordinates and linked news are not independent findings of wrongdoing.",
+  "crs": "EPSG:4326",
+  "repository": "https://github.com/Base27-CVNSS/Scamland"
+}

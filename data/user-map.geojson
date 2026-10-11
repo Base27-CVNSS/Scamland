@@ -1,0 +1,2033 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "retrieved": "2026-10-11",
+    "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+    "kml_url": "https://www.google.com/maps/d/u/0/kml?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA&forcekml=1",
+    "original_networklink_url": "https://www.google.com/maps/d/u/0/kml?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+    "original_placemarks": 87,
+    "snapshot_sha256": "502bdd1eb476cae27bcfff7bdcb48c4712cc9eb9343f357a0c88a2368a261c9e",
+    "uploaded_kmz_sha256": "860ff0e73e744c99f1bac5a2cd33c766388c87efc352f3c9a9ab44b21f68d5c1",
+    "coordinate_policy": "Original coordinates retained. Precision is not verified accuracy.",
+    "limitations": "Public map snapshot; names, coordinates and linked news are not independent findings of wrongdoing.",
+    "crs": "EPSG:4326",
+    "repository": "https://github.com/Base27-CVNSS/Scamland"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1113782,
+          20.3413949
+        ]
+      },
+      "properties": {
+        "id": "mymaps-001",
+        "name": "News about Golden Triangle Special Economic Zone 金三角经济特区",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "Read:\nOnline Scam: How the Chinese Police raided the Golden Triangle Special Economic Zone in Laos \nhttps://treasuresoflaos.blogspot.com/2024/03/how-chinese-police-raided-golden.html (February 2024)\n\n16 Indians rescued from scam operations in Laos (March 2024)\nhttps://www.rfa.org/english/news/laos/indians-rescued-03282024180122.html\n\nMacao at Mekong: How Chinese money flows into the Golden Triangle\nhttps://treasuresoflaos.blogspot.com/2013/02/macao-on-mekong-how-chinese-money-flows.html",
+        "links": [
+          "https://treasuresoflaos.blogspot.com/2024/03/how-chinese-police-raided-golden.html",
+          "https://www.rfa.org/english/news/laos/indians-rescued-03282024180122.html",
+          "https://treasuresoflaos.blogspot.com/2013/02/macao-on-mekong-how-chinese-money-flows.html"
+        ],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.157846,
+          20.3192299
+        ]
+      },
+      "properties": {
+        "id": "mymaps-002",
+        "name": "News about Bokeo International Airport 博胶国际机场",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "Bokeo International Airport: For two millions of Passengers - but only one Flight daily until now. Read:\nhttps://treasuresoflaos.blogspot.com/2024/01/what-happens-to-bokeo-international.html",
+        "links": [
+          "https://treasuresoflaos.blogspot.com/2024/01/what-happens-to-bokeo-international.html"
+        ],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0979332,
+          20.3408886
+        ]
+      },
+      "properties": {
+        "id": "mymaps-003",
+        "name": "Kapok Star Hotel 木棉之星酒店",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0968168,
+          20.3401443
+        ]
+      },
+      "properties": {
+        "id": "mymaps-004",
+        "name": "Kings Romans Casino, aka Blue Shield Casino\n",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0983687,
+          20.3422387
+        ]
+      },
+      "properties": {
+        "id": "mymaps-005",
+        "name": "China Town - ຕະຫຼາດຈີນ",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0989333,
+          20.3423154
+        ]
+      },
+      "properties": {
+        "id": "mymaps-006",
+        "name": "金木棉會所酒店 Golden Kapok Club Hotel",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0974336,
+          20.3423308
+        ]
+      },
+      "properties": {
+        "id": "mymaps-007",
+        "name": "Kapok Garden hotel 及木棉花园酒店",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "https://hotels.ctrip.com/hotels/7366369.html",
+        "links": [
+          "https://hotels.ctrip.com/hotels/7366369.html"
+        ],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0972029,
+          20.343979
+        ]
+      },
+      "properties": {
+        "id": "mymaps-008",
+        "name": "泰和大酒店 Taihe Hotel",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.099868,
+          20.347721
+        ]
+      },
+      "properties": {
+        "id": "mymaps-009",
+        "name": "铂金酒店 Platinum Hotel",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.100095,
+          20.3468135
+        ]
+      },
+      "properties": {
+        "id": "mymaps-010",
+        "name": "金三角特区曼樂酒店 Manle Hotel",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.100027,
+          20.3388681
+        ]
+      },
+      "properties": {
+        "id": "mymaps-011",
+        "name": "ร้านไทยแท้ Thai Tae restaurant",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1003899,
+          20.338702
+        ]
+      },
+      "properties": {
+        "id": "mymaps-012",
+        "name": "ຮ້ານເຫລົ້າປັ່ນສອງເອື້ອຍນ້ອງ Two Sisters Wine Shop",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1008176,
+          20.3386146
+        ]
+      },
+      "properties": {
+        "id": "mymaps-013",
+        "name": "ຕະຫລາດມືດສີ່ແຍກຖາງເຫລິນ Dark Market",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1003406,
+          20.3437085
+        ]
+      },
+      "properties": {
+        "id": "mymaps-014",
+        "name": "甘氏重庆烤活鱼（老字号）Gan's Chongqing grilled live fish",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1029635,
+          20.3446653
+        ]
+      },
+      "properties": {
+        "id": "mymaps-015",
+        "name": "ケンタッキーフライドチキン KFC",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1034748,
+          20.3447986
+        ]
+      },
+      "properties": {
+        "id": "mymaps-016",
+        "name": "七十七路拌粉 77 Road Mixed Noodles\n",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1039028,
+          20.3450207
+        ]
+      },
+      "properties": {
+        "id": "mymaps-017",
+        "name": "ချမ်းမြေ့သူ ကိတ်မုန့်ဆိုင် Sweet Cake Shop\n",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1135361,
+          20.3041654
+        ]
+      },
+      "properties": {
+        "id": "mymaps-018",
+        "name": "ສວນອາຫານວັງມັງກອນ",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1116878,
+          20.3052821
+        ]
+      },
+      "properties": {
+        "id": "mymaps-019",
+        "name": "ຮ້ານອາຫານ ເດິຄີງ the khing",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.108085,
+          20.302927
+        ]
+      },
+      "properties": {
+        "id": "mymaps-020",
+        "name": "Waivai heartbeat pub",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "https://www.instagram.com/explore/locations/1586546054971997/heartbeat-pub-thakhek/",
+        "links": [
+          "https://www.instagram.com/explore/locations/1586546054971997/heartbeat-pub-thakhek/"
+        ],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1128267,
+          20.3032111
+        ]
+      },
+      "properties": {
+        "id": "mymaps-021",
+        "name": "ເຮືອນພັກຮຸ່ຍຊາງ",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1123672,
+          20.3074952
+        ]
+      },
+      "properties": {
+        "id": "mymaps-022",
+        "name": "星河餐厅 Galaxy Restaurant\n",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1122888,
+          20.3069877
+        ]
+      },
+      "properties": {
+        "id": "mymaps-023",
+        "name": "巨鼎酒店 Juding Hotel\n",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1104035,
+          20.3200203
+        ]
+      },
+      "properties": {
+        "id": "mymaps-024",
+        "name": "Latsamee guesthouse",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1099572,
+          20.319763
+        ]
+      },
+      "properties": {
+        "id": "mymaps-025",
+        "name": "ເຫຼົ່າຊຽງຫ່າວ金三角老湘好",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1103414,
+          20.3205295
+        ]
+      },
+      "properties": {
+        "id": "mymaps-026",
+        "name": "ຮ້ານອາຫານລາວວຽງຈັນ ສາຂາ1",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.108572,
+          20.320633
+        ]
+      },
+      "properties": {
+        "id": "mymaps-027",
+        "name": "A+",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1095407,
+          20.3229673
+        ]
+      },
+      "properties": {
+        "id": "mymaps-028",
+        "name": "khách sạn tq",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.107962,
+          20.3256035
+        ]
+      },
+      "properties": {
+        "id": "mymaps-029",
+        "name": "ຮ້ານອາຫານKK PUB",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1041036,
+          20.3294215
+        ]
+      },
+      "properties": {
+        "id": "mymaps-030",
+        "name": "DingGuaGua Live Music Bar",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.104921,
+          20.3379516
+        ]
+      },
+      "properties": {
+        "id": "mymaps-031",
+        "name": "云鹏机器人 Yunpeng Robot Karaoke",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1048288,
+          20.3403183
+        ]
+      },
+      "properties": {
+        "id": "mymaps-032",
+        "name": "ໂຮງແຮມຢຸນຫລົງ",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1108606,
+          20.3204423
+        ]
+      },
+      "properties": {
+        "id": "mymaps-033",
+        "name": "ອາຫານລາວ ວຽງຈັນ ສາຂາ1ບ້ານຄວ້ານ",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "https://www.facebook.com/profile.php?id=100083519796080",
+        "links": [
+          "https://www.facebook.com/profile.php?id=100083519796080"
+        ],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.116882,
+          20.3217178
+        ]
+      },
+      "properties": {
+        "id": "mymaps-034",
+        "name": "ຮ້ານສະນຸກເກີ້",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.103384,
+          20.3631749
+        ]
+      },
+      "properties": {
+        "id": "mymaps-035",
+        "name": "Van Pak Len",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1233329,
+          20.4300299
+        ]
+      },
+      "properties": {
+        "id": "mymaps-036",
+        "name": "Wat Ban Mom",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1244982,
+          20.4304639
+        ]
+      },
+      "properties": {
+        "id": "mymaps-037",
+        "name": "ຮ້ານ ຂາຍເຄື່ອງນາງສີ Store\n",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1208507,
+          20.4348241
+        ]
+      },
+      "properties": {
+        "id": "mymaps-038",
+        "name": "勐磨码头 Ban Mom Pier\n",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1220502,
+          20.4353336
+        ]
+      },
+      "properties": {
+        "id": "mymaps-039",
+        "name": "ศปปข.จีน ใน สปป.ลาว Chinese People's Democratic Reform Committee in Lao PDR",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1250369,
+          20.4240339
+        ]
+      },
+      "properties": {
+        "id": "mymaps-040",
+        "name": "ໂຮງຮຽນ ມຕ ບ້ານມອມ Ban Mom High School\n",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0916417,
+          20.3599167
+        ]
+      },
+      "properties": {
+        "id": "mymaps-041",
+        "name": "ຮ້ານຂາຍຂອງຊຳ",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.090991,
+          20.3570582
+        ]
+      },
+      "properties": {
+        "id": "mymaps-042",
+        "name": "Mini Restaurant & barbecue",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0914031,
+          20.3566953
+        ]
+      },
+      "properties": {
+        "id": "mymaps-043",
+        "name": "Sivilai Guesthouse",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0877631,
+          20.3509237
+        ]
+      },
+      "properties": {
+        "id": "mymaps-044",
+        "name": "loas",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0880373,
+          20.3494938
+        ]
+      },
+      "properties": {
+        "id": "mymaps-045",
+        "name": "ร้าน BeerLao Restaurant",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0965576,
+          20.3460915
+        ]
+      },
+      "properties": {
+        "id": "mymaps-046",
+        "name": "农贸市场 Agricultural Market\n",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.099084,
+          20.3491157
+        ]
+      },
+      "properties": {
+        "id": "mymaps-047",
+        "name": "山水酒店 Shanshui Hotel\n",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0995524,
+          20.3492817
+        ]
+      },
+      "properties": {
+        "id": "mymaps-048",
+        "name": "金三角特区炬星国际酒店 Golden Triangle Special Economic Zone Juxing International Hotel",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0997605,
+          20.346382
+        ]
+      },
+      "properties": {
+        "id": "mymaps-049",
+        "name": "华源酒店 Huayuan Hotel",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1009783,
+          20.3450531
+        ]
+      },
+      "properties": {
+        "id": "mymaps-050",
+        "name": "福建财神酒店 Fujian Fortune Hotel",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1010767,
+          20.344607
+        ]
+      },
+      "properties": {
+        "id": "mymaps-051",
+        "name": "金三角特区浩远酒店 Golden Triangle Special Economic Zone Haoyuan Hotel",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1021205,
+          20.3442351
+        ]
+      },
+      "properties": {
+        "id": "mymaps-052",
+        "name": "金三角特区银海酒店 Golden Triangle Special Economic Zone Silver Sea Hotel",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1006997,
+          20.3466777
+        ]
+      },
+      "properties": {
+        "id": "mymaps-053",
+        "name": "金三角特区强者数码ສຽງເຈິຊູ່ມ່າ Golden Triangle Special Zone Strong Digital",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1061492,
+          20.3342749
+        ]
+      },
+      "properties": {
+        "id": "mymaps-054",
+        "name": "金三角特区雲珑酒店 Yunlong Hotel",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1077846,
+          20.3345666
+        ]
+      },
+      "properties": {
+        "id": "mymaps-055",
+        "name": "ເມືອຍດົງວາງ Mekong Avenue 湄公大道",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1049479,
+          20.3390347
+        ]
+      },
+      "properties": {
+        "id": "mymaps-056",
+        "name": "Dee Dee",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1071059,
+          20.3375038
+        ]
+      },
+      "properties": {
+        "id": "mymaps-057",
+        "name": "ສາມຫຼ່ຽມຄຳ",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.105792,
+          20.33312
+        ]
+      },
+      "properties": {
+        "id": "mymaps-058",
+        "name": "红莞会所 Hongwan Club",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1078647,
+          20.3306804
+        ]
+      },
+      "properties": {
+        "id": "mymaps-059",
+        "name": "金三角特区爱菲尔酒店 Golden Triangle Hotel",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0996351,
+          20.334613
+        ]
+      },
+      "properties": {
+        "id": "mymaps-060",
+        "name": "金三角特区闵福国际酒店 Golden Triangle International Hotel",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1375625,
+          20.3055625
+        ]
+      },
+      "properties": {
+        "id": "mymaps-061",
+        "name": "Golden Dragon Mountain International Golf Club 金龙山国际高尔夫球会",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.091656,
+          20.3425062
+        ]
+      },
+      "properties": {
+        "id": "mymaps-062",
+        "name": "Riverside Road",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0972779,
+          20.3382724
+        ]
+      },
+      "properties": {
+        "id": "mymaps-063",
+        "name": "Kapok Avenue",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0975515,
+          20.3431642
+        ]
+      },
+      "properties": {
+        "id": "mymaps-064",
+        "name": "East Garden Road",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0963412,
+          20.3411743
+        ]
+      },
+      "properties": {
+        "id": "mymaps-065",
+        "name": "South Garden Road",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0956331,
+          20.3453827
+        ]
+      },
+      "properties": {
+        "id": "mymaps-066",
+        "name": "North Garden Road",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1021611,
+          20.34647
+        ]
+      },
+      "properties": {
+        "id": "mymaps-067",
+        "name": "汉城超市 Seoul Supermarket",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1275909,
+          20.3501226
+        ]
+      },
+      "properties": {
+        "id": "mymaps-068",
+        "name": "金龙山 Golden Dragon Mountain",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0916567,
+          20.3353761
+        ]
+      },
+      "properties": {
+        "id": "mymaps-069",
+        "name": "Mekong River 湄公河",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.093723,
+          20.3474573
+        ]
+      },
+      "properties": {
+        "id": "mymaps-070",
+        "name": "会展综合体 Convention and Exhibition Complex",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0975425,
+          20.348262
+        ]
+      },
+      "properties": {
+        "id": "mymaps-071",
+        "name": "数字产业园 Digital Industrial Park",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0979459,
+          20.3471796
+        ]
+      },
+      "properties": {
+        "id": "mymaps-072",
+        "name": "Commercial and Entertainment Complex",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.095788,
+          20.3374699
+        ]
+      },
+      "properties": {
+        "id": "mymaps-073",
+        "name": "鑫越城市中心项目 Laos Xinyue City Center Project",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "https://www.powerchina.cn/art/2023/10/25/art_7449_1811375.html",
+        "links": [
+          "https://www.powerchina.cn/art/2023/10/25/art_7449_1811375.html"
+        ],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0964593,
+          20.3353951
+        ]
+      },
+      "properties": {
+        "id": "mymaps-074",
+        "name": "金三角特区上水酒店 Golden Triangle Sheung Shui Hotel",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0972442,
+          20.3357739
+        ]
+      },
+      "properties": {
+        "id": "mymaps-075",
+        "name": "ຖານເຫຍີນໂກຈີ 唐人国际 Tangren International",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0984236,
+          20.3356506
+        ]
+      },
+      "properties": {
+        "id": "mymaps-076",
+        "name": "提督的宴会厅",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0980033,
+          20.3356482
+        ]
+      },
+      "properties": {
+        "id": "mymaps-077",
+        "name": "ถางเหลีน Tang Lein",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0985176,
+          20.3348264
+        ]
+      },
+      "properties": {
+        "id": "mymaps-078",
+        "name": "唐人国际梅花园 Tangren International Plum Garden",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0977745,
+          20.334696
+        ]
+      },
+      "properties": {
+        "id": "mymaps-079",
+        "name": "汝好茶餐廳 Ruhao Tea Restaurant",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.098284,
+          20.334025
+        ]
+      },
+      "properties": {
+        "id": "mymaps-080",
+        "name": "ที่พัก",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1008045,
+          20.3336632
+        ]
+      },
+      "properties": {
+        "id": "mymaps-081",
+        "name": "牛肉板面饺子馆 友家铁锅炖 Beef Pan Noodle Dumpling House Youjia Iron Pot Stew",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.096144,
+          20.3287074
+        ]
+      },
+      "properties": {
+        "id": "mymaps-082",
+        "name": "皇朝會国际娱乐会所 Dynasty Club International Entertainment Club",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "Star City Club",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.096349,
+          20.329203
+        ]
+      },
+      "properties": {
+        "id": "mymaps-083",
+        "name": "superface全球百大俱乐部",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0962156,
+          20.3296034
+        ]
+      },
+      "properties": {
+        "id": "mymaps-084",
+        "name": "金三角特区豪志庄园酒店 Golden Triangle Special Zone Haozhi Manor Hotel",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.1037281,
+          20.3569236
+        ]
+      },
+      "properties": {
+        "id": "mymaps-085",
+        "name": "缅籍新村库房 Myanmar New Village Warehouse",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0964533,
+          20.3457307
+        ]
+      },
+      "properties": {
+        "id": "mymaps-086",
+        "name": "Wet Market",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0991582,
+          20.3464433
+        ]
+      },
+      "properties": {
+        "id": "mymaps-087",
+        "name": "炭元素烤吧",
+        "folder": "Golden Triangle Special Economic Zone",
+        "description_text": "",
+        "links": [],
+        "source_url": "https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA",
+        "date": null,
+        "altitude_m_original": 0.0,
+        "status": "unreviewed_geographic_context",
+        "position_basis": "user_map_snapshot",
+        "coordinate_note": "Tọa độ giữ nguyên từ snapshot My Maps; chưa kiểm định độc lập."
+      }
+    }
+  ]
+}

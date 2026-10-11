@@ -1,0 +1,60 @@
+[
+  {
+    "id": "f1",
+    "title": "ScamLens và hồ sơ Golden Triangle SEZ",
+    "status": "qualified",
+    "verdict": "Có hồ sơ; vị trí gần đúng, chưa xác minh độc lập",
+    "detail": "Giữ ScamLens ở cấp đầu mối thứ cấp. Không coi nhãn Active là trạng thái đã được Scamland kiểm chứng.",
+    "source_ids": [
+      "scamlens"
+    ]
+  },
+  {
+    "id": "f2",
+    "title": "Open Development Mekong có hơn 300 bộ dữ liệu",
+    "status": "qualified",
+    "verdict": "Có nền tảng; không gán con số cho riêng Tam giác vàng",
+    "detail": "Danh mục phân loại dataset, library, laws và tài nguyên khác. Tổng số biến động và phạm vi của tuyên bố ban đầu chưa xác định.",
+    "source_ids": [
+      "odm"
+    ]
+  },
+  {
+    "id": "f3",
+    "title": "SII: hơn 120 bài và kho lưu trữ IPFS",
+    "status": "pending",
+    "verdict": "Chưa kiểm chứng số lượng và CID",
+    "detail": "Đã đọc website và bài nghiên cứu tháng 04/2026. Cần danh mục, CID, ngày pin và đối chiếu nội dung trước khi xác nhận kho IPFS.",
+    "source_ids": [
+      "sii"
+    ]
+  },
+  {
+    "id": "f4",
+    "title": "Logic Hunter là công cụ về Tam giác vàng địa lý",
+    "status": "pending",
+    "verdict": "Chưa có nguồn gốc chứng minh ứng dụng địa lý",
+    "detail": "Tên Golden Triangle trong mô tả kỹ năng logic chưa đủ để liên hệ với khu vực Lào–Myanmar–Thái Lan. Không cài hoặc thực thi kỹ năng chưa được kiểm tra.",
+    "source_ids": []
+  },
+  {
+    "id": "f5",
+    "title": "RSO đào tạo điều tra viên từ 16 quốc gia",
+    "status": "verified",
+    "verdict": "Có nguồn RSO, hội thảo 27–30/05/2025",
+    "detail": "RSO công bố 31 người tham gia từ 16 quốc gia tại Chiang Saen. Đây là dữ liệu sự kiện đào tạo.",
+    "source_ids": [
+      "rso-2025"
+    ]
+  },
+  {
+    "id": "f6",
+    "title": "Mã phát hiện hố bom KH-9 dùng nhận diện scam centres",
+    "status": "qualified",
+    "verdict": "Có mã nghiên cứu hố bom; không phải bộ nhận diện scam centres",
+    "detail": "Repository pbarthelme/detecting-vietnam-war-bomb-craters tái lập nghiên cứu ảnh lịch sử. Không chuyển nhãn hố bom thành nhãn cơ sở lừa đảo; không đồng nhất hai vùng tri-border.",
+    "source_ids": [
+      "crater-paper"
+    ]
+  }
+]

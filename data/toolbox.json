@@ -1,0 +1,72 @@
+[
+  {
+    "id": "aleph",
+    "name": "Aleph",
+    "category": "entities",
+    "url": "https://github.com/alephdata/aleph",
+    "license": "MIT (code)",
+    "summary": "Tìm kiếm tài liệu và kết nối thực thể người, tổ chức, hồ sơ.",
+    "use": "Dùng ID ổn định, tên thay thế và tài liệu nguồn để xử lý trùng tên.",
+    "checked": "2026-10-11"
+  },
+  {
+    "id": "opensanctions",
+    "name": "OpenSanctions",
+    "category": "entities",
+    "url": "https://github.com/opensanctions/opensanctions",
+    "license": "MIT (code); dữ liệu có điều khoản riêng",
+    "summary": "Dữ liệu và pipeline liên quan trừng phạt, PEP và thực thể.",
+    "use": "Đối chiếu danh sách hiện hành, thời điểm cập nhật và nguyên nhân khớp tên.",
+    "checked": "2026-10-11"
+  },
+  {
+    "id": "auto-archiver",
+    "name": "Bellingcat Auto Archiver",
+    "category": "archive",
+    "url": "https://github.com/bellingcat/auto-archiver",
+    "license": "MIT",
+    "summary": "Lưu trữ nội dung nguồn mở từ các liên kết.",
+    "use": "Tôn trọng quyền truy cập, điều khoản nguồn và quyền riêng tư khi lưu bằng chứng.",
+    "checked": "2026-10-11"
+  },
+  {
+    "id": "openrefine",
+    "name": "OpenRefine",
+    "category": "data",
+    "url": "https://github.com/OpenRefine/OpenRefine",
+    "license": "BSD-3-Clause",
+    "summary": "Làm sạch và chuẩn hóa dữ liệu không đồng nhất.",
+    "use": "Chuẩn hóa tên địa danh, quốc gia và alias trước khi nối bảng.",
+    "checked": "2026-10-11"
+  },
+  {
+    "id": "crater",
+    "name": "KH-9 bomb crater research",
+    "category": "imagery",
+    "url": "https://github.com/pbarthelme/detecting-vietnam-war-bomb-craters",
+    "license": "Kiểm tra LICENSE của phiên bản trước khi tái sử dụng",
+    "summary": "Mã tái lập phân tích hố bom từ ảnh vệ tinh lịch sử.",
+    "use": "Tham khảo tính tái lập, cấu hình và đánh giá của nghiên cứu; không coi là công cụ xác định hành vi phạm tội.",
+    "checked": "2026-10-11"
+  },
+  {
+    "id": "leaflet",
+    "name": "Leaflet 1.9.4",
+    "category": "maps",
+    "url": "https://github.com/Leaflet/Leaflet",
+    "license": "BSD-2-Clause",
+    "summary": "Bản đồ tương tác, lớp dữ liệu, popup và thước tỷ lệ.",
+    "use": "Lõi bản đồ dẫn xuất trong Vietflex; giữ giấy phép BSD-2-Clause.",
+    "checked": "2026-10-11"
+  },
+  {
+    "id": "vietflex",
+    "name": "Vietflex 1.0.0",
+    "category": "maps",
+    "url": "https://github.com/Vietflexmap/VN/tree/6144d565fcf236727577ab3c4471bbe49f86892f",
+    "license": "BSD-2-Clause (lõi); MIT (phần bổ sung)",
+    "summary": "SDK Vietflex do Long Ngo phát triển trên lõi Leaflet; được đóng gói theo commit người dùng chỉ định.",
+    "use": "vietflexMap(), Google roadmap legacy, AttributionControl và lớp dữ liệu. Có nền Atlas cục bộ và OSM dự phòng.",
+    "checked": "2026-10-11"
+  }
+]
