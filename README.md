@@ -16,7 +16,7 @@ KMZ gửi ban đầu chỉ chứa một `NetworkLink`. Đã tải thành công K
 
 ## Vietflex và bản đồ nền
 
-SDK/CSS Vietflex được lưu cục bộ, từ commit [`6144d565fcf236727577ab3c4471bbe49f86892f`](https://github.com/Vietflexmap/VN/tree/6144d565fcf236727577ab3c4471bbe49f86892f). Không phải chờ CDN để khởi tạo ứng dụng. Mặc định trực tuyến là OSM, offline là Atlas Natural Earth. Nút **Vietflex / Google** bật roadmap legacy theo cấu hình đã yêu cầu; lỗi tile chuyển về Atlas. Giữ AttributionControl và ghi nguồn nền.
+Bản đồ chính tải SDK/CSS Vietflex qua CDN jsDelivr với URL có dấu `@`, từ commit [`6144d565fcf236727577ab3c4471bbe49f86892f`](https://github.com/Vietflexmap/VN/tree/6144d565fcf236727577ab3c4471bbe49f86892f). SDK/CSS được kiểm tra bằng SRI và có bản cục bộ dự phòng khi CDN lỗi. Ứng dụng đợi SDK/CSS sẵn sàng trước khi khởi tạo. Mặc định trực tuyến là Google roadmap legacy, offline là Atlas Natural Earth. Nút **Vietflex / Google** bật roadmap legacy theo cấu hình đã yêu cầu; lỗi tile chuyển về Atlas. Dùng `Vietflex.ZoomControl` ở góc trái trên và `Vietflex.AttributionControl` ở góc phải dưới; ghi nguồn nền.
 
 Google legacy là endpoint tương thích của SDK, có thể thay đổi. Dữ liệu/ảnh của Google và OSM không nằm trong giấy phép MIT của ứng dụng. Xem [NOTICE](NOTICE.md).
 

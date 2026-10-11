@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Scamland — WebGIS OSINT Tam giác vàng. Tra cứu địa danh, đọc nguồn gốc, kiểm tra quan hệ và mốc thời gian từ tài liệu công khai.">
   <meta name="theme-color" content="#0a0f17">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://tile.openstreetmap.org https://mt0.google.com https://mt1.google.com https://mt2.google.com https://mt3.google.com; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: https://cdn.jsdelivr.net https://tile.openstreetmap.org https://mt0.google.com https://mt1.google.com https://mt2.google.com https://mt3.google.com; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <title>Scamland · Tam giác vàng OSINT Atlas</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="vendor/vietflex.css">
+  <link id="vietflexStyle" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Vietflexmap/VN@6144d565fcf236727577ab3c4471bbe49f86892f/dist/vietflex.css" integrity="sha384-jgGkangGaFCW07zvonbYp8IqKgPThmKK4Oqfb4zbEw21uKpCINwp0YI3cBdNNriZ" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/map-focus.css">
 </head>
@@ -51,7 +51,7 @@
           <div id="map" aria-label="Bản đồ địa danh. Có thể dùng danh sách địa danh để truy cập bằng bàn phím."></div>
           <div class="focus-map-pill">◉ BOKEO · TON PHEUNG</div><button class="focus-sidebar-btn" id="focusSidebarBtn" type="button">☰ Dữ liệu &amp; lớp</button><div class="map-title"><span class="eyebrow">ATLAS / 01</span><h2>Tam giác vàng</h2><p id="mapSubtitle">Bối cảnh địa lý & hồ sơ công khai</p></div>
           <div class="basemap-switch" aria-label="Chọn bản đồ nền"><button id="googleBtn" class="active" aria-pressed="true">Google · legacy</button><button id="atlasBtn" aria-pressed="false">Atlas</button><button id="osmBtn" aria-pressed="false">OpenStreetMap</button></div>
-          <div class="map-tools"><button class="tool" id="zoomIn" aria-label="Phóng to" title="Phóng to">+</button><button class="tool" id="zoomOut" aria-label="Thu nhỏ" title="Thu nhỏ">−</button><div class="tool-divider"></div><button class="tool" id="fitBtn" aria-label="Xem toàn bộ mốc đã lọc" title="Xem toàn bộ mốc đã lọc"><span data-icon="expand"></span></button><button class="tool" id="measureBtn" aria-label="Đo khoảng cách thẳng giữa hai điểm" title="Đo khoảng cách thẳng giữa hai điểm" aria-pressed="false"><span data-icon="ruler"></span></button><button class="tool" id="layerBtn" aria-label="Tùy chọn lớp" title="Tùy chọn lớp" aria-expanded="false"><span data-icon="layers"></span></button></div>
+          <div class="map-tools"><button class="tool" id="fitBtn" aria-label="Xem toàn bộ mốc đã lọc" title="Xem toàn bộ mốc đã lọc"><span data-icon="expand"></span></button><button class="tool" id="measureBtn" aria-label="Đo khoảng cách thẳng giữa hai điểm" title="Đo khoảng cách thẳng giữa hai điểm" aria-pressed="false"><span data-icon="ruler"></span></button><button class="tool" id="layerBtn" aria-label="Tùy chọn lớp" title="Tùy chọn lớp" aria-expanded="false"><span data-icon="layers"></span></button></div>
           <div id="layerOptions" class="layer-options" hidden><b>Lớp hiển thị</b><label><input type="checkbox" id="showOriginal" checked>Bản đồ gốc · 87 mốc</label><label><input type="checkbox" id="showContext" checked>Nền địa lý tổng quát</label><label><input type="checkbox" id="showRadii">Vòng chỉ báo độ khái quát</label><label><input type="checkbox" id="showLabels" checked>Tên địa danh</label><label><input type="checkbox" id="showLocal" checked>Điểm nhập cục bộ</label><button class="text-btn" id="clearImport">Xóa lớp nhập cục bộ</button></div>
 <details id="influencePanel" class="influence-panel" open>
             <summary><span>PHẠM VI KHẢO SÁT · 3 VÙNG</span><i aria-hidden="true">⌄</i></summary>
@@ -89,7 +89,8 @@
     "date":null,"summary":"Ghi chú nguồn"}}
 ]}</pre><button class="btn primary" id="chooseImport"><span data-icon="upload"></span>Chọn GeoJSON</button><p style="margin-top:18px"><a class="text-btn" href="tools/KML_Workbench.html" target="_blank" rel="noopener">Công cụ nhập KML/KMZ và hình học khác ↗</a></p><p id="importError" role="alert" class="error" hidden></p></dialog>
   <noscript><div class="noscript">Cần bật JavaScript để sử dụng atlas. Bạn vẫn có thể đọc <a href="data/sources.json">danh mục nguồn</a> và <a href="docs/METHODOLOGY.md">phương pháp</a>.</div></noscript>
-  <script src="vendor/vietflex.js"></script>
+  <script id="vietflexSdk" src="https://cdn.jsdelivr.net/gh/Vietflexmap/VN@6144d565fcf236727577ab3c4471bbe49f86892f/dist/vietflex.js" integrity="sha384-P8H4XpGMUp5izHJAQNkpvQcrHJFGg33bcxds/QYOOitiP19Ywd62DXLoPB+49WlC" crossorigin="anonymous"></script>
+  <script src="assets/vietflex-loader.js"></script>
   <script src="data/bundle.js"></script>
   <script src="assets/core.js"></script>
   <script src="assets/app.js"></script>

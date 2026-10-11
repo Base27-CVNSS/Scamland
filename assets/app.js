@@ -1,5 +1,5 @@
-/* Scamland application. MIT, Long Ngo 2026. No server, tracker, API key or remote script. */
-(function () {
+/* Scamland application. MIT, Long Ngo 2026. No server, tracker or API key. */
+(window.ScamlandVietflexReady || Promise.resolve()).then(function () {
   'use strict';
   const D = window.ScamlandData; const C = window.ScamlandCore;
   const V = window.Vietflex;
@@ -145,11 +145,12 @@
   }
   function initMap() {
     map = V.vietflexMap('map',{useLegacyGoogleTiles:true,googleMapType:'roadmap',googleMaps:state.base==='google',zoomControl:false,attributionControl:false,minZoom:3,maxZoom:18,maxBounds:null,preferCanvas:false,worldCopyJump:true,scrollWheelZoom:true}).setView([20.34,100.11],11);
-    new V.AttributionControl({position:'bottomright',prefix:false}).addTo(map);
+    new V.ZoomControl({position:'topleft',zoomInTitle:'Phóng to',zoomOutTitle:'Thu nhỏ'}).addTo(map);
+    new V.AttributionControl({position:'bottomright'}).addTo(map);
     googleLayer=map.baseLayer || V.legacyGoogleTiles({mapType:'roadmap'});
     backgroundLayer = L.layerGroup().addTo(map); markerLayer = L.layerGroup().addTo(map); radiusLayer = L.layerGroup().addTo(map); labelLayer = L.layerGroup().addTo(map); localLayer = L.layerGroup().addTo(map); measureLayer = L.layerGroup().addTo(map);
     originalLayer=L.layerGroup().addTo(map);
-    map.attributionControl.setPrefix(false); map.attributionControl.addAttribution('Natural Earth 1:110m · điểm chỉ báo');
+    map.attributionControl.addAttribution('Natural Earth 1:110m · điểm chỉ báo');
     L.control.scale({position:'bottomleft',imperial:false,maxWidth:90}).addTo(map);
     osmLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxNativeZoom:19,maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',keepBuffer:0,updateWhenIdle:true});
     // Isolated tile failures should not trigger the full-basemap fallback.
@@ -483,8 +484,6 @@
         case 'closeDetail':document.body.classList.remove('detail-open');if(window.innerWidth>720){document.body.classList.add('detail-closed');requestAnimationFrame(()=>map.invalidateSize());}break;
         case 'shareBtn':shareView();break;
         case 'resetBtn':stopPlaying();Object.assign(state,{scope:'core',year:2026,country:'',topic:'',level:'all',query:'',includeUndated:true,bookmarksOnly:false,selectedId:'gtsez'});graphPositions={};activeEdge=null;refresh({fit:true});toast('Đã đặt lại bộ lọc.');break;
-        case 'zoomIn':map.zoomIn();break;
-        case 'zoomOut':map.zoomOut();break;
         case 'fitBtn':fitPlaces();break;
         case 'atlasBtn':setBase('atlas');break;
         case 'osmBtn':setBase('osm');break;
@@ -543,4 +542,11 @@
   }
   try{start();}
   catch(error){console.error('Scamland startup failed:',error);$('detailContent').innerHTML='<div class="error">Không khởi tạo được atlas. Mở Console để xem chi tiết; các file dữ liệu và tài liệu phương pháp vẫn có trong mã nguồn.</div>';toast('Không khởi tạo được atlas. Kiểm tra các file tài nguyên cục bộ.');}
-})();
+}).catch(error => {
+  console.error('Scamland SDK loading failed:', error);
+  const status = document.getElementById('mapMessage');
+  if (status) {
+    status.hidden = false;
+    status.textContent = 'Chưa tải được Vietflex. Thử tải lại trang; bạn vẫn có thể tải KML/KMZ và đọc danh mục nguồn.';
+  }
+});

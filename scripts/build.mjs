@@ -16,10 +16,19 @@ let html=read('index.html');
 for(const file of ['vendor/vietflex.css','assets/style.css','assets/map-focus.css']){
  let css=read(file);
  if(file==='vendor/vietflex.css')for(const name of ['layers.svg','marker-icon.svg'])css=css.replaceAll('url(images/'+name+')','url(data:image/svg+xml;base64,'+fs.readFileSync(path.join(root,'vendor/images',name)).toString('base64')+')');
- html=html.replace('<link rel="stylesheet" href="'+file+'">',()=>'<style>\n'+css+'\n</style>');
+ const style='<style>\n'+css+'\n</style>';
+ html=file==='vendor/vietflex.css'
+  ?html.replace(/<link\b[^>]*\bid="vietflexStyle"[^>]*>/,()=>style)
+  :html.replace('<link rel="stylesheet" href="'+file+'">',()=>style);
 }
 html=html.replace('<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">','<link rel="icon" href="data:image/svg+xml;base64,'+fs.readFileSync(path.join(root,'assets/favicon.svg')).toString('base64')+'" type="image/svg+xml">');
-for(const file of ['vendor/vietflex.js','data/bundle.js','assets/core.js','assets/app.js'])html=html.replace('<script src="'+file+'"></script>',()=>'<script>\n'+(file==='vendor/vietflex.js'?'window.__SCAMLAND_OFFLINE__=true;\n':'')+read(file).replace(/<\/script/gi,'<\\/script').replace(/\/\/# sourceMappingURL=.*$/gm,'')+'\n</script>');
+html=html.replace('<script src="assets/vietflex-loader.js"></script>','');
+for(const file of ['vendor/vietflex.js','data/bundle.js','assets/core.js','assets/app.js']){
+ const script='<script>\n'+(file==='vendor/vietflex.js'?'window.__SCAMLAND_OFFLINE__=true;\n':'')+read(file).replace(/<\/script/gi,'<\\/script').replace(/\/\/# sourceMappingURL=.*$/gm,'')+'\n</script>';
+ html=file==='vendor/vietflex.js'
+  ?html.replace(/<script\b[^>]*\bid="vietflexSdk"[^>]*><\/script>/,()=>script)
+  :html.replace('<script src="'+file+'"></script>',()=>script);
+}
 for(const ext of ['kml','kmz'])html=html.replace('href="downloads/Scamland_Updated.'+ext+'"','href="data:application/vnd.google-earth.'+(ext==='kml'?'kml+xml':'kmz')+';base64,'+fs.readFileSync(path.join(root,'downloads/Scamland_Updated.'+ext)).toString('base64')+'"');
 html=html.replace('href="docs/METHODOLOGY.md"','href="https://github.com/Base27-CVNSS/Scamland/blob/main/docs/METHODOLOGY.md"').replace('href="LICENSE"','href="https://github.com/Base27-CVNSS/Scamland/blob/main/LICENSE"');
 html=html.replace('href="tools/KML_Workbench.html"','href="https://base27-cvnss.github.io/Scamland/tools/KML_Workbench.html"');
