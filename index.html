@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101621">
+  <meta name="description" content="Scamland OSINT WebGIS: bản đồ nghiên cứu dữ liệu công khai tại khu vực Tam giác Vàng. Địa điểm không đồng nghĩa với cáo buộc.">
+  <title>Scamland | Golden Triangle OSINT WebGIS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Vietflexmap/VN@6144d565fcf236727577ab3c4471bbe49f86892f/dist/vietflex.css">
+  <script defer src="https://cdn.jsdelivr.net/gh/Vietflexmap/VN@6144d565fcf236727577ab3c4471bbe49f86892f/dist/vietflex.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <style>
+    :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color-scheme:dark;--bg:#0b1018;--panel:#131b27;--panel2:#1b2634;--line:#2e3949;--text:#f3f7fa;--muted:#a2b1c3;--accent:#f55e65;--cyan:#53d7df;--gold:#f3b95e}
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text)}
+    button,input,select{font:inherit}button{cursor:pointer}a{color:#92d9f6}
+    .shell{height:100dvh;min-height:620px;display:grid;grid-template-columns:345px minmax(0,1fr);grid-template-rows:72px minmax(0,1fr) 34px}
+    header{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 24px;border-bottom:1px solid var(--line);background:#101823}
+    .brand{display:flex;align-items:center;gap:13px;min-width:0}.brandmark{height:42px;width:42px;border:1px solid #fd677c66;border-radius:13px;background:linear-gradient(135deg,#4a2330,#1b2738);display:grid;place-items:center;color:#ff8c93;font-weight:900;font-size:21px}
+    h1{font-size:17px;letter-spacing:.045em;margin:0}.sub{font-size:11px;color:var(--muted);margin-top:4px}
+    .toplinks{display:flex;align-items:center;gap:12px;font-size:12px;flex-wrap:wrap;justify-content:flex-end}
+    .tag{padding:7px 10px;border-radius:999px;border:1px solid #45675c;color:#a9e6c8;background:#192e2c;font-size:11px;white-space:nowrap}
+    aside{overflow:auto;padding:19px 17px;background:var(--panel);border-right:1px solid var(--line)}
+    .eyebrow{font-size:10px;font-weight:800;letter-spacing:.19em;text-transform:uppercase;color:var(--cyan);margin-bottom:9px}
+    h2{font-size:20px;line-height:1.3;margin:0 0 10px}
+    .intro{font-size:12px;line-height:1.7;color:var(--muted);margin:0 0 18px}
+    .section{margin:19px 0;padding-top:17px;border-top:1px solid var(--line)}
+    .section h3{font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin:0 0 12px;color:#dfebf4}
+    .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+    .stat{padding:12px 9px;background:var(--panel2);border:1px solid var(--line);border-radius:12px}
+    .num{font-size:22px;font-weight:800;line-height:1.2;font-variant-numeric:tabular-nums}
+    .stat-label{font-size:10px;color:var(--muted);margin-top:6px}
+    .controls{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    button,.button{background:#202c3c;border:1px solid #41516a;color:var(--text);border-radius:10px;padding:10px 11px;font-size:12px;font-weight:700}
+    button:hover,.button:hover{border-color:var(--cyan);background:#263b4c}
+    button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+    button.primary,.button.primary{background:#a72b3e;border-color:#e65b68;color:#fff}
+    button.active{border-color:#67d7df;background:#24434a;color:#e7feff}
+    .full{width:100%;margin-top:8px;text-align:center;display:block}
+    .muted{font-size:11px;color:var(--muted);line-height:1.65}
+    .field{width:100%;height:39px;background:#101824;border:1px solid var(--line);border-radius:9px;padding:0 11px;color:var(--text);margin:3px 0 10px}
+    .source{padding:11px;border:1px solid var(--line);background:#172130;border-radius:11px;margin-bottom:8px}
+    .source-header{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;font-weight:750}
+    .source small{display:block;margin:6px 0 0;color:var(--muted);line-height:1.5}
+    .source button{padding:5px 9px;font-size:10px}
+    .item{width:100%;display:block;text-align:left;margin-bottom:6px;padding:11px;background:#182333;border:1px solid var(--line)}
+    .item strong{display:block;font-size:12px;margin-bottom:5px}.item span{font-size:10px;color:var(--muted)}
+    .notice{padding:12px;background:#29231d;border:1px solid #66513c;color:#f1d09d;border-radius:11px;font-size:11px;line-height:1.6}
+    .map-wrap{position:relative;overflow:hidden;background:#0e1621}
+    #map{height:100%;width:100%;z-index:1}
+    .toolbar{position:absolute;top:15px;left:15px;right:15px;z-index:500;display:flex;flex-wrap:wrap;align-items:center;gap:8px;pointer-events:none}
+    .toolbar>*{pointer-events:auto}
+    .map-chip{background:#111a26eb;border:1px solid #496073;border-radius:10px;color:#f3f8fa;padding:9px 12px;font-size:11px;backdrop-filter:blur(14px)}
+    .grow{flex:1}
+    .map-foot{position:absolute;bottom:24px;left:15px;z-index:500;max-width:min(510px,calc(100% - 30px));pointer-events:none}
+    .map-foot>*{pointer-events:auto}
+    .legend{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:10px}
+    .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--gold);margin-right:5px}
+    .dot.cyan{background:var(--cyan)}
+    .map-error{display:none;position:absolute;top:66px;right:14px;z-index:650;background:#6b2830;border:1px solid #fd7d87;color:#fff;padding:10px 13px;border-radius:9px;font-size:12px;max-width:370px}
+    .leaflet-container{background:#111a25;font-family:inherit}
+    .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#182536;color:#f0f7fc}
+    .leaflet-popup-content{line-height:1.5;min-width:170px}
+    .popup-title{font-size:14px;font-weight:800;margin-bottom:5px}
+    .popup-note{font-size:11px;color:#bfccd9;margin:8px 0}
+    .leaflet-control-attribution{background:#101824dc!important;color:#c7d4df!important}
+    .leaflet-control-zoom a{background:#182638!important;color:#fff!important}
+    footer{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding:5px 17px;font-size:10px;color:var(--muted);background:#0f1721}
+    #fileInput{display:none}
+    @media(max-width:850px){.shell{height:auto;min-height:100dvh;display:flex;flex-direction:column}header{padding:12px 14px}.toplinks .tag{display:none}aside{order:2;overflow:visible;border-right:0;border-top:1px solid var(--line)}.map-wrap{order:1;height:57dvh;min-height:390px}footer{order:3}.toolbar{top:8px;left:8px;right:8px}.map-chip{padding:8px;font-size:10px}}
+    @media(max-width:460px){header h1{font-size:14px}.toplinks{gap:7px}.toplinks a{font-size:10px}.map-foot{bottom:26px;left:8px}.stat{padding:9px 7px}.num{font-size:20px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+  </style>
+</head>
+<body>
+<div class="shell">
+  <header>
+    <div class="brand"><div class="brandmark" aria-hidden="true">S</div><div><h1>SCAMLAND <span style="color:#f87482">/ OSINT WebGIS</span></h1><div class="sub">GOLDEN TRIANGLE · BOKEO, LAOS · VIETFLEX ENGINE</div></div></div>
+    <nav class="toplinks" aria-label="Liên kết chính"><span class="tag">● Open-source intelligence</span><a href="https://github.com/Base27-CVNSS/Scamland" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav>
+  </header>
+  <aside>
+    <div class="eyebrow">GEOSPATIAL RESEARCH PLATFORM</div>
+    <h2>Địa lý dữ liệu mở<br>khu vực Tam giác Vàng</h2>
+    <p class="intro">Theo dõi địa điểm, tài liệu và lớp dữ liệu địa lý từ nguồn công khai. Phân biệt rõ <strong>địa danh tham chiếu</strong>, <strong>nguồn tin</strong> và <strong>thông tin đã kiểm chứng</strong>.</p>
+    <div class="stats" aria-label="Thống kê dữ liệu">
+      <div class="stat"><div class="num" id="countFeatures">0</div><div class="stat-label">Hình học GIS</div></div>
+      <div class="stat"><div class="num" id="countLayers">0</div><div class="stat-label">Lớp dữ liệu</div></div>
+      <div class="stat"><div class="num" id="countLinks">1</div><div class="stat-label">NetworkLink</div></div>
+    </div>
+    <section class="section" aria-labelledby="source-heading">
+      <h3 id="source-heading">Nguồn dữ liệu & lớp bản đồ</h3>
+      <div id="sourceList" aria-live="polite"></div>
+      <p class="muted">KMZ đính kèm chỉ chứa liên kết Google My Maps, không có hình học nhúng. Chưa thể tự động suy ra các tọa độ từ liên kết này.</p>
+      <a class="button full" style="text-decoration:none" href="https://www.google.com/maps/d/u/0/kml?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA" target="_blank" rel="noopener noreferrer">Mở nguồn KML công khai ↗</a>
+      <a class="muted" style="display:block;margin-top:8px" href="./data/gtsez-networklink.kml" download>Tải KML nguồn đã cung cấp</a>
+    </section>
+    <section class="section" aria-labelledby="tools-heading">
+      <h3 id="tools-heading">Công cụ không gian</h3>
+      <div class="controls">
+        <button id="goHome">⌖ Đến vùng nghiên cứu</button>
+        <button id="fitData">⊞ Xem toàn bộ dữ liệu</button>
+        <button id="importButton" class="primary">＋ Nhập dữ liệu</button>
+        <button id="exportButton">↓ Xuất GeoJSON</button>
+      </div>
+      <input id="fileInput" type="file" accept=".geojson,.json,.kml,.kmz,application/vnd.google-earth.kml+xml,application/vnd.google-earth.kmz" multiple>
+      <p class="muted">Nhập GeoJSON, KML hoặc KMZ (tối đa 10 MB/tệp). Xử lý cục bộ trên trình duyệt, không tải dữ liệu lên máy chủ.</p>
+    </section>
+    <section class="section" aria-labelledby="objects-heading">
+      <h3 id="objects-heading">Đối tượng trên bản đồ</h3>
+      <label for="search" class="muted">Tìm theo địa danh hoặc thuộc tính</label>
+      <input id="search" class="field" placeholder="Ví dụ: Golden Triangle SEZ" autocomplete="off">
+      <div id="featureList"></div>
+    </section>
+    <section class="section">
+      <h3>Quy tắc xác minh</h3>
+      <div class="notice">Dữ liệu nghiên cứu OSINT ≠ kết luận về hoạt động phạm pháp. Không quy kết một cá nhân, doanh nghiệp hay công trình từ vị trí địa lý đơn lẻ. Đối chiếu nguồn gốc, thời điểm và bằng chứng độc lập trước khi công bố.</div>
+    </section>
+  </aside>
+  <main class="map-wrap" aria-label="Bản đồ khu vực Tam giác Vàng">
+    <div id="map"></div>
+    <div class="toolbar">
+      <div class="map-chip">◉ BOKEO · TON PHEUNG</div>
+      <div class="grow"></div>
+      <button id="googleBase" class="active" aria-pressed="true">Google · legacy</button>
+      <button id="osmBase" aria-pressed="false">OpenStreetMap</button>
+    </div>
+    <div id="mapError" class="map-error" role="alert"></div>
+    <div class="map-foot">
+      <div class="map-chip legend"><span><i class="dot"></i>Địa danh tham chiếu</span><span><i class="dot cyan"></i>Dữ liệu người dùng nhập</span><span id="mouseCoords">WGS84 · EPSG:4326</span></div>
+    </div>
+  </main>
+  <footer><span>Dữ liệu nghiên cứu công khai · Không phải kết luận điều tra</span><span>Vietflexmap · Long Ngo 2026 · MIT (mã ứng dụng)</span></footer>
+</div>
+<script>
+(function(){
+"use strict";
+const HOME=[20.34025,100.10524];
+const $=id=>document.getElementById(id);
+const referenceFeature={type:"Feature",geometry:{type:"Point",coordinates:[HOME[1],HOME[0]]},properties:{
+  name:"Golden Triangle Special Economic Zone",category:"reference",
+  description:"Địa danh tham chiếu tại Ton Pheung, tỉnh Bokeo, Lào. Tọa độ trung tâm xấp xỉ; không phải ranh giới pháp lý hay vị trí một cơ sở bị cáo buộc.",
+  source:"Wikidata Q24896442",url:"https://www.wikidata.org/wiki/Q24896442"}};
+const datasets=[{id:"reference",name:"Địa danh đã định vị",kind:"reference",visible:true,features:[referenceFeature]}];
+let map,google,osm;
+const layers=new Map();
+function error(message){$("mapError").textContent=message;$("mapError").style.display="block";}
+function status(message){$("mapError").textContent=message;$("mapError").style.display="block";}
+function hideStatus(){$("mapError").style.display="none";}
+function safeText(v){return v==null?"":String(v).slice(0,1200);}
+function safeLink(url){
+ try{const parsed=new URL(url);return parsed.protocol==="https:"?parsed.href:null;}catch(e){return null;}
+}
+function pName(f){return safeText((f.properties||{}).name||(f.properties||{}).title||(f.properties||{}).Name||"Không có tên");}
+function allFeatures(){return datasets.flatMap(d=>d.features);}
+function pointBounds(features){
+ let minLat=90,maxLat=-90,minLng=180,maxLng=-180,n=0;
+ function scan(c){if(!Array.isArray(c))return;if(typeof c[0]==="number"&&typeof c[1]==="number"){if(Number.isFinite(c[0])&&Number.isFinite(c[1])&&Math.abs(c[0])<=180&&Math.abs(c[1])<=90){minLng=Math.min(minLng,c[0]);maxLng=Math.max(maxLng,c[0]);minLat=Math.min(minLat,c[1]);maxLat=Math.max(maxLat,c[1]);n++;}}else c.forEach(scan);}
+ features.forEach(f=>f.geometry&&scan(f.geometry.coordinates));
+ return n?[[minLat,minLng],[maxLat,maxLng]]:null;
+}
+function goFeature(f){
+ const b=pointBounds([f]);if(!b)return;
+ const same=Math.abs(b[0][0]-b[1][0])<.00001&&Math.abs(b[0][1]-b[1][1])<.00001;
+ if(same)map.setView(b[0],Math.max(14,map.getZoom()));else map.fitBounds(b,{padding:[45,45],maxZoom:16});
+}
+function popupNode(f){
+ const p=f.properties||{},wrap=document.createElement("div");
+ const title=document.createElement("div");title.className="popup-title";title.textContent=pName(f);wrap.appendChild(title);
+ const descr=document.createElement("div");descr.className="popup-note";descr.textContent=safeText(p.description||"Dữ liệu địa lý do người dùng cung cấp; chưa được hệ thống xác minh.");wrap.appendChild(descr);
+ if(p.source){const src=document.createElement("div");src.className="popup-note";src.textContent="Nguồn: "+safeText(p.source);wrap.appendChild(src);}
+ const href=safeLink(p.url);if(href){const link=document.createElement("a");link.href=href;link.target="_blank";link.rel="noopener noreferrer";link.textContent="Mở nguồn ↗";wrap.appendChild(link);}
+ return wrap;
+}
+function styleFor(kind){return kind==="reference"?{color:"#eab65a",fillColor:"#eab65a",weight:2,fillOpacity:.25,opacity:.95}:{color:"#53d7df",fillColor:"#53d7df",weight:2.5,fillOpacity:.17,opacity:1};}
+function draw(d){
+ if(layers.has(d.id)){map.removeLayer(layers.get(d.id));layers.delete(d.id);}
+ const style=styleFor(d.kind);
+ const layer=new Vietflex.GeoJSON({type:"FeatureCollection",features:d.features},{
+   style:()=>style,
+   pointToLayer:(f,ll)=>new Vietflex.CircleMarker(ll,{...style,radius:d.kind==="reference"?8:6,fillOpacity:.8}),
+   onEachFeature:(f,l)=>{l.bindPopup(popupNode(f));l.on("click",()=>{});}
+ });
+ layers.set(d.id,layer);if(d.visible)layer.addTo(map);
+}
+function addText(parent,tag,txt,cls){const el=document.createElement(tag);el.textContent=txt;if(cls)el.className=cls;parent.appendChild(el);return el;}
+function render(){
+ $("countFeatures").textContent=allFeatures().length;
+ $("countLayers").textContent=datasets.length;
+ const src=$("sourceList");src.replaceChildren();
+ datasets.forEach(d=>{
+  const row=document.createElement("div");row.className="source";
+  const line=document.createElement("div");line.className="source-header";
+  addText(line,"span",d.name);
+  const btn=document.createElement("button");btn.textContent=d.visible?"● Hiện":"○ Ẩn";btn.setAttribute("aria-pressed",String(d.visible));
+  btn.onclick=()=>{d.visible=!d.visible;const lyr=layers.get(d.id);if(d.visible)lyr.addTo(map);else map.removeLayer(lyr);render();};
+  line.appendChild(btn);row.appendChild(line);
+  addText(row,"small",d.features.length+" hình học · "+(d.kind==="reference"?"Tọa độ địa danh từ nguồn mở":"Dữ liệu nhập, chưa xác minh"));
+  src.appendChild(row);
+ });
+ const q=$("search").value.trim().toLowerCase(),items=$("featureList");items.replaceChildren();
+ let hits=0;datasets.forEach(d=>d.features.forEach(f=>{
+  const text=(pName(f)+" "+safeText(f.properties&&f.properties.description)).toLowerCase();
+  if(!text.includes(q)||hits>=100)return;hits++;
+  const btn=document.createElement("button");btn.className="item";
+  addText(btn,"strong",pName(f));addText(btn,"span",(d.kind==="reference"?"Tham chiếu":"Đã nhập")+" · "+f.geometry.type);
+  btn.onclick=()=>{if(!d.visible){d.visible=true;layers.get(d.id).addTo(map);render();}goFeature(f);};
+  items.appendChild(btn);
+ }));
+ if(!hits)addText(items,"p","Không tìm thấy đối tượng phù hợp.","muted");
+}
+function useBase(which){
+ if(which==="osm"){if(google&&map.hasLayer(google))map.removeLayer(google);if(!map.hasLayer(osm))osm.addTo(map);}
+ else{if(map.hasLayer(osm))map.removeLayer(osm);if(google&&!map.hasLayer(google))google.addTo(map);}
+ $("googleBase").classList.toggle("active",which==="google");
+ $("osmBase").classList.toggle("active",which==="osm");
+ $("googleBase").setAttribute("aria-pressed",String(which==="google"));
+ $("osmBase").setAttribute("aria-pressed",String(which==="osm"));
+ if(which==="osm")hideStatus();
+}
+function validateFeatures(data){
+ let features=data&&data.type==="FeatureCollection"?data.features:(data&&data.type==="Feature"?[data]:[]);
+ if(!Array.isArray(features))throw Error("Tệp không có danh sách GeoJSON Feature.");
+ if(features.length>10000)throw Error("Giới hạn 10.000 đối tượng mỗi tệp.");
+ const allowed=new Set(["Point","MultiPoint","LineString","MultiLineString","Polygon","MultiPolygon","GeometryCollection"]);
+ return features.filter(f=>f&&f.type==="Feature"&&f.geometry&&allowed.has(f.geometry.type)).map(f=>({
+  type:"Feature",geometry:f.geometry,properties:{
+   ...(f.properties&&typeof f.properties==="object"&&!Array.isArray(f.properties)?f.properties:{}),
+   name:pName(f),source:safeText((f.properties||{}).source||"Tệp dữ liệu do người dùng nhập")
+  }
+ }));
+}
+function kmlCoords(raw){
+ return safeText(raw).trim().split(/\s+/).map(pt=>{
+   const a=pt.split(",").map(Number);return [a[0],a[1]];
+ }).filter(p=>Number.isFinite(p[0])&&Number.isFinite(p[1])&&Math.abs(p[0])<=180&&Math.abs(p[1])<=90);
+}
+function firstTag(node,tag){
+ const found=node.getElementsByTagNameNS("*",tag);return found.length?found[0]:null;
+}
+function xmlText(node,tag){const e=firstTag(node,tag);return e?e.textContent.trim():"";}
+function parseKML(xml){
+ const doc=new DOMParser().parseFromString(xml,"application/xml");
+ if(doc.querySelector("parsererror"))throw Error("KML không hợp lệ.");
+ const links=Array.from(doc.getElementsByTagNameNS("*","NetworkLink")).map(x=>({name:xmlText(x,"name"),href:xmlText(x,"href")})).filter(x=>x.href);
+ const feats=[];
+ const placemarks=doc.getElementsByTagNameNS("*","Placemark");
+ Array.from(placemarks).forEach(pm=>{
+  const props={name:xmlText(pm,"name")||"KML Placemark",description:xmlText(pm,"description"),source:"KML nhập từ máy"};
+  ["Point","LineString","Polygon"].forEach(type=>{
+   Array.from(pm.getElementsByTagNameNS("*",type)).forEach(node=>{
+    const raw=xmlText(node,"coordinates");const xy=kmlCoords(raw);let coords=null;
+    if(type==="Point"&&xy.length)coords=xy[0];
+    if(type==="LineString"&&xy.length>=2)coords=xy;
+    if(type==="Polygon"){
+     const outer=firstTag(node,"outerBoundaryIs"),outerCoords=outer?kmlCoords(xmlText(outer,"coordinates")):xy;
+     if(outerCoords.length>=3){const ring=outerCoords.slice();if(ring[0][0]!==ring[ring.length-1][0]||ring[0][1]!==ring[ring.length-1][1])ring.push(ring[0]);coords=[ring];}
+    }
+    if(coords)feats.push({type:"Feature",geometry:{type,coordinates:coords},properties:props});
+   });
+  });
+ });
+ return {features:feats,links};
+}
+async function loadFile(file){
+ if(file.size>10*1024*1024)throw Error(file.name+": quá 10 MB.");
+ const ext=file.name.split(".").pop().toLowerCase();let data={features:[],links:[]};
+ if(ext==="json"||ext==="geojson"){data.features=validateFeatures(JSON.parse(await file.text()));}
+ else if(ext==="kml"){data=parseKML(await file.text());}
+ else if(ext==="kmz"){
+  if(!window.JSZip)throw Error("Không tải được JSZip để mở tệp KMZ; hãy dùng KML hoặc GeoJSON.");
+  const zip=await JSZip.loadAsync(file);const kmlPath=Object.keys(zip.files).find(k=>k.toLowerCase().endsWith(".kml")&&!zip.files[k].dir);
+  if(!kmlPath)throw Error("KMZ không có tệp KML.");data=parseKML(await zip.files[kmlPath].async("string"));
+ }else throw Error("Chỉ chấp nhận GeoJSON, KML hoặc KMZ.");
+ if(data.links.length){const s=data.links.map(l=>l.href).join("\n");status("Tệp "+file.name+" chứa "+data.links.length+" NetworkLink. Nguồn ở xa chưa được tự động tải (có thể bị CORS). "+s.slice(0,170));$("countLinks").textContent=String(Number($("countLinks").textContent)+data.links.length);}
+ if(!data.features.length)return;
+ const name=file.name.slice(0,80);
+ const layer={id:"user-"+Date.now()+"-"+Math.random().toString(36).slice(2,7),name,kind:"import",visible:true,features:validateFeatures({type:"FeatureCollection",features:data.features})};
+ datasets.push(layer);draw(layer);render();const b=pointBounds(layer.features);if(b)map.fitBounds(b,{padding:[40,40],maxZoom:15});
+}
+function exportGeoJSON(){
+ const features=datasets.filter(d=>d.visible).flatMap(d=>d.features);
+ const content=JSON.stringify({type:"FeatureCollection",features},null,2);
+ const url=URL.createObjectURL(new Blob([content],{type:"application/geo+json"}));
+ const a=document.createElement("a");a.href=url;a.download="scamland-export.geojson";document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+function init(){
+ if(!window.Vietflex){error("Không tải được thư viện Vietflex từ CDN. Kiểm tra mạng hoặc chặn tải script.");return;}
+ try{
+  map=Vietflex.vietflexMap("map",{useLegacyGoogleTiles:true,googleMapType:"roadmap",zoomControl:false,attributionControl:false,maxBounds:null,minZoom:3});
+  map.setView(HOME,12);
+  new Vietflex.ZoomControl({position:"topleft"}).addTo(map);
+  new Vietflex.AttributionControl({position:"bottomright"}).addTo(map);
+  google=map.baseLayer;
+  osm=new Vietflex.TileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>',maxZoom:19});
+  let googleErrors=0;
+  if(google)google.on("tileerror",()=>{if(++googleErrors===3){useBase("osm");status("Nền Google legacy không tải được; đã chuyển sang OpenStreetMap. Để triển khai Google chính thức, cần API key và điều kiện sử dụng phù hợp.");}});
+  map.on("baselayererror",()=>{useBase("osm");status("Không khởi tạo được Google tiles; đã dùng OpenStreetMap.");});
+  map.on("mousemove",e=>{$("mouseCoords").textContent=e.latlng.lat.toFixed(5)+"°N, "+e.latlng.lng.toFixed(5)+"°E";});
+  datasets.forEach(draw);render();
+  $("goHome").onclick=()=>map.setView(HOME,12);
+  $("fitData").onclick=()=>{const b=pointBounds(datasets.filter(d=>d.visible).flatMap(d=>d.features));if(b)map.fitBounds(b,{padding:[35,35],maxZoom:14});};
+  $("googleBase").onclick=()=>useBase("google");
+  $("osmBase").onclick=()=>useBase("osm");
+  $("importButton").onclick=()=>$("fileInput").click();
+  $("fileInput").onchange=async e=>{
+   for(const file of Array.from(e.target.files||[])){try{await loadFile(file);}catch(err){status(file.name+": "+err.message);}}
+   e.target.value="";
+  };
+  $("exportButton").onclick=exportGeoJSON;
+  $("search").oninput=render;
+ }catch(e){error("Lỗi khởi tạo WebGIS: "+safeText(e.message));}
+}
+window.addEventListener("DOMContentLoaded",init);
+})();
+</script>
+</body>
+</html>
