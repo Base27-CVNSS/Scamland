@@ -55,11 +55,12 @@
   const loadedNotes = readLocal('notes', {});
   const notes = loadedNotes && typeof loadedNotes === 'object' && !Array.isArray(loadedNotes) ? loadedNotes : {};
   const state = {view:'map',scope:'core',year:2026,country:'',topic:'',level:'all',query:'',includeUndated:true,bookmarksOnly:false,
-    bookmarks:Array.isArray(saved) ? saved.filter(id => validIds.has(id)) : [],selectedId:'gtsez',sourceTab:'library',sourceQuery:'',sourceCategory:'all',base:window.__SCAMLAND_OFFLINE__?'atlas':'osm',showContext:true,showRadii:false,showLabels:true,showLocal:true,showOriginal:true,originalQuery:'',impactPoint:true,impactRed:true,impactOrange:true,impactYellow:true};
+    bookmarks:Array.isArray(saved) ? saved.filter(id => validIds.has(id)) : [],selectedId:'gtsez',sourceTab:'library',sourceQuery:'',sourceCategory:'all',base:window.__SCAMLAND_OFFLINE__?'atlas':'google',showContext:true,showRadii:false,showLabels:true,showLocal:true,showOriginal:true,originalQuery:'',impactPoint:true,impactRed:true,impactOrange:true,impactYellow:true};
   let places = []; let graph = {nodes:[],edges:[]}; let activeEdge = null; let graphPositions = {};
   let map; let backgroundLayer; let markerLayer; let radiusLayer; let labelLayer; let osmLayer; let localLayer; let googleLayer; let originalLayer;
   let impactLayers=new Map();
   let imported = []; let measureActive = false; let measurePoints = []; let measureLayer; let playTimer = null;
+  let focusMode=true;
   let dragNode = null; let dragMoved = false; let suppressNodeClick = false; let toastTimer;
 
   function toast(message) { $('toast').textContent = message; $('toast').hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => {$('toast').hidden = true;}, 4200); }
@@ -96,6 +97,8 @@
   }
   function showView(view) {
     state.view = view;
+    document.body.classList.toggle('map-focus',focusMode&&view==='map');
+    $('mapModeBtn').textContent=focusMode&&view==='map'?'Atlas phân tích ↗':'Toàn màn hình bản đồ';
     document.querySelectorAll('[data-view]').forEach(button => {const active = button.dataset.view === view; button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});
     ['map','graph','timeline','sources'].forEach(name => {$(name + 'View').hidden = name !== view;});
     document.body.classList.toggle('library-mode',view === 'sources');
@@ -141,7 +144,7 @@
     }).join('');
   }
   function initMap() {
-    map = V.vietflexMap('map',{useLegacyGoogleTiles:true,googleMapType:'roadmap',googleMaps:state.base==='google',zoomControl:false,attributionControl:false,minZoom:3,maxZoom:18,maxBounds:null,preferCanvas:false,worldCopyJump:true,scrollWheelZoom:true}).setView([20.34,100.11],12);
+    map = V.vietflexMap('map',{useLegacyGoogleTiles:true,googleMapType:'roadmap',googleMaps:state.base==='google',zoomControl:false,attributionControl:false,minZoom:3,maxZoom:18,maxBounds:null,preferCanvas:false,worldCopyJump:true,scrollWheelZoom:true}).setView([20.34,100.11],11);
     new V.AttributionControl({position:'bottomright',prefix:false}).addTo(map);
     googleLayer=map.baseLayer || V.legacyGoogleTiles({mapType:'roadmap'});
     backgroundLayer = L.layerGroup().addTo(map); markerLayer = L.layerGroup().addTo(map); radiusLayer = L.layerGroup().addTo(map); labelLayer = L.layerGroup().addTo(map); localLayer = L.layerGroup().addTo(map); measureLayer = L.layerGroup().addTo(map);
@@ -149,12 +152,12 @@
     map.attributionControl.setPrefix(false); map.attributionControl.addAttribution('Natural Earth 1:110m · điểm chỉ báo');
     L.control.scale({position:'bottomleft',imperial:false,maxWidth:90}).addTo(map);
     osmLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxNativeZoom:19,maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',keepBuffer:0,updateWhenIdle:true});
-    let tileErrors = 0;
-    osmLayer.on('tileerror',() => {tileErrors += 1;if(tileErrors>=3 && state.base==='osm'){setBase('atlas');message('Không tải được lớp OSM. Atlas địa lý cục bộ vẫn sẵn sàng.');}});
-    osmLayer.on('tileload',()=>{tileErrors=0;});
-    let googleErrors=0;
-    googleLayer.on('tileerror',()=>{googleErrors++;if(googleErrors>=3 && state.base==='google'){setBase('atlas');message('Không tải được nền Google. Có thể chọn OSM hoặc tiếp tục với Atlas cục bộ.');}});
-    googleLayer.on('tileload',()=>{googleErrors=0;});
+    // Isolated tile failures should not trigger the full-basemap fallback.
+    let osmErrors=0,osmLoaded=false,googleErrors=0,googleLoaded=false;
+    osmLayer.on('tileerror',()=>{if(++osmErrors>=8&&!osmLoaded&&state.base==='osm'){setBase('atlas');toast('OSM không phản hồi; đã chuyển sang Atlas cục bộ.');}});
+    osmLayer.on('tileload',()=>{osmLoaded=true;osmErrors=0;});
+    googleLayer.on('tileerror',()=>{if(++googleErrors>=8&&!googleLoaded&&state.base==='google'){setBase('osm');toast('Google legacy không phản hồi; chuyển sang OSM.');}});
+    googleLayer.on('tileload',()=>{googleLoaded=true;googleErrors=0;});
     map.on('zoomend moveend',renderMarkers);
     map.on('mousemove',event=>{$('mapCoords').textContent = event.latlng.lat.toFixed(3) + '°N · ' + event.latlng.lng.toFixed(3) + '°E | EPSG:4326';});
     map.on('mouseout',()=>{$('mapCoords').textContent = 'WGS84 · EPSG:4326';});
@@ -487,6 +490,10 @@
         case 'osmBtn':setBase('osm');break;
         case 'googleBtn':setBase('google');break;
         case 'fitOriginal':fitOriginal();break;
+        case 'focusHome':showView('map');map.setView([20.34,100.11],11,{animate:!reducedMotion});break;
+        case 'focusAll':showView('map');fitInfluence();break;
+        case 'focusSidebarBtn':document.body.classList.toggle('filters-open');break;
+        case 'mapModeBtn':focusMode=!focusMode;showView('map');requestAnimationFrame(()=>map.invalidateSize());break;
         case 'impactFit':fitInfluence();break;
         case 'layerBtn':$('layerOptions').hidden=!$('layerOptions').hidden;button.setAttribute('aria-expanded',String(!$('layerOptions').hidden));if(!$('layerOptions').hidden)$('influencePanel').open=false;break;
         case 'clearImport':imported=[];renderImported();toast('Đã xóa lớp nhập cục bộ khỏi phiên.');break;
@@ -529,7 +536,7 @@
   function start() {
     const errors=C.validateCatalog(D);
     if(errors.length)throw new Error('Catalog contract failed: '+errors.join('; '));
-    restoreHash();const initialView=state.view;initMap();bindEvents();refresh();fitInfluence();showView(initialView);hydrateIcons();
+    restoreHash();const initialView=state.view;document.body.classList.toggle('map-focus',focusMode&&initialView==='map');initMap();bindEvents();refresh();showView(initialView);map.setView([20.34,100.11],11,{animate:false});$('focusOriginalCount').textContent=D.userMap.features.length;hydrateIcons();
     $('metricSources').textContent=D.sources.length;
     $('resourceSummary').textContent=D.sources.length+' nguồn biên tập · '+D.toolbox.length+' kho công cụ · '+D.factchecks.length+' tuyên bố được rà soát';
     if(window.__SCAMLAND_OFFLINE__)$('exportDialog').querySelector('[data-offline]')?.setAttribute('href','#');

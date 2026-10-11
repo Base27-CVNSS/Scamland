@@ -795,18 +795,75 @@ path.leaflet-interactive:focus:not(:focus-visible) {
 @media print{.influence-panel{display:none!important}}
 
 </style>
+<style>
+
+.focus-logo,.focus-brand-note,.focus-trust,.focus-github,.focus-overview,.focus-map-pill,.focus-sidebar-btn{display:none}
+body.map-focus .header{height:76px;padding:0 24px;background:#101923;gap:14px}
+body.map-focus .brand{gap:13px;letter-spacing:0;font-size:18px}
+body.map-focus .brand>svg{display:none}
+body.map-focus .focus-logo{display:grid;place-items:center;width:44px;height:44px;flex:0 0 44px;background:#392433;color:#ff8294;border:1px solid #87546c;border-radius:13px;font-size:21px}
+body.map-focus .brand .gold{color:#f0f6fb}
+body.map-focus .focus-brand-note{display:inline;color:#ff7080}
+body.map-focus .brand small{font-size:10px;letter-spacing:0;margin-top:4px}
+body.map-focus .nav,body.map-focus .intro,body.map-focus .workspace-toolbar,body.map-focus .time-control,body.map-focus .detail{display:none}
+body.map-focus .header-actions{margin-left:auto}
+body.map-focus .header-actions .icon-btn,body.map-focus #exportBtn{display:none}
+body.map-focus .focus-trust{display:block;padding:7px 10px;background:#1b312d;border:1px solid #427264;border-radius:20px;color:#a3ead0;font-size:11px}
+body.map-focus .focus-github{display:inline;white-space:nowrap;font-size:12px}
+body.map-focus #mapModeBtn{display:inline-flex;color:#e0eaf5;border:1px solid #43596d;background:#1d3043}
+body.map-focus #mainContent{height:calc(100dvh - 76px);min-height:400px;display:flex;flex-direction:column;overflow:hidden}
+body.map-focus .workspace{flex:1 1 auto;height:auto;min-height:0;display:flex}
+body.map-focus .sidebar{width:355px;flex:0 0 355px;display:flex;flex-direction:column;overflow:auto;overflow-x:hidden;padding:22px 18px 10px;background:#121d2b;scrollbar-width:thin}
+body.map-focus .focus-overview{display:block;flex-shrink:0}
+body.map-focus .focus-eyebrow{font-size:10px;letter-spacing:1.8px;color:#66dde8;font-weight:800}
+body.map-focus .focus-overview h2{font-size:22px;line-height:1.3;margin:12px 0}
+body.map-focus .focus-overview p{margin:12px 0;color:#a7bbd0;line-height:1.7;font-size:12px}
+body.map-focus .focus-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:17px 0}
+body.map-focus .focus-stats>div{border:1px solid #34475d;border-radius:13px;background:#1d2c3d;padding:12px 9px}
+body.map-focus .focus-stats b{display:block;font-size:23px}
+body.map-focus .focus-stats small{font-size:10px;color:#adbed2}
+body.map-focus .focus-source-section{border-top:1px solid #36465a;margin-top:18px;padding-top:17px}
+body.map-focus .focus-source-section h3,body.map-focus .focus-filter-heading{font-size:12px;font-weight:800;letter-spacing:.5px;margin-bottom:12px}
+body.map-focus .focus-source{border:1px solid #33475e;border-radius:12px;background:#1b293c;padding:12px;margin-bottom:8px}
+body.map-focus .focus-source b{font-size:12px}
+body.map-focus .focus-source small{display:block;color:#a4b8cd;margin-top:5px;font-size:10px}
+body.map-focus .focus-source-section>a{display:block;background:#27394e;border:1px solid #50657a;padding:11px;border-radius:9px;text-align:center;color:#e8f5ff;font-size:11px}
+body.map-focus .focus-quick-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+body.map-focus .focus-quick-actions button{border:1px solid #466078;border-radius:9px;padding:11px 6px;background:#22384e;font-size:11px}
+body.map-focus .focus-filter-heading{border-top:1px solid #34465b;margin-top:18px;padding-top:16px}
+body.map-focus .place-list{flex:0 1 auto;min-height:130px;max-height:230px}
+body.map-focus .stage,body.map-focus #mapView{height:100%;min-height:0}
+body.map-focus #map{min-height:0;background:#e7ece2;background-image:none}
+body.map-focus .footer{display:flex;flex:0 0 32px;min-height:32px;background:#101923}
+body.map-focus .map-title{display:none}
+body.map-focus .focus-map-pill{display:block;position:absolute;z-index:601;top:17px;left:17px;border-radius:11px;background:#142437ee;border:1px solid #475d76;padding:11px 12px;color:#eef7ff;font-size:11px;font-weight:700}
+body.map-focus .basemap-switch{z-index:650;top:16px;right:17px;background:#142435ec;padding:4px;border-radius:11px;gap:3px}
+body.map-focus .basemap-switch button{font-size:11px;font-weight:700;padding:8px 10px;border-radius:8px}
+body.map-focus .basemap-switch .active{background:#11596b;color:white}
+body.map-focus .map-tools{right:17px;top:77px;border-radius:9px}
+body.map-focus .influence-panel{right:17px;top:270px;width:245px;max-height:min(51%,410px);border-radius:11px}
+body.map-focus .layer-options{right:64px;top:250px}
+body.map-focus .map-legend{bottom:38px;left:17px;border-radius:10px}
+body.map-focus .map-coordinates{bottom:9px;left:17px}
+body.map-focus .leaflet-tile-pane{filter:none}
+body.map-focus .leaflet-container{background:#e8eee6}
+@media(max-width:1100px){body.map-focus .sidebar{width:290px;flex-basis:290px}body.map-focus .focus-trust{display:none}}
+@media(max-width:850px){body.map-focus .header{height:95px;padding:8px 12px}body.map-focus #mainContent{height:calc(100dvh - 95px)}body.map-focus .brand{font-size:15px}body.map-focus .focus-brand-note{font-size:12px}body.map-focus .brand small{font-size:8px}body.map-focus .focus-logo{width:36px;height:36px;flex-basis:36px}body.map-focus .focus-github{display:none}body.map-focus .sidebar{position:fixed;top:95px;bottom:0;z-index:1100;width:min(340px,91vw);transform:translateX(-110%);box-shadow:0 15px 35px #0009}body.map-focus.filters-open .sidebar{transform:translateX(0)}body.map-focus .focus-sidebar-btn{display:block;position:absolute;z-index:660;top:15px;left:12px;background:#17374bed;border:1px solid #446379;border-radius:9px;padding:10px;color:white;font-size:11px}body.map-focus .focus-map-pill{top:66px;left:12px;padding:8px;font-size:10px}body.map-focus .basemap-switch{top:15px;right:10px}body.map-focus .basemap-switch button{font-size:9px;padding:7px 6px}body.map-focus .map-tools{top:70px;right:10px}body.map-focus .influence-panel{top:255px;right:10px;width:214px;max-height:38dvh}body.map-focus .layer-options{top:230px;right:55px}}
+@media(max-width:470px){body.map-focus .header{height:88px}body.map-focus #mainContent{height:calc(100dvh - 88px)}body.map-focus .sidebar{top:88px}body.map-focus .basemap-switch{top:64px}body.map-focus .map-tools{top:115px}body.map-focus .influence-panel{top:286px;max-height:30dvh}body.map-focus .focus-map-pill{top:59px}}
+
+</style>
 </head>
 <body>
   <a class="skip" href="#mainContent">Đến nội dung</a>
   <header class="header">
-    <a class="brand" href="#view=map" aria-label="Scamland · về bản đồ"><svg viewBox="0 0 42 42" aria-hidden="true"><path d="M21 5 38 35H4Z"/><path d="m21 16 11 19M15 25h18"/></svg><span>SCAM<span class="gold">LAND</span><small>GOLDEN TRIANGLE · OSINT ATLAS</small></span></a>
+    <a class="brand" href="#view=map" aria-label="Scamland · về bản đồ"><span class="focus-logo" aria-hidden="true">S</span><svg viewBox="0 0 42 42" aria-hidden="true"><path d="M21 5 38 35H4Z"/><path d="m21 16 11 19M15 25h18"/></svg><span>SCAM<span class="gold">LAND</span><span class="focus-brand-note"> / OSINT WebGIS</span><small>GOLDEN TRIANGLE · BOKEO, LAOS · VIETFLEX ENGINE</small></span></a>
     <nav class="nav" aria-label="Chế độ phân tích">
       <button class="nav-btn active" data-view="map" aria-pressed="true"><span data-icon="map"></span>Bản đồ</button>
       <button class="nav-btn" data-view="graph" aria-pressed="false"><span data-icon="network"></span>Quan hệ</button>
       <button class="nav-btn" data-view="timeline" aria-pressed="false"><span data-icon="clock"></span>Diễn biến</button>
       <button class="nav-btn" data-view="sources" aria-pressed="false"><span data-icon="book"></span>Nguồn & công cụ</button>
     </nav>
-    <div class="header-actions"><button class="icon-btn" id="methodBtn" title="Phương pháp và giới hạn" aria-label="Phương pháp và giới hạn"><span data-icon="info"></span></button><a class="icon-btn" href="https://github.com/Base27-CVNSS/Scamland" target="_blank" rel="noopener noreferrer" title="Mã nguồn GitHub" aria-label="Mã nguồn GitHub"><span data-icon="code"></span></a><button class="btn primary" id="exportBtn"><span data-icon="download"></span><span>Xuất dữ liệu</span></button></div>
+    <div class="header-actions"><span class="focus-trust">● Open-source intelligence</span><button class="btn subtle" id="mapModeBtn" type="button">Atlas phân tích ↗</button><a class="focus-github" href="https://github.com/Base27-CVNSS/Scamland" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button class="icon-btn" id="methodBtn" title="Phương pháp và giới hạn" aria-label="Phương pháp và giới hạn"><span data-icon="info"></span></button><a class="icon-btn" href="https://github.com/Base27-CVNSS/Scamland" target="_blank" rel="noopener noreferrer" title="Mã nguồn GitHub" aria-label="Mã nguồn GitHub"><span data-icon="code"></span></a><button class="btn primary" id="exportBtn"><span data-icon="download"></span><span>Xuất dữ liệu</span></button></div>
   </header>
   <main id="mainContent" tabindex="-1">
     <section class="intro" aria-label="Tổng quan bộ dữ liệu">
@@ -816,6 +873,10 @@ path.leaflet-interactive:focus:not(:focus-visible) {
     <div class="workspace-toolbar"><div class="scope-control" aria-label="Phạm vi nghiên cứu"><button class="scope active" data-scope="core" aria-pressed="true">Tam giác vàng</button><button class="scope" data-scope="regional" aria-pressed="false">Đông Nam Á mở rộng</button></div><div class="toolbar-right"><span id="scopeNote">Lõi và vùng Shan lân cận</span><button class="btn subtle mobile-only" id="filterBtn"><span data-icon="filter"></span>Bộ lọc</button><button class="btn subtle" id="resetBtn"><span data-icon="reset"></span>Đặt lại</button><button class="btn subtle" id="shareBtn"><span data-icon="link"></span>Chia sẻ góc nhìn</button></div></div>
     <section class="workspace">
       <aside class="sidebar" id="sidebar" aria-label="Bộ lọc và địa danh">
+<section class="focus-overview"><div class="focus-eyebrow">GEOSPATIAL RESEARCH PLATFORM</div><h2>Địa lý dữ liệu mở<br>khu vực Tam giác Vàng</h2><p>Theo dõi địa điểm và dữ liệu GIS từ nguồn công khai. Phân biệt địa danh tham chiếu với các vùng khảo sát minh họa.</p>
+<div class="focus-stats"><div><b>4</b><small>Lớp GTSEZ</small></div><div><b>3</b><small>Vùng sơ họa</small></div><div><b id="focusOriginalCount">87</b><small>Mốc My Maps</small></div></div>
+<div class="focus-source-section"><h3>NGUỒN DỮ LIỆU &amp; LỚP BẢN ĐỒ</h3><div class="focus-source"><b>GTSEZ · đỏ / cam / vàng</b><small>Bật tắt lớp ở góc phải bản đồ</small></div><div class="focus-source"><b>Dữ liệu My Maps</b><small>87 điểm đã lưu · chưa thẩm định</small></div><p>Vùng màu là ranh giới khảo sát sơ họa; không phải mức độ ảnh hưởng hay kết luận pháp lý.</p><a href="https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA" target="_blank" rel="noopener noreferrer">Mở nguồn KML công khai ↗</a></div>
+<div class="focus-source-section"><h3>CÔNG CỤ KHÔNG GIAN</h3><div class="focus-quick-actions"><button id="focusHome" type="button">⌖ Đến vùng nghiên cứu</button><button id="focusAll" type="button">⊞ Xem cả 3 vùng</button></div></div><h3 class="focus-filter-heading">BỘ LỌC &amp; ĐỊA DANH OSINT</h3></section>
         <div class="side-heading"><span class="eyebrow">BỘ LỌC KHÔNG GIAN</span><button class="icon-btn mobile-only" id="closeFilters" aria-label="Đóng bộ lọc"><span data-icon="close"></span></button></div>
         <label class="search"><span data-icon="search"></span><input id="placeSearch" placeholder="Địa danh, tên khác, nội dung…" aria-label="Tìm địa danh, tên khác, nội dung"><kbd>/</kbd></label>
         <div class="field-row"><label>Quốc gia<select id="countryFilter"><option value="">Tất cả quốc gia</option><option value="LAO">Lào</option><option value="MMR">Myanmar</option><option value="THA">Thái Lan</option><option value="KHM">Campuchia</option></select></label></div>
@@ -829,8 +890,8 @@ path.leaflet-interactive:focus:not(:focus-visible) {
       <div class="stage">
         <section class="view-panel map-panel" id="mapView" aria-label="Bản đồ tương tác">
           <div id="map" aria-label="Bản đồ địa danh. Có thể dùng danh sách địa danh để truy cập bằng bàn phím."></div>
-          <div class="map-title"><span class="eyebrow">ATLAS / 01</span><h2>Tam giác vàng</h2><p id="mapSubtitle">Bối cảnh địa lý & hồ sơ công khai</p></div>
-          <div class="basemap-switch" aria-label="Chọn bản đồ nền"><button id="googleBtn" aria-pressed="false">Vietflex / Google</button><button id="atlasBtn" aria-pressed="false">Atlas</button><button id="osmBtn" class="active" aria-pressed="true">OSM</button></div>
+          <div class="focus-map-pill">◉ BOKEO · TON PHEUNG</div><button class="focus-sidebar-btn" id="focusSidebarBtn" type="button">☰ Dữ liệu &amp; lớp</button><div class="map-title"><span class="eyebrow">ATLAS / 01</span><h2>Tam giác vàng</h2><p id="mapSubtitle">Bối cảnh địa lý & hồ sơ công khai</p></div>
+          <div class="basemap-switch" aria-label="Chọn bản đồ nền"><button id="googleBtn" class="active" aria-pressed="true">Google · legacy</button><button id="atlasBtn" aria-pressed="false">Atlas</button><button id="osmBtn" aria-pressed="false">OpenStreetMap</button></div>
           <div class="map-tools"><button class="tool" id="zoomIn" aria-label="Phóng to" title="Phóng to">+</button><button class="tool" id="zoomOut" aria-label="Thu nhỏ" title="Thu nhỏ">−</button><div class="tool-divider"></div><button class="tool" id="fitBtn" aria-label="Xem toàn bộ mốc đã lọc" title="Xem toàn bộ mốc đã lọc"><span data-icon="expand"></span></button><button class="tool" id="measureBtn" aria-label="Đo khoảng cách thẳng giữa hai điểm" title="Đo khoảng cách thẳng giữa hai điểm" aria-pressed="false"><span data-icon="ruler"></span></button><button class="tool" id="layerBtn" aria-label="Tùy chọn lớp" title="Tùy chọn lớp" aria-expanded="false"><span data-icon="layers"></span></button></div>
           <div id="layerOptions" class="layer-options" hidden><b>Lớp hiển thị</b><label><input type="checkbox" id="showOriginal" checked>Bản đồ gốc · 87 mốc</label><label><input type="checkbox" id="showContext" checked>Nền địa lý tổng quát</label><label><input type="checkbox" id="showRadii">Vòng chỉ báo độ khái quát</label><label><input type="checkbox" id="showLabels" checked>Tên địa danh</label><label><input type="checkbox" id="showLocal" checked>Điểm nhập cục bộ</label><button class="text-btn" id="clearImport">Xóa lớp nhập cục bộ</button></div>
 <details id="influencePanel" class="influence-panel" open>
@@ -1119,11 +1180,12 @@ window.ScamlandData = {"metadata":{"title":"Scamland · Golden Triangle OSINT At
   const loadedNotes = readLocal('notes', {});
   const notes = loadedNotes && typeof loadedNotes === 'object' && !Array.isArray(loadedNotes) ? loadedNotes : {};
   const state = {view:'map',scope:'core',year:2026,country:'',topic:'',level:'all',query:'',includeUndated:true,bookmarksOnly:false,
-    bookmarks:Array.isArray(saved) ? saved.filter(id => validIds.has(id)) : [],selectedId:'gtsez',sourceTab:'library',sourceQuery:'',sourceCategory:'all',base:window.__SCAMLAND_OFFLINE__?'atlas':'osm',showContext:true,showRadii:false,showLabels:true,showLocal:true,showOriginal:true,originalQuery:'',impactPoint:true,impactRed:true,impactOrange:true,impactYellow:true};
+    bookmarks:Array.isArray(saved) ? saved.filter(id => validIds.has(id)) : [],selectedId:'gtsez',sourceTab:'library',sourceQuery:'',sourceCategory:'all',base:window.__SCAMLAND_OFFLINE__?'atlas':'google',showContext:true,showRadii:false,showLabels:true,showLocal:true,showOriginal:true,originalQuery:'',impactPoint:true,impactRed:true,impactOrange:true,impactYellow:true};
   let places = []; let graph = {nodes:[],edges:[]}; let activeEdge = null; let graphPositions = {};
   let map; let backgroundLayer; let markerLayer; let radiusLayer; let labelLayer; let osmLayer; let localLayer; let googleLayer; let originalLayer;
   let impactLayers=new Map();
   let imported = []; let measureActive = false; let measurePoints = []; let measureLayer; let playTimer = null;
+  let focusMode=true;
   let dragNode = null; let dragMoved = false; let suppressNodeClick = false; let toastTimer;
 
   function toast(message) { $('toast').textContent = message; $('toast').hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => {$('toast').hidden = true;}, 4200); }
@@ -1160,6 +1222,8 @@ window.ScamlandData = {"metadata":{"title":"Scamland · Golden Triangle OSINT At
   }
   function showView(view) {
     state.view = view;
+    document.body.classList.toggle('map-focus',focusMode&&view==='map');
+    $('mapModeBtn').textContent=focusMode&&view==='map'?'Atlas phân tích ↗':'Toàn màn hình bản đồ';
     document.querySelectorAll('[data-view]').forEach(button => {const active = button.dataset.view === view; button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});
     ['map','graph','timeline','sources'].forEach(name => {$(name + 'View').hidden = name !== view;});
     document.body.classList.toggle('library-mode',view === 'sources');
@@ -1205,7 +1269,7 @@ window.ScamlandData = {"metadata":{"title":"Scamland · Golden Triangle OSINT At
     }).join('');
   }
   function initMap() {
-    map = V.vietflexMap('map',{useLegacyGoogleTiles:true,googleMapType:'roadmap',googleMaps:state.base==='google',zoomControl:false,attributionControl:false,minZoom:3,maxZoom:18,maxBounds:null,preferCanvas:false,worldCopyJump:true,scrollWheelZoom:true}).setView([20.34,100.11],12);
+    map = V.vietflexMap('map',{useLegacyGoogleTiles:true,googleMapType:'roadmap',googleMaps:state.base==='google',zoomControl:false,attributionControl:false,minZoom:3,maxZoom:18,maxBounds:null,preferCanvas:false,worldCopyJump:true,scrollWheelZoom:true}).setView([20.34,100.11],11);
     new V.AttributionControl({position:'bottomright',prefix:false}).addTo(map);
     googleLayer=map.baseLayer || V.legacyGoogleTiles({mapType:'roadmap'});
     backgroundLayer = L.layerGroup().addTo(map); markerLayer = L.layerGroup().addTo(map); radiusLayer = L.layerGroup().addTo(map); labelLayer = L.layerGroup().addTo(map); localLayer = L.layerGroup().addTo(map); measureLayer = L.layerGroup().addTo(map);
@@ -1213,12 +1277,12 @@ window.ScamlandData = {"metadata":{"title":"Scamland · Golden Triangle OSINT At
     map.attributionControl.setPrefix(false); map.attributionControl.addAttribution('Natural Earth 1:110m · điểm chỉ báo');
     L.control.scale({position:'bottomleft',imperial:false,maxWidth:90}).addTo(map);
     osmLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxNativeZoom:19,maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',keepBuffer:0,updateWhenIdle:true});
-    let tileErrors = 0;
-    osmLayer.on('tileerror',() => {tileErrors += 1;if(tileErrors>=3 && state.base==='osm'){setBase('atlas');message('Không tải được lớp OSM. Atlas địa lý cục bộ vẫn sẵn sàng.');}});
-    osmLayer.on('tileload',()=>{tileErrors=0;});
-    let googleErrors=0;
-    googleLayer.on('tileerror',()=>{googleErrors++;if(googleErrors>=3 && state.base==='google'){setBase('atlas');message('Không tải được nền Google. Có thể chọn OSM hoặc tiếp tục với Atlas cục bộ.');}});
-    googleLayer.on('tileload',()=>{googleErrors=0;});
+    // Isolated tile failures should not trigger the full-basemap fallback.
+    let osmErrors=0,osmLoaded=false,googleErrors=0,googleLoaded=false;
+    osmLayer.on('tileerror',()=>{if(++osmErrors>=8&&!osmLoaded&&state.base==='osm'){setBase('atlas');toast('OSM không phản hồi; đã chuyển sang Atlas cục bộ.');}});
+    osmLayer.on('tileload',()=>{osmLoaded=true;osmErrors=0;});
+    googleLayer.on('tileerror',()=>{if(++googleErrors>=8&&!googleLoaded&&state.base==='google'){setBase('osm');toast('Google legacy không phản hồi; chuyển sang OSM.');}});
+    googleLayer.on('tileload',()=>{googleLoaded=true;googleErrors=0;});
     map.on('zoomend moveend',renderMarkers);
     map.on('mousemove',event=>{$('mapCoords').textContent = event.latlng.lat.toFixed(3) + '°N · ' + event.latlng.lng.toFixed(3) + '°E | EPSG:4326';});
     map.on('mouseout',()=>{$('mapCoords').textContent = 'WGS84 · EPSG:4326';});
@@ -1551,6 +1615,10 @@ window.ScamlandData = {"metadata":{"title":"Scamland · Golden Triangle OSINT At
         case 'osmBtn':setBase('osm');break;
         case 'googleBtn':setBase('google');break;
         case 'fitOriginal':fitOriginal();break;
+        case 'focusHome':showView('map');map.setView([20.34,100.11],11,{animate:!reducedMotion});break;
+        case 'focusAll':showView('map');fitInfluence();break;
+        case 'focusSidebarBtn':document.body.classList.toggle('filters-open');break;
+        case 'mapModeBtn':focusMode=!focusMode;showView('map');requestAnimationFrame(()=>map.invalidateSize());break;
         case 'impactFit':fitInfluence();break;
         case 'layerBtn':$('layerOptions').hidden=!$('layerOptions').hidden;button.setAttribute('aria-expanded',String(!$('layerOptions').hidden));if(!$('layerOptions').hidden)$('influencePanel').open=false;break;
         case 'clearImport':imported=[];renderImported();toast('Đã xóa lớp nhập cục bộ khỏi phiên.');break;
@@ -1593,7 +1661,7 @@ window.ScamlandData = {"metadata":{"title":"Scamland · Golden Triangle OSINT At
   function start() {
     const errors=C.validateCatalog(D);
     if(errors.length)throw new Error('Catalog contract failed: '+errors.join('; '));
-    restoreHash();const initialView=state.view;initMap();bindEvents();refresh();fitInfluence();showView(initialView);hydrateIcons();
+    restoreHash();const initialView=state.view;document.body.classList.toggle('map-focus',focusMode&&initialView==='map');initMap();bindEvents();refresh();showView(initialView);map.setView([20.34,100.11],11,{animate:false});$('focusOriginalCount').textContent=D.userMap.features.length;hydrateIcons();
     $('metricSources').textContent=D.sources.length;
     $('resourceSummary').textContent=D.sources.length+' nguồn biên tập · '+D.toolbox.length+' kho công cụ · '+D.factchecks.length+' tuyên bố được rà soát';
     if(window.__SCAMLAND_OFFLINE__)$('exportDialog').querySelector('[data-offline]')?.setAttribute('href','#');

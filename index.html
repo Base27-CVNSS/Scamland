@@ -10,18 +10,19 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="vendor/vietflex.css">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/map-focus.css">
 </head>
 <body>
   <a class="skip" href="#mainContent">Đến nội dung</a>
   <header class="header">
-    <a class="brand" href="#view=map" aria-label="Scamland · về bản đồ"><svg viewBox="0 0 42 42" aria-hidden="true"><path d="M21 5 38 35H4Z"/><path d="m21 16 11 19M15 25h18"/></svg><span>SCAM<span class="gold">LAND</span><small>GOLDEN TRIANGLE · OSINT ATLAS</small></span></a>
+    <a class="brand" href="#view=map" aria-label="Scamland · về bản đồ"><span class="focus-logo" aria-hidden="true">S</span><svg viewBox="0 0 42 42" aria-hidden="true"><path d="M21 5 38 35H4Z"/><path d="m21 16 11 19M15 25h18"/></svg><span>SCAM<span class="gold">LAND</span><span class="focus-brand-note"> / OSINT WebGIS</span><small>GOLDEN TRIANGLE · BOKEO, LAOS · VIETFLEX ENGINE</small></span></a>
     <nav class="nav" aria-label="Chế độ phân tích">
       <button class="nav-btn active" data-view="map" aria-pressed="true"><span data-icon="map"></span>Bản đồ</button>
       <button class="nav-btn" data-view="graph" aria-pressed="false"><span data-icon="network"></span>Quan hệ</button>
       <button class="nav-btn" data-view="timeline" aria-pressed="false"><span data-icon="clock"></span>Diễn biến</button>
       <button class="nav-btn" data-view="sources" aria-pressed="false"><span data-icon="book"></span>Nguồn & công cụ</button>
     </nav>
-    <div class="header-actions"><button class="icon-btn" id="methodBtn" title="Phương pháp và giới hạn" aria-label="Phương pháp và giới hạn"><span data-icon="info"></span></button><a class="icon-btn" href="https://github.com/Base27-CVNSS/Scamland" target="_blank" rel="noopener noreferrer" title="Mã nguồn GitHub" aria-label="Mã nguồn GitHub"><span data-icon="code"></span></a><button class="btn primary" id="exportBtn"><span data-icon="download"></span><span>Xuất dữ liệu</span></button></div>
+    <div class="header-actions"><span class="focus-trust">● Open-source intelligence</span><button class="btn subtle" id="mapModeBtn" type="button">Atlas phân tích ↗</button><a class="focus-github" href="https://github.com/Base27-CVNSS/Scamland" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button class="icon-btn" id="methodBtn" title="Phương pháp và giới hạn" aria-label="Phương pháp và giới hạn"><span data-icon="info"></span></button><a class="icon-btn" href="https://github.com/Base27-CVNSS/Scamland" target="_blank" rel="noopener noreferrer" title="Mã nguồn GitHub" aria-label="Mã nguồn GitHub"><span data-icon="code"></span></a><button class="btn primary" id="exportBtn"><span data-icon="download"></span><span>Xuất dữ liệu</span></button></div>
   </header>
   <main id="mainContent" tabindex="-1">
     <section class="intro" aria-label="Tổng quan bộ dữ liệu">
@@ -31,6 +32,10 @@
     <div class="workspace-toolbar"><div class="scope-control" aria-label="Phạm vi nghiên cứu"><button class="scope active" data-scope="core" aria-pressed="true">Tam giác vàng</button><button class="scope" data-scope="regional" aria-pressed="false">Đông Nam Á mở rộng</button></div><div class="toolbar-right"><span id="scopeNote">Lõi và vùng Shan lân cận</span><button class="btn subtle mobile-only" id="filterBtn"><span data-icon="filter"></span>Bộ lọc</button><button class="btn subtle" id="resetBtn"><span data-icon="reset"></span>Đặt lại</button><button class="btn subtle" id="shareBtn"><span data-icon="link"></span>Chia sẻ góc nhìn</button></div></div>
     <section class="workspace">
       <aside class="sidebar" id="sidebar" aria-label="Bộ lọc và địa danh">
+<section class="focus-overview"><div class="focus-eyebrow">GEOSPATIAL RESEARCH PLATFORM</div><h2>Địa lý dữ liệu mở<br>khu vực Tam giác Vàng</h2><p>Theo dõi địa điểm và dữ liệu GIS từ nguồn công khai. Phân biệt địa danh tham chiếu với các vùng khảo sát minh họa.</p>
+<div class="focus-stats"><div><b>4</b><small>Lớp GTSEZ</small></div><div><b>3</b><small>Vùng sơ họa</small></div><div><b id="focusOriginalCount">87</b><small>Mốc My Maps</small></div></div>
+<div class="focus-source-section"><h3>NGUỒN DỮ LIỆU &amp; LỚP BẢN ĐỒ</h3><div class="focus-source"><b>GTSEZ · đỏ / cam / vàng</b><small>Bật tắt lớp ở góc phải bản đồ</small></div><div class="focus-source"><b>Dữ liệu My Maps</b><small>87 điểm đã lưu · chưa thẩm định</small></div><p>Vùng màu là ranh giới khảo sát sơ họa; không phải mức độ ảnh hưởng hay kết luận pháp lý.</p><a href="https://www.google.com/maps/d/viewer?mid=1mrbCu6ITwNhJQi6FenDrKBWftMOEeiA" target="_blank" rel="noopener noreferrer">Mở nguồn KML công khai ↗</a></div>
+<div class="focus-source-section"><h3>CÔNG CỤ KHÔNG GIAN</h3><div class="focus-quick-actions"><button id="focusHome" type="button">⌖ Đến vùng nghiên cứu</button><button id="focusAll" type="button">⊞ Xem cả 3 vùng</button></div></div><h3 class="focus-filter-heading">BỘ LỌC &amp; ĐỊA DANH OSINT</h3></section>
         <div class="side-heading"><span class="eyebrow">BỘ LỌC KHÔNG GIAN</span><button class="icon-btn mobile-only" id="closeFilters" aria-label="Đóng bộ lọc"><span data-icon="close"></span></button></div>
         <label class="search"><span data-icon="search"></span><input id="placeSearch" placeholder="Địa danh, tên khác, nội dung…" aria-label="Tìm địa danh, tên khác, nội dung"><kbd>/</kbd></label>
         <div class="field-row"><label>Quốc gia<select id="countryFilter"><option value="">Tất cả quốc gia</option><option value="LAO">Lào</option><option value="MMR">Myanmar</option><option value="THA">Thái Lan</option><option value="KHM">Campuchia</option></select></label></div>
@@ -44,8 +49,8 @@
       <div class="stage">
         <section class="view-panel map-panel" id="mapView" aria-label="Bản đồ tương tác">
           <div id="map" aria-label="Bản đồ địa danh. Có thể dùng danh sách địa danh để truy cập bằng bàn phím."></div>
-          <div class="map-title"><span class="eyebrow">ATLAS / 01</span><h2>Tam giác vàng</h2><p id="mapSubtitle">Bối cảnh địa lý & hồ sơ công khai</p></div>
-          <div class="basemap-switch" aria-label="Chọn bản đồ nền"><button id="googleBtn" aria-pressed="false">Vietflex / Google</button><button id="atlasBtn" aria-pressed="false">Atlas</button><button id="osmBtn" class="active" aria-pressed="true">OSM</button></div>
+          <div class="focus-map-pill">◉ BOKEO · TON PHEUNG</div><button class="focus-sidebar-btn" id="focusSidebarBtn" type="button">☰ Dữ liệu &amp; lớp</button><div class="map-title"><span class="eyebrow">ATLAS / 01</span><h2>Tam giác vàng</h2><p id="mapSubtitle">Bối cảnh địa lý & hồ sơ công khai</p></div>
+          <div class="basemap-switch" aria-label="Chọn bản đồ nền"><button id="googleBtn" class="active" aria-pressed="true">Google · legacy</button><button id="atlasBtn" aria-pressed="false">Atlas</button><button id="osmBtn" aria-pressed="false">OpenStreetMap</button></div>
           <div class="map-tools"><button class="tool" id="zoomIn" aria-label="Phóng to" title="Phóng to">+</button><button class="tool" id="zoomOut" aria-label="Thu nhỏ" title="Thu nhỏ">−</button><div class="tool-divider"></div><button class="tool" id="fitBtn" aria-label="Xem toàn bộ mốc đã lọc" title="Xem toàn bộ mốc đã lọc"><span data-icon="expand"></span></button><button class="tool" id="measureBtn" aria-label="Đo khoảng cách thẳng giữa hai điểm" title="Đo khoảng cách thẳng giữa hai điểm" aria-pressed="false"><span data-icon="ruler"></span></button><button class="tool" id="layerBtn" aria-label="Tùy chọn lớp" title="Tùy chọn lớp" aria-expanded="false"><span data-icon="layers"></span></button></div>
           <div id="layerOptions" class="layer-options" hidden><b>Lớp hiển thị</b><label><input type="checkbox" id="showOriginal" checked>Bản đồ gốc · 87 mốc</label><label><input type="checkbox" id="showContext" checked>Nền địa lý tổng quát</label><label><input type="checkbox" id="showRadii">Vòng chỉ báo độ khái quát</label><label><input type="checkbox" id="showLabels" checked>Tên địa danh</label><label><input type="checkbox" id="showLocal" checked>Điểm nhập cục bộ</label><button class="text-btn" id="clearImport">Xóa lớp nhập cục bộ</button></div>
 <details id="influencePanel" class="influence-panel" open>

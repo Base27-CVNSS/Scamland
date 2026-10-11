@@ -53,3 +53,8 @@ Thông báo trừng phạt là tài liệu theo ngày phát hành; cần kiểm 
 ## 3 cấp vùng khảo sát khái niệm (11/10/2026)
 
 Có 4 công tắc trực tiếp trên bản đồ: **điểm GTSEZ**, **vùng lõi đỏ**, **vùng cam**, **vùng vàng kéo tới Việt Nam**. Có nút xem toàn bộ 3 vùng và tải [GeoJSON](data/influence.geojson). Dữ liệu minh họa không phải phạm vi ảnh hưởng đo đạc, ranh giới pháp lý, bản đồ rủi ro hoặc bằng chứng về hoạt động phạm pháp tại Việt Nam. Các đường bao vẽ sơ họa theo mục đích trình bày; cần dữ liệu thực địa, nguồn độc lập và mô hình đã kiểm thử trước khi đưa ra kết luận.
+
+
+## Chế độ bản đồ theo ảnh mẫu (11/10/2026)
+
+Trang mở mặc định tại Ton Pheung/Bokeo (zoom 11), thanh bên trái nền tối và bản đồ sáng với Vietflex Google legacy, OSM/Atlas dự phòng; bảng bật tắt điểm GTSEZ và 3 vùng đỏ/cam/vàng ở góc phải. Nút Atlas phân tích đưa về các chức năng khác, dữ liệu gốc giữ nguyên. Dừng tự động fit toàn vùng tới Việt Nam khi mở trang. Lỗi một vài tiles không còn làm hiện cảnh báo thiếu bản đồ nếu đã có tile tải thành công. Google legacy không phải dịch vụ được bảo đảm vận hành sản xuất.
