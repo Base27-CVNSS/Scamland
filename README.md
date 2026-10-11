@@ -20,6 +20,8 @@ SDK/CSS Vietflex được lưu cục bộ, từ commit [`6144d565fcf236727577ab3
 
 Google legacy là endpoint tương thích của SDK, có thể thay đổi. Dữ liệu/ảnh của Google và OSM không nằm trong giấy phép MIT của ứng dụng. Xem [NOTICE](NOTICE.md).
 
+[Mở mẫu HTML Vietflex](https://base27-cvnss.github.io/Scamland/examples/vietflex-map.html) theo đoạn mã người dùng gửi, gồm `ZoomControl` ở góc trái trên, `AttributionControl` ở góc phải dưới và điểm Hà Nội. Đường dẫn CDN đã sửa thành `Vietflexmap/VN@6144d565fcf236727577ab3c4471bbe49f86892f/dist/...` với dấu `@` trước commit. Mẫu được đóng gói trong KMZ tại `web/vietflex-map.html`; giải nén và mở bằng trình duyệt khi cần. Google legacy/CDN cần Internet. KML chứa liên kết mẫu và metadata tích hợp; [data/integration.json](data/integration.json) ghi cấu hình cùng các URL.
+
 ## Chạy và kiểm tra
 
 Node 22+ và Python 3. Không cần cài package hoặc truy cập mạng khi build.

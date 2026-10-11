@@ -37,6 +37,18 @@ class KMLTests(unittest.TestCase):
         kmz.build()
         self.assertEqual(hashlib.sha256(p.read_bytes()).digest(), digest)
 
+    def test_vietflex_example_and_integration_are_in_updated_kmz(self):
+        import json
+        integration = json.loads((kmz.ROOT / 'data/integration.json').read_text())
+        with ZipFile(kmz.ROOT / 'downloads/Scamland_Updated.kmz') as z:
+            self.assertEqual(z.read(integration['kmz_html_path']), (kmz.ROOT / 'examples/vietflex-map.html').read_bytes())
+            self.assertEqual(json.loads(z.read('metadata/integration.json')), integration)
+            root = kmz.parse_xml(z.read('doc.kml'))
+            values = {d.get('name'): d.findtext('k:value', '', kmz.N) for d in root.findall('k:Document/k:ExtendedData/k:Data', kmz.N)}
+            self.assertEqual(values['integration_repository'], kmz.REPO)
+            self.assertEqual(values['integration_commit'], integration['commit'])
+            self.assertEqual(values['integration_html_example'], integration['html_example'])
+
     def test_xml_entities_and_invalid_geometry_rejected(self):
         with self.assertRaises(ValueError):
             kmz.parse_xml(b'<!DOCTYPE kml [<!ENTITY x "test">]><kml/>')

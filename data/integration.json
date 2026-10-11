@@ -1,0 +1,21 @@
+{
+  "library": "Vietflex",
+  "commit": "6144d565fcf236727577ab3c4471bbe49f86892f",
+  "repository": "https://github.com/Base27-CVNSS/Scamland",
+  "webgis": "https://base27-cvnss.github.io/Scamland/",
+  "html_example": "https://base27-cvnss.github.io/Scamland/examples/vietflex-map.html",
+  "kmz_html_path": "web/vietflex-map.html",
+  "css_cdn": "https://cdn.jsdelivr.net/gh/Vietflexmap/VN@6144d565fcf236727577ab3c4471bbe49f86892f/dist/vietflex.css",
+  "js_cdn": "https://cdn.jsdelivr.net/gh/Vietflexmap/VN@6144d565fcf236727577ab3c4471bbe49f86892f/dist/vietflex.js",
+  "options": {
+    "useLegacyGoogleTiles": true,
+    "googleMapType": "roadmap",
+    "zoomControl": false,
+    "attributionControl": false
+  },
+  "controls": {
+    "ZoomControl": "topleft",
+    "AttributionControl": "bottomright"
+  },
+  "example_note": "Mẫu HTML giữ điểm Hà Nội theo mã người dùng gửi; dữ liệu Tam giác vàng có trong WebGIS và các lớp KML/KMZ. Google legacy và CDN cần Internet."
+}

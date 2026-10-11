@@ -138,6 +138,7 @@ def build():
     if len(links) != 1 or links[0].findtext('k:Link/k:href', '', N) != KML_URL:
         raise ValueError('Unexpected original NetworkLink')
     meta = json.loads((ROOT / 'data/metadata.json').read_text())
+    integration = json.loads((ROOT / 'data/integration.json').read_text())
     features = snapshot_features(root)
     provenance = {'retrieved': meta['updated'], 'source_url': VIEW_URL, 'kml_url': KML_URL + '&forcekml=1',
                   'original_networklink_url': KML_URL, 'original_placemarks': len(features),
@@ -157,7 +158,11 @@ def build():
         '<b>Bổ sung Scamland, ' + meta['updated'] + '</b><br>87 mốc gốc giữ nguyên; 8 mốc OSINT riêng, tọa độ chỉ báo.'
         '<br>Các địa danh gốc không tự xác nhận hành vi phạm tội.'
         '<br><a href="' + REPO + '">Mã nguồn Scamland</a> · <a href="' + WEB + '">WebGIS</a>'
+        '<br><a href="' + integration['html_example'] + '">Mẫu HTML Vietflex · ZoomControl và AttributionControl</a>'
     )
+    document_data = add(doc, 'ExtendedData')
+    for key in ('library', 'commit', 'repository', 'webgis', 'html_example', 'kmz_html_path', 'css_cdn', 'js_cdn'):
+        add(add(document_data, 'Data', name='integration_' + key), 'value', integration[key])
     link_folder = add(doc, 'Folder')
     add(link_folder, 'name', 'NetworkLink gốc · tắt mặc định để tránh trùng snapshot')
     add(link_folder, 'visibility', 0)
@@ -210,7 +215,9 @@ def build():
     (output / 'Scamland_Updated.kml').write_bytes(kml)
     # Fixed timestamps make repeated builds byte-for-byte identical.
     with ZipFile(output / 'Scamland_Updated.kmz', 'w') as z:
-        for path, content in [('doc.kml', kml), ('original/network-link.kml', link_raw), ('metadata/provenance.json', (original / 'provenance.json').read_bytes())]:
+        for path, content in [('doc.kml', kml), ('original/network-link.kml', link_raw), ('metadata/provenance.json', (original / 'provenance.json').read_bytes()),
+                              ('metadata/integration.json', (ROOT / 'data/integration.json').read_bytes()),
+                              (integration['kmz_html_path'], (ROOT / 'examples/vietflex-map.html').read_bytes())]:
             info = ZipInfo(path, (2026, 10, 11, 0, 0, 0))
             info.compress_type = ZIP_DEFLATED
             info.external_attr = 0o100644 << 16

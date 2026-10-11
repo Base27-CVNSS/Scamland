@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vietflex map · Mẫu tích hợp Scamland</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Vietflexmap/VN@6144d565fcf236727577ab3c4471bbe49f86892f/dist/vietflex.css">
+  <script src="https://cdn.jsdelivr.net/gh/Vietflexmap/VN@6144d565fcf236727577ab3c4471bbe49f86892f/dist/vietflex.js"></script>
+  <style>
+    body { margin: 0; font: 14px/1.5 system-ui, sans-serif; color: #122338; background: #f3f6fa; }
+    header { padding: 14px 20px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    header a { color: #0759a3; }
+    #map { height: 600px; }
+    #status { padding: 12px 20px; }
+  </style>
+</head>
+<body>
+  <header><strong>Vietflex map · Mẫu HTML</strong><a href="https://base27-cvnss.github.io/Scamland/">Mở WebGIS Tam giác vàng</a><a href="https://github.com/Base27-CVNSS/Scamland">Mã nguồn Scamland</a></header>
+  <div id="map" aria-label="Bản đồ minh họa Vietflex với điểm Hà Nội"></div>
+  <p id="status" role="status">Mẫu điểm Hà Nội theo đoạn mã tích hợp. Dữ liệu Tam giác vàng nằm trong WebGIS Scamland.</p>
+  <script>
+    if (window.Vietflex) {
+      const map = Vietflex.vietflexMap('map', {
+        useLegacyGoogleTiles: true,
+        googleMapType: 'roadmap',
+        zoomControl: false,
+        attributionControl: false
+      });
+
+      new Vietflex.ZoomControl({position: 'topleft'}).addTo(map);
+      new Vietflex.AttributionControl({position: 'bottomright'}).addTo(map);
+
+      new Vietflex.Marker([21.0285, 105.8542])
+        .bindPopup('Hà Nội')
+        .addTo(map);
+
+      map.setView([21.0285, 105.8542], 12);
+      let failures = 0;
+      map.baseLayer.on('tileerror', () => {
+        if (++failures === 3) document.getElementById('status').textContent = 'Nền Google legacy chưa tải được. Mở WebGIS Scamland để chọn nền OSM hoặc Atlas.';
+      });
+    } else {
+      document.getElementById('status').textContent = 'Chưa tải được SDK Vietflex từ CDN. Mở WebGIS Scamland để dùng SDK cục bộ.';
+    }
+  </script>
+</body>
+</html>

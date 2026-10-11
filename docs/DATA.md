@@ -13,6 +13,7 @@
 | `original/source.kmz` | KMZ NetworkLink do người dùng gửi, chưa sửa |
 | `original/provenance.json` | Nguồn, ngày tải và SHA-256 |
 | `bundle.js` | Dữ liệu đóng gói để mở không cần API hoặc fetch |
+| `integration.json` | Commit Vietflex, URL CDN, cấu hình điều khiển và mẫu HTML được đóng gói trong KMZ |
 
 Mỗi mốc OSINT có `position_basis: analyst_approximation`, `coordinate_note`, `scope: core/regional`, `claims[]`. Mỗi claim có ID duy nhất, `date` ISO hoặc null, `topics[]`, `status` và ít nhất một nguồn. `display_radius_m` là vòng ký hiệu, không phải độ chính xác.
 

@@ -2,7 +2,7 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>Scamland · Golden Triangle · bản đồ gốc + OSINT</name>
-    <description>Golden Triangle Special Economic Zone 金三角经济特区 in Bokeo province in Laos. Casino, hotels, entertainment and online fraud activities.&lt;br&gt;#gtsez #goldentriangle #onlinescam #cyberfraud #casino #GoldenKapokGroup #ZhaoWei #Laos&lt;br&gt;#金三角经济特区&lt;br&gt;&lt;br&gt;&lt;b&gt;Bổ sung Scamland, 2026-10-11&lt;/b&gt;&lt;br&gt;87 mốc gốc giữ nguyên; 8 mốc OSINT riêng, tọa độ chỉ báo.&lt;br&gt;Các địa danh gốc không tự xác nhận hành vi phạm tội.&lt;br&gt;&lt;a href="https://github.com/Base27-CVNSS/Scamland"&gt;Mã nguồn Scamland&lt;/a&gt; · &lt;a href="https://base27-cvnss.github.io/Scamland/"&gt;WebGIS&lt;/a&gt;</description>
+    <description>Golden Triangle Special Economic Zone 金三角经济特区 in Bokeo province in Laos. Casino, hotels, entertainment and online fraud activities.&lt;br&gt;#gtsez #goldentriangle #onlinescam #cyberfraud #casino #GoldenKapokGroup #ZhaoWei #Laos&lt;br&gt;#金三角经济特区&lt;br&gt;&lt;br&gt;&lt;b&gt;Bổ sung Scamland, 2026-10-11&lt;/b&gt;&lt;br&gt;87 mốc gốc giữ nguyên; 8 mốc OSINT riêng, tọa độ chỉ báo.&lt;br&gt;Các địa danh gốc không tự xác nhận hành vi phạm tội.&lt;br&gt;&lt;a href="https://github.com/Base27-CVNSS/Scamland"&gt;Mã nguồn Scamland&lt;/a&gt; · &lt;a href="https://base27-cvnss.github.io/Scamland/"&gt;WebGIS&lt;/a&gt;&lt;br&gt;&lt;a href="https://base27-cvnss.github.io/Scamland/examples/vietflex-map.html"&gt;Mẫu HTML Vietflex · ZoomControl và AttributionControl&lt;/a&gt;</description>
     <Style id="icon-1504-0288D1-normal">
       <IconStyle>
         <color>ffd18802</color>
@@ -1415,6 +1415,32 @@
         </Point>
       </Placemark>
     </Folder>
+    <ExtendedData>
+      <Data name="integration_library">
+        <value>Vietflex</value>
+      </Data>
+      <Data name="integration_commit">
+        <value>6144d565fcf236727577ab3c4471bbe49f86892f</value>
+      </Data>
+      <Data name="integration_repository">
+        <value>https://github.com/Base27-CVNSS/Scamland</value>
+      </Data>
+      <Data name="integration_webgis">
+        <value>https://base27-cvnss.github.io/Scamland/</value>
+      </Data>
+      <Data name="integration_html_example">
+        <value>https://base27-cvnss.github.io/Scamland/examples/vietflex-map.html</value>
+      </Data>
+      <Data name="integration_kmz_html_path">
+        <value>web/vietflex-map.html</value>
+      </Data>
+      <Data name="integration_css_cdn">
+        <value>https://cdn.jsdelivr.net/gh/Vietflexmap/VN@6144d565fcf236727577ab3c4471bbe49f86892f/dist/vietflex.css</value>
+      </Data>
+      <Data name="integration_js_cdn">
+        <value>https://cdn.jsdelivr.net/gh/Vietflexmap/VN@6144d565fcf236727577ab3c4471bbe49f86892f/dist/vietflex.js</value>
+      </Data>
+    </ExtendedData>
     <Folder>
       <name>NetworkLink gốc · tắt mặc định để tránh trùng snapshot</name>
       <visibility>0</visibility>
